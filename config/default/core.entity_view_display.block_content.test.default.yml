@@ -1,0 +1,39 @@
+uuid: 16b6bf9e-7e7a-493e-8235-70ea8bf941de
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.test
+    - field.field.block_content.test.body
+    - field.field.block_content.test.field_image
+    - field.field.block_content.test.field_social_link
+  module:
+    - fontawesome
+    - link
+id: block_content.test.default
+targetEntityType: block_content
+bundle: test
+mode: default
+content:
+  field_image:
+    type: fontawesome_icon_formatter
+    label: above
+    settings:
+      layers: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_social_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  body: true
