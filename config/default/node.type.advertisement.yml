@@ -1,0 +1,17 @@
+uuid: 703296f6-60a7-421d-84b7-e091cc016790
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Advertisement
+type: advertisement
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
