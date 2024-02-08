@@ -4,11 +4,11 @@ langcode: en
 uuid: e0b7fc15-587f-489b-b1e3-9a7fee33b4db
 name: 'PULSES PRO'
 mail: admin@example.com
-slogan: ''
+slogan: 'PULSES PRO'
 page:
   403: ''
   404: ''
-  front: /node
+  front: /node/111
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en

@@ -2,7 +2,7 @@ uuid: f1a55a6c-6aba-4bcb-8705-21825f55c57c
 langcode: en
 status: true
 dependencies: {  }
-name: News
+name: Category
 vid: news
 description: ''
 weight: 0
