@@ -11,7 +11,7 @@ dependencies:
 id: olivero_sociallinks
 theme: olivero
 region: header
-weight: -9
+weight: -7
 provider: null
 plugin: 'system_menu_block:social-links'
 settings:

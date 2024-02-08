@@ -5,35 +5,45 @@ dependencies:
   config:
     - block_content.type.test
     - field.field.block_content.test.body
-    - field.field.block_content.test.field_image
-    - field.field.block_content.test.field_social_link
   module:
-    - fontawesome
-    - link
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          2ed1077a-c392-44ae-9d9e-197e485aafae:
+            uuid: 2ed1077a-c392-44ae-9d9e-197e485aafae
+            region: content
+            configuration:
+              id: 'field_block:block_content:test:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
 id: block_content.test.default
 targetEntityType: block_content
 bundle: test
 mode: default
 content:
-  field_image:
-    type: fontawesome_icon_formatter
+  body:
+    type: text_default
     label: above
-    settings:
-      layers: false
+    settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content
-  field_social_link:
-    type: link
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    weight: 1
-    region: content
-hidden:
-  body: true
+hidden: {  }

@@ -5,30 +5,22 @@ dependencies:
   config:
     - block_content.type.test
     - field.field.block_content.test.body
-    - field.field.block_content.test.field_image
-    - field.field.block_content.test.field_social_link
   module:
-    - fontawesome
-    - link
+    - text
 id: block_content.test.default
 targetEntityType: block_content
 bundle: test
 mode: default
 content:
-  field_image:
-    type: fontawesome_icon_widget
+  body:
+    type: text_textarea_with_summary
     weight: 0
     region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_social_link:
-    type: link_default
-    weight: 26
-    region: content
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
     third_party_settings: {  }
 hidden:
-  body: true
   info: true

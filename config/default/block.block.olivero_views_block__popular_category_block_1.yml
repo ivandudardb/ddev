@@ -1,4 +1,4 @@
-uuid: 463e9746-5053-4998-86e4-17a90ec407c7
+uuid: 68a03600-35ad-479e-96c4-ba388345aff6
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ dependencies:
 id: olivero_views_block__popular_category_block_1
 theme: olivero
 region: footer_top
-weight: -7
+weight: 0
 provider: null
 plugin: 'views_block:popular_category-block_1'
 settings:
