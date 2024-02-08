@@ -1,0 +1,14 @@
+uuid: ab4a5435-5b86-41bb-9bac-b9eb634061ff
+langcode: en
+status: true
+dependencies: {  }
+name: advertisement_wide
+label: 'Advertisement wide'
+effects:
+  56051f35-274b-4e4b-81bc-56be086dfa25:
+    uuid: 56051f35-274b-4e4b-81bc-56be086dfa25
+    id: image_resize
+    weight: 1
+    data:
+      width: 728
+      height: 90

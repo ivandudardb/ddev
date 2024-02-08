@@ -1,0 +1,40 @@
+uuid: 7d9b90cb-6fd7-465a-b6c1-8fad2af689b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.advertisement_normal
+    - field.field.block_content.advertisement_normal.field_advertisement_link
+    - field.field.block_content.advertisement_normal.field_advertisement_normal_image
+  module:
+    - image
+    - link
+id: block_content.advertisement_normal.default
+targetEntityType: block_content
+bundle: advertisement_normal
+mode: default
+content:
+  field_advertisement_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_advertisement_normal_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
