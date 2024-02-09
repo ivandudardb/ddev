@@ -1,0 +1,26 @@
+uuid: 4b9add69-199c-481a-81bb-952531f99dd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.middle_photo.field_middle_photo
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.middle_photo
+  module:
+    - image
+id: paragraph.middle_photo.default
+targetEntityType: paragraph
+bundle: middle_photo
+mode: default
+content:
+  field_middle_photo:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

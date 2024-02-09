@@ -1,0 +1,28 @@
+uuid: 1549fee5-f886-42ba-bb00-89919a244a91
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_regular_text
+    - paragraphs.paragraphs_type.regular_text
+  module:
+    - text
+id: paragraph.regular_text.field_regular_text
+field_name: field_regular_text
+entity_type: paragraph
+bundle: regular_text
+label: 'regular text'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '<p>We woke reasonably late following the feast and free flowing wine the night before. After gathering ourselves and our packs, we headed down to our homestay family’s small dining room for breakfast, where we enjoyed scrambled eggs, toast, mekitsi (fried dough), local jam and peppermint tea.</p><p>&nbsp;We were making our way to the Rila Mountains, where we were visiting the Rila Monastery.</p>'
+    summary: ''
+    format: basic_html
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

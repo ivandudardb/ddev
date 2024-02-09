@@ -16,7 +16,7 @@ dependencies:
     - taxonomy
     - user
 id: politics_page
-label: 'politics page'
+label: Politics
 module: views
 description: ''
 tag: ''
@@ -29,7 +29,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'politics page'
+      title: Politics
       fields:
         title:
           id: title

@@ -1,0 +1,46 @@
+uuid: 9fb25cc5-712f-4d70-bbc4-d54f64981e33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_conclusion
+    - node.type.new
+    - paragraphs.paragraphs_type.conclusion
+  module:
+    - entity_reference_revisions
+id: node.new.field_conclusion
+field_name: field_conclusion
+entity_type: node
+bundle: new
+label: '  conclusion'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      conclusion: conclusion
+    negate: 0
+    target_bundles_drag_drop:
+      conclusion:
+        weight: 7
+        enabled: true
+      middle_photo:
+        weight: 7
+        enabled: false
+      regular_text:
+        weight: 8
+        enabled: false
+      slogan:
+        weight: 6
+        enabled: false
+      test:
+        weight: 9
+        enabled: false
+      text_and_picture:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions
