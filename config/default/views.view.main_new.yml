@@ -7,9 +7,13 @@ dependencies:
     - field.storage.node.field_teaser_text
     - image.style.main_new
     - node.type.new
+    - taxonomy.vocabulary.news
+  content:
+    - 'taxonomy_term:news:fc4323ca-e8d6-493e-b5ce-0a098aa65490'
   module:
     - image
     - node
+    - taxonomy
     - user
 id: main_new
 label: 'main new'
@@ -407,6 +411,52 @@ display:
           plugin_id: bundle
           value:
             new: new
+        tid:
+          id: tid
+          table: taxonomy_index
+          field: tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            17: 17
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: news
+          type: select
+          hierarchy: true
+          limit: true
+          error_message: true
       style:
         type: default
       row:

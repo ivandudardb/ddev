@@ -12,7 +12,7 @@ dependencies:
 id: olivero_views_block__latest_article_block_1
 theme: olivero
 region: sidebar
-weight: -21
+weight: -22
 provider: null
 plugin: 'views_block:latest_article-block_1'
 settings:
@@ -26,4 +26,4 @@ visibility:
   request_path:
     id: request_path
     negate: true
-    pages: "/newspaper_pulses_pro\r\n/user/*\r\n/news\r\n/news/*"
+    pages: "/newspaper_pulses_pro\r\n/user/*\r\n/category/*"

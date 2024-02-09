@@ -15,7 +15,7 @@ dependencies:
     - field.field.node.new.field_slogan
     - field.field.node.new.field_teaser_text
     - field.field.node.new.field_text_and_image
-    - image.style.latest_pics
+    - image.style.teaser
     - node.type.new
   module:
     - image
@@ -25,27 +25,41 @@ targetEntityType: node
 bundle: new
 mode: teaser
 content:
+  field_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
   field_photo:
     type: image
     label: hidden
     settings:
       image_link: ''
-      image_style: latest_pics
+      image_style: teaser
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 0
+    weight: 1
+    region: content
+  field_teaser_text:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   addtoany: true
   body: true
-  field_category: true
   field_comments: true
   field_conclusion: true
   field_middle_photo: true
   field_paragraphs: true
   field_regular_text: true
   field_slogan: true
-  field_teaser_text: true
   field_text_and_image: true
   links: true

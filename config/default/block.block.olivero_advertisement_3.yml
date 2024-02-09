@@ -12,7 +12,7 @@ dependencies:
 id: olivero_advertisement_3
 theme: olivero
 region: sidebar
-weight: -25
+weight: -23
 provider: null
 plugin: 'block_content:4ccbcfd8-96b5-4e08-8571-90ff2ae74d37'
 settings:
@@ -27,4 +27,4 @@ visibility:
   request_path:
     id: request_path
     negate: true
-    pages: "/newspaper_pulses_pro\r\n/user/*\r\n/news\r\n/news/*"
+    pages: "/newspaper_pulses_pro\r\n/user/*"

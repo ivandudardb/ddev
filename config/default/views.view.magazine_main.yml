@@ -23,7 +23,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'magazine main'
+      title: magazine
       fields:
         title:
           id: title
@@ -237,20 +237,7 @@ display:
           vids:
             - news
       header: {  }
-      footer:
-        entity_taxonomy_term:
-          id: entity_taxonomy_term
-          table: views
-          field: entity_taxonomy_term
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: entity
-          empty: false
-          target: ''
-          view_mode: full
-          tokenize: true
-          bypass_access: false
+      footer: {  }
       display_extenders: {  }
     cache_metadata:
       max-age: -1
