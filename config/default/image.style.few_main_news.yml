@@ -1,0 +1,14 @@
+uuid: c681409d-7281-4d4b-b55b-46442233a115
+langcode: en
+status: true
+dependencies: {  }
+name: few_main_news
+label: 'few main news'
+effects:
+  024fd801-81e7-4fbd-98aa-d75d21f45de8:
+    uuid: 024fd801-81e7-4fbd-98aa-d75d21f45de8
+    id: image_resize
+    weight: 1
+    data:
+      width: 310
+      height: 140
