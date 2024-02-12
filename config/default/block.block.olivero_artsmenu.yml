@@ -11,7 +11,7 @@ dependencies:
 id: olivero_artsmenu
 theme: olivero
 region: content
-weight: -20
+weight: -22
 provider: null
 plugin: 'system_menu_block:arts-menu'
 settings:

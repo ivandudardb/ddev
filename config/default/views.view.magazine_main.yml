@@ -3,8 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.new
     - taxonomy.vocabulary.news
+  content:
+    - 'taxonomy_term:news:101d57df-01e5-4068-bdba-6e03a21d64f9'
   module:
     - node
     - taxonomy
@@ -202,15 +203,52 @@ display:
           group: 1
           expose:
             operator: ''
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
+        tid:
+          id: tid
+          table: taxonomy_index
+          field: tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
           value:
-            new: new
+            10: 10
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: news
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
       style:
         type: default
       row:
@@ -223,19 +261,12 @@ display:
           distinct: false
           replica: false
           query_tags: {  }
-      relationships:
-        term_node_tid:
-          id: term_node_tid
-          table: node_field_data
-          field: term_node_tid
-          relationship: none
-          group_type: group
-          admin_label: term
-          entity_type: node
-          plugin_id: node_term_data
-          required: false
-          vids:
-            - news
+      relationships: {  }
+      use_more: true
+      use_more_always: true
+      use_more_text: 'View All News'
+      link_display: custom_url
+      link_url: /category/magazine
       header: {  }
       footer: {  }
       display_extenders: {  }
