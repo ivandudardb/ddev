@@ -1,0 +1,6 @@
+/web/core
+/web/sites/default/files
+/.idea
+/web/modules/contrib
+/vendor
+/web/themes/contrib
