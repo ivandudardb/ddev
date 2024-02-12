@@ -12,7 +12,7 @@ dependencies:
 id: olivero_views_block__business_page_block_1
 theme: olivero
 region: content
-weight: -14
+weight: -27
 provider: null
 plugin: 'views_block:business_page-block_1'
 settings:

@@ -1,0 +1,30 @@
+uuid: b0a20ce2-704d-4938-9d32-6178d7f0611f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:advertisement_normal:4ccbcfd8-96b5-4e08-8571-90ff2ae74d37'
+  module:
+    - block_content
+    - system
+  theme:
+    - olivero
+id: olivero_advertisement_3
+theme: olivero
+region: sidebar
+weight: -23
+provider: null
+plugin: 'block_content:4ccbcfd8-96b5-4e08-8571-90ff2ae74d37'
+settings:
+  id: 'block_content:4ccbcfd8-96b5-4e08-8571-90ff2ae74d37'
+  label: Advertisement
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/newspaper_pulses_pro\r\n/user/*"

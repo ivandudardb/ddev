@@ -1,0 +1,10 @@
+uuid: 7828e3f5-4adc-4603-8ddb-ddd7d800763a
+langcode: en
+status: true
+dependencies: {  }
+id: middle_photo
+label: 'middle photo'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

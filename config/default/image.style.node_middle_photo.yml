@@ -1,0 +1,14 @@
+uuid: 8a03f0d9-6d2a-4bc8-b083-08bae67fec61
+langcode: en
+status: true
+dependencies: {  }
+name: node_middle_photo
+label: 'node middle'
+effects:
+  77de02db-27ee-42f6-b04a-7c583f0352dc:
+    uuid: 77de02db-27ee-42f6-b04a-7c583f0352dc
+    id: image_resize
+    weight: 1
+    data:
+      width: 691
+      height: 460

@@ -1,0 +1,21 @@
+uuid: 04af6424-9184-4d24-8fbc-efeceab65e52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slogan
+    - paragraphs.paragraphs_type.slogan
+id: paragraph.slogan.field_slogan
+field_name: field_slogan
+entity_type: paragraph
+bundle: slogan
+label: slogan
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'IF YOU HAVE IT, YOU CAN MAKE ANYTHING LOOK GOOD'
+default_value_callback: ''
+settings: {  }
+field_type: string
