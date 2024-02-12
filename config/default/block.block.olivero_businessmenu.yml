@@ -11,7 +11,7 @@ dependencies:
 id: olivero_businessmenu
 theme: olivero
 region: content
-weight: -30
+weight: -29
 provider: null
 plugin: 'system_menu_block:business-menu'
 settings:

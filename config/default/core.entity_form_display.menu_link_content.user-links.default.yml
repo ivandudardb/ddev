@@ -1,0 +1,40 @@
+uuid: a34ba6e2-c093-4738-9c7f-2c734ccb58c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.user-links.field_user_social_photo
+    - image.style.thumbnail
+    - system.menu.user-links
+  module:
+    - image
+    - link
+    - menu_item_extras
+id: menu_link_content.user-links.default
+targetEntityType: menu_link_content
+bundle: user-links
+mode: default
+content:
+  field_user_social_photo:
+    type: image_image
+    weight: 21
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  view_mode:
+    type: menu_item_extras_view_mode_selector_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
