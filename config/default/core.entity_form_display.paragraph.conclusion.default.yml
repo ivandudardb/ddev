@@ -1,0 +1,23 @@
+uuid: 91cbd1fc-c747-47ea-b7e8-b21aa3ca637a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.conclusion.field_conclusion
+    - paragraphs.paragraphs_type.conclusion
+id: paragraph.conclusion.default
+targetEntityType: paragraph
+bundle: conclusion
+mode: default
+content:
+  field_conclusion:
+    type: string_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

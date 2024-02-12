@@ -1,0 +1,23 @@
+uuid: 31ade66c-135e-4cfe-9dbd-e528f42eeef4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slogan.field_slogan
+    - paragraphs.paragraphs_type.slogan
+id: paragraph.slogan.default
+targetEntityType: paragraph
+bundle: slogan
+mode: default
+content:
+  field_slogan:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
