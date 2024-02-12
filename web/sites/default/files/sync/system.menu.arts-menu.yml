@@ -1,8 +1,0 @@
-uuid: 127b4a5a-9844-4ead-ab1f-575651b0875b
-langcode: en
-status: true
-dependencies: {  }
-id: arts-menu
-label: 'arts menu'
-description: ''
-locked: false

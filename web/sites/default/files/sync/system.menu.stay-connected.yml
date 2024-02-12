@@ -1,8 +1,0 @@
-uuid: 8c4fc670-dba0-4f3a-9611-4c2ba13573fe
-langcode: en
-status: true
-dependencies: {  }
-id: stay-connected
-label: 'Stay Connected'
-description: ''
-locked: false

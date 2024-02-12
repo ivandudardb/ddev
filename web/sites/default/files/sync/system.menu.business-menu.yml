@@ -1,8 +1,0 @@
-uuid: 157ce0f9-043b-46d5-ac24-1bd9be5de4c3
-langcode: en
-status: true
-dependencies: {  }
-id: business-menu
-label: 'business menu'
-description: ''
-locked: false

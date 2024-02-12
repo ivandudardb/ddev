@@ -1,8 +1,0 @@
-uuid: bc502836-0695-43ec-af9e-ffa2be3ab029
-langcode: en
-status: true
-dependencies: {  }
-id: news-menu
-label: 'news menu'
-description: ''
-locked: false
