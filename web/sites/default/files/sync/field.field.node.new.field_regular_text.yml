@@ -1,0 +1,46 @@
+uuid: f0d515f2-a7a2-4eab-b91c-af1b45612aa8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_regular_text
+    - node.type.new
+    - paragraphs.paragraphs_type.regular_text
+  module:
+    - entity_reference_revisions
+id: node.new.field_regular_text
+field_name: field_regular_text
+entity_type: node
+bundle: new
+label: 'regular text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      regular_text: regular_text
+    negate: 0
+    target_bundles_drag_drop:
+      conclusion:
+        weight: 7
+        enabled: false
+      middle_photo:
+        weight: 7
+        enabled: false
+      regular_text:
+        weight: 8
+        enabled: true
+      slogan:
+        weight: 6
+        enabled: false
+      test:
+        weight: 9
+        enabled: false
+      text_and_picture:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

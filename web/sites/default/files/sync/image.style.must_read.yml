@@ -1,0 +1,14 @@
+uuid: c458b598-d41f-4eea-8232-0835485de023
+langcode: en
+status: true
+dependencies: {  }
+name: must_read
+label: 'Must Read'
+effects:
+  2fcfdefc-e102-4731-affa-74b051b684fb:
+    uuid: 2fcfdefc-e102-4731-affa-74b051b684fb
+    id: image_resize
+    weight: 1
+    data:
+      width: 560
+      height: 480

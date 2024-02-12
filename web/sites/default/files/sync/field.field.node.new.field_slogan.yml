@@ -1,0 +1,43 @@
+uuid: 10f083df-6443-4a13-b2b2-107fa562a4ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slogan
+    - node.type.new
+    - paragraphs.paragraphs_type.slogan
+  module:
+    - entity_reference_revisions
+id: node.new.field_slogan
+field_name: field_slogan
+entity_type: node
+bundle: new
+label: slogan
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      slogan: slogan
+    negate: 0
+    target_bundles_drag_drop:
+      middle_photo:
+        weight: 7
+        enabled: false
+      regular_text:
+        weight: 8
+        enabled: false
+      slogan:
+        weight: 6
+        enabled: true
+      test:
+        weight: 9
+        enabled: false
+      text_and_picture:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

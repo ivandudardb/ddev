@@ -1,0 +1,25 @@
+uuid: 9bc045ec-7e87-45ca-ae23-22e299ee219d
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.social-links-footer
+  module:
+    - system
+  theme:
+    - olivero
+id: olivero_sociallinksfooter
+theme: olivero
+region: footer_top
+weight: -9
+provider: null
+plugin: 'system_menu_block:social-links-footer'
+settings:
+  id: 'system_menu_block:social-links-footer'
+  label: 'Social links footer'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,31 @@
+uuid: 4138418d-058d-4177-9bfd-5b9b08ec67ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.social-links-footer.field_social_footer_image
+    - system.menu.social-links-footer
+  module:
+    - image
+id: menu_link_content.social-links-footer.default
+targetEntityType: menu_link_content
+bundle: social-links-footer
+mode: default
+content:
+  children:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_social_footer_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

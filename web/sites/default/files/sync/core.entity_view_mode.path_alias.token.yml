@@ -1,0 +1,11 @@
+uuid: cdc86dcb-f4c1-4f60-9f87-dd275ca535b3
+langcode: en
+status: true
+dependencies:
+  module:
+    - path_alias
+id: path_alias.token
+label: Token
+description: ''
+targetEntityType: path_alias
+cache: true

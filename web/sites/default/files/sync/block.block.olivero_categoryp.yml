@@ -1,0 +1,30 @@
+uuid: bf2b8db4-b1b5-410a-bf91-9e7b49e0472b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:019c452b-2963-441a-b4ec-e7175e2d7f7a'
+  module:
+    - block_content
+    - system
+  theme:
+    - olivero
+id: olivero_categoryp
+theme: olivero
+region: content
+weight: -34
+provider: null
+plugin: 'block_content:019c452b-2963-441a-b4ec-e7175e2d7f7a'
+settings:
+  id: 'block_content:019c452b-2963-441a-b4ec-e7175e2d7f7a'
+  label: 'category p'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/category/*'

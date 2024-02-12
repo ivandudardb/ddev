@@ -1,0 +1,29 @@
+uuid: a6cae8d9-067e-493e-b879-360d311173aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.business-menu
+  module:
+    - system
+  theme:
+    - olivero
+id: olivero_businessmenu
+theme: olivero
+region: content
+weight: -30
+provider: null
+plugin: 'system_menu_block:business-menu'
+settings:
+  id: 'system_menu_block:business-menu'
+  label: 'business menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/news/business\r\n/news/magazine\r\n/news/sport"

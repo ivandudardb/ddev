@@ -1,0 +1,29 @@
+uuid: 5c7840f1-c862-4eaf-b880-86a03e2d0ca0
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.editor_picks_main
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: olivero_views_block__editor_picks_main_block_1
+theme: olivero
+region: content
+weight: -17
+provider: null
+plugin: 'views_block:editor_picks_main-block_1'
+settings:
+  id: 'views_block:editor_picks_main-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

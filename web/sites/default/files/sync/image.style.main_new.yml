@@ -1,0 +1,14 @@
+uuid: f8880d11-7727-43f6-aac5-fb292348232e
+langcode: en
+status: true
+dependencies: {  }
+name: main_new
+label: 'main new'
+effects:
+  b7e6b500-4c2d-4e61-a83a-03c780d8db92:
+    uuid: b7e6b500-4c2d-4e61-a83a-03c780d8db92
+    id: image_resize
+    weight: 1
+    data:
+      width: 650
+      height: 490
