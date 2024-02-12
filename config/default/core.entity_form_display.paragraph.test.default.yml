@@ -1,0 +1,25 @@
+uuid: ded4e655-ac89-4af4-af0f-831d96ad6655
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.test.field_bold_text_for_teaser
+    - paragraphs.paragraphs_type.test
+  module:
+    - text
+id: paragraph.test.default
+targetEntityType: paragraph
+bundle: test
+mode: default
+content:
+  field_bold_text_for_teaser:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,14 @@
+uuid: 680e7f73-d387-481d-93d9-f0b7b553c796
+langcode: en
+status: true
+dependencies: {  }
+name: teaser
+label: teaser
+effects:
+  e6eca275-f018-4099-a65d-10ef69626e84:
+    uuid: e6eca275-f018-4099-a65d-10ef69626e84
+    id: image_resize
+    weight: 2
+    data:
+      width: 310
+      height: 185

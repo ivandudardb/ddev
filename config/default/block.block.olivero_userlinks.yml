@@ -1,0 +1,29 @@
+uuid: 217e55c6-63e0-44d8-8926-72bf396272a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.user-links
+  module:
+    - system
+  theme:
+    - olivero
+id: olivero_userlinks
+theme: olivero
+region: content_above
+weight: 0
+provider: null
+plugin: 'system_menu_block:user-links'
+settings:
+  id: 'system_menu_block:user-links'
+  label: 'user links'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /user/1

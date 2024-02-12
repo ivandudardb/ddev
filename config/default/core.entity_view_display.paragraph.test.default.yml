@@ -1,0 +1,22 @@
+uuid: 32e2a5d5-0322-48e6-9de9-2ef456f45e80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.test.field_bold_text_for_teaser
+    - paragraphs.paragraphs_type.test
+  module:
+    - text
+id: paragraph.test.default
+targetEntityType: paragraph
+bundle: test
+mode: default
+content:
+  field_bold_text_for_teaser:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

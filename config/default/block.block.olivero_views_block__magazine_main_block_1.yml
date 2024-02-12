@@ -1,0 +1,29 @@
+uuid: 46bc3d84-30f7-478c-8bb1-dc839c0f66c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.magazine_main
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: olivero_views_block__magazine_main_block_1
+theme: olivero
+region: content
+weight: -10
+provider: null
+plugin: 'views_block:magazine_main-block_1'
+settings:
+  id: 'views_block:magazine_main-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

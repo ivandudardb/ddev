@@ -1,0 +1,14 @@
+uuid: 0197e9d9-e202-4348-82b5-83aa7dc72fdd
+langcode: en
+status: true
+dependencies: {  }
+name: node_middle
+label: 'text and picture'
+effects:
+  0976aa89-fe01-4f76-9b48-cf924f0d4c12:
+    uuid: 0976aa89-fe01-4f76-9b48-cf924f0d4c12
+    id: image_resize
+    weight: 1
+    data:
+      width: 259
+      height: 388

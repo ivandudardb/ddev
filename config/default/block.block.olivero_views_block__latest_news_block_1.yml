@@ -1,0 +1,29 @@
+uuid: dd2693dd-c8c1-45d0-b574-4ce53f4772e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_news
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: olivero_views_block__latest_news_block_1
+theme: olivero
+region: sidebar
+weight: -24
+provider: null
+plugin: 'views_block:latest_news-block_1'
+settings:
+  id: 'views_block:latest_news-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/category/*\r\n/user/*"

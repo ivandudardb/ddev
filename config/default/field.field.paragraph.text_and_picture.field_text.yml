@@ -1,0 +1,21 @@
+uuid: 3273ed5a-9288-4b34-8865-2c030f14f427
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.text_and_picture
+id: paragraph.text_and_picture.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: text_and_picture
+label: text
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: "We wandered the site with busloads of other tourists, yet strangely the place did not seem crowded. I’m not sure if it was the sheer size of the place, or whether the masses congregated in one area and didn’t venture far from the main church, but I didn’t feel overwhelmed by tourists in the monastery.\r\n\r\nHeaded over Lions Bridge and made our way to the Sofia Synagogue, then sheltered in the Central Market Hall until the recurrent (but short-lived) mid-afternoon rain passed.\r\n\r\nFeeling refreshed after an espresso, we walked a short distance to the small but welcoming Banya Bashi Mosque, then descended into the ancient Serdica complex.\r\n\r\nWe were exhausted after a long day of travel, so we headed back to the hotel and crashed. I had low expectations about Sofia as a city, but after the walking tour I absolutely loved the place. This was an easy city to navigate, and it was a beautiful city – despite its ugly, staunch and stolid communist-built surrounds. Sofia has a very average facade as you enter the city, but once you lose yourself in the old town area, everything changes."
+default_value_callback: ''
+settings: {  }
+field_type: string_long

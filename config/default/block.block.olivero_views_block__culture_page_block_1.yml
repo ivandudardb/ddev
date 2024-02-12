@@ -1,0 +1,29 @@
+uuid: 3e7cbc8d-73b3-4a2a-880b-9c62faa4bbc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.culture_page
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: olivero_views_block__culture_page_block_1
+theme: olivero
+region: content
+weight: -24
+provider: null
+plugin: 'views_block:culture_page-block_1'
+settings:
+  id: 'views_block:culture_page-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /news/culture
