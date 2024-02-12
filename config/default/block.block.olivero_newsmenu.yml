@@ -1,0 +1,29 @@
+uuid: a9816dd6-78ce-4d2c-a142-dc34eb4fb356
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.news-menu
+  module:
+    - system
+  theme:
+    - olivero
+id: olivero_newsmenu
+theme: olivero
+region: content
+weight: -18
+provider: null
+plugin: 'system_menu_block:news-menu'
+settings:
+  id: 'system_menu_block:news-menu'
+  label: 'news menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /news

@@ -1,0 +1,14 @@
+uuid: a44cab59-ca31-42c2-87c6-63d9bdc8902b
+langcode: en
+status: true
+dependencies: {  }
+name: social
+label: social
+effects:
+  7c55c491-30f1-4fa7-8883-530cbda46475:
+    uuid: 7c55c491-30f1-4fa7-8883-530cbda46475
+    id: image_resize
+    weight: 1
+    data:
+      width: 27
+      height: 27

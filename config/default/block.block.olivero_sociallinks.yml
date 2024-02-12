@@ -1,0 +1,25 @@
+uuid: 2120ed18-f62a-46ba-915e-e32263408362
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.social-links
+  module:
+    - system
+  theme:
+    - olivero
+id: olivero_sociallinks
+theme: olivero
+region: header
+weight: -7
+provider: null
+plugin: 'system_menu_block:social-links'
+settings:
+  id: 'system_menu_block:social-links'
+  label: 'social links header'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

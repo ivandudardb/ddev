@@ -1,0 +1,23 @@
+uuid: 653b7dae-8521-4e4d-99c5-77410973f433
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.advertisement_normal
+    - field.storage.block_content.field_advertisement_link
+  module:
+    - link
+id: block_content.advertisement_normal.field_advertisement_link
+field_name: field_advertisement_link
+entity_type: block_content
+bundle: advertisement_normal
+label: 'Advertisement link'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link
