@@ -11,7 +11,7 @@ dependencies:
 id: olivero_newsmenu
 theme: olivero
 region: content
-weight: -24
+weight: -26
 provider: null
 plugin: 'system_menu_block:news-menu'
 settings:

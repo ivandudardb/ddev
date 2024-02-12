@@ -1,0 +1,30 @@
+uuid: 82569711-0e2f-4ce0-bcd1-0c7184bb666f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:353917d0-25e0-4e0b-9b3f-86497d7a1abf'
+  module:
+    - block_content
+    - system
+  theme:
+    - olivero
+id: olivero_mustread
+theme: olivero
+region: content
+weight: -4
+provider: null
+plugin: 'block_content:353917d0-25e0-4e0b-9b3f-86497d7a1abf'
+settings:
+  id: 'block_content:353917d0-25e0-4e0b-9b3f-86497d7a1abf'
+  label: 'Must Read'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
