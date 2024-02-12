@@ -1,0 +1,14 @@
+uuid: b5654886-ff54-415d-801e-dce6c7b9efd6
+langcode: en
+status: true
+dependencies: {  }
+name: social_links
+label: 'social links'
+effects:
+  033f5ef4-32c1-456c-ae37-2a056f45c09e:
+    uuid: 033f5ef4-32c1-456c-ae37-2a056f45c09e
+    id: image_resize
+    weight: 1
+    data:
+      width: 15
+      height: 15

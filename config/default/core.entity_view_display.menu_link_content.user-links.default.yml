@@ -1,0 +1,32 @@
+uuid: 9ca5bcb5-f3cb-4c2d-b33b-5b4b0b8d28bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.user-links.field_user_social_photo
+    - image.style.social_links
+    - system.menu.user-links
+  module:
+    - image
+id: menu_link_content.user-links.default
+targetEntityType: menu_link_content
+bundle: user-links
+mode: default
+content:
+  children:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_user_social_photo:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: social_links
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

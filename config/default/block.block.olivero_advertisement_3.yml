@@ -27,4 +27,4 @@ visibility:
   request_path:
     id: request_path
     negate: true
-    pages: "/newspaper_pulses_pro\r\n/user/*"
+    pages: /newspaper_pulses_pro

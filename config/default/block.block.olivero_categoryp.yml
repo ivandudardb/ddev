@@ -12,7 +12,7 @@ dependencies:
 id: olivero_categoryp
 theme: olivero
 region: content
-weight: -34
+weight: -33
 provider: null
 plugin: 'block_content:019c452b-2963-441a-b4ec-e7175e2d7f7a'
 settings:
