@@ -12,7 +12,7 @@ dependencies:
 id: olivero_views_block__editor_picks_main_block_1
 theme: olivero
 region: content
-weight: -12
+weight: -15
 provider: null
 plugin: 'views_block:editor_picks_main-block_1'
 settings:

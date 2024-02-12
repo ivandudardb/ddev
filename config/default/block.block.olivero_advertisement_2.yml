@@ -12,7 +12,7 @@ dependencies:
 id: olivero_advertisement_2
 theme: olivero
 region: content
-weight: -11
+weight: -14
 provider: null
 plugin: 'block_content:4ccbcfd8-96b5-4e08-8571-90ff2ae74d37'
 settings:

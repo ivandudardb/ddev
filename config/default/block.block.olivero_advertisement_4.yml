@@ -1,0 +1,30 @@
+uuid: b3c3bdc3-f0c2-4cc2-81cd-5d49ed468621
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:advertisement_normal:4ccbcfd8-96b5-4e08-8571-90ff2ae74d37'
+  module:
+    - block_content
+    - system
+  theme:
+    - olivero
+id: olivero_advertisement_4
+theme: olivero
+region: content
+weight: 1
+provider: null
+plugin: 'block_content:4ccbcfd8-96b5-4e08-8571-90ff2ae74d37'
+settings:
+  id: 'block_content:4ccbcfd8-96b5-4e08-8571-90ff2ae74d37'
+  label: Advertisement
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
