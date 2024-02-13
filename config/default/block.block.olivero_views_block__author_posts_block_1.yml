@@ -12,7 +12,7 @@ dependencies:
 id: olivero_views_block__author_posts_block_1
 theme: olivero
 region: content
-weight: -35
+weight: -34
 provider: null
 plugin: 'views_block:author_posts-block_1'
 settings:

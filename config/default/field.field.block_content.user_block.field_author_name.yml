@@ -1,0 +1,29 @@
+uuid: 21404453-9ad5-4c66-8a87-949dd9b5a392
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.user_block
+    - field.storage.block_content.field_author_name
+id: block_content.user_block.field_author_name
+field_name: field_author_name
+entity_type: block_content
+bundle: user_block
+label: 'Author name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    filter:
+      type: _none
+    include_anonymous: true
+field_type: entity_reference
