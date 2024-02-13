@@ -1,0 +1,30 @@
+uuid: 7c2d935f-05f5-481b-8d57-9ece1b2215c4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:user_block:8f2c8db4-86d7-412b-83aa-248250bb9bca'
+  module:
+    - block_content
+    - system
+  theme:
+    - olivero
+id: olivero_authorblock
+theme: olivero
+region: content_above
+weight: 0
+provider: null
+plugin: 'block_content:8f2c8db4-86d7-412b-83aa-248250bb9bca'
+settings:
+  id: 'block_content:8f2c8db4-86d7-412b-83aa-248250bb9bca'
+  label: 'Author block'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/node/*'
