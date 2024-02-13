@@ -12,7 +12,7 @@ dependencies:
 id: olivero_views_block__advertisement_wide_block_1_3
 theme: olivero
 region: content
-weight: -2
+weight: -3
 provider: null
 plugin: 'views_block:advertisement_wide-block_1'
 settings:
