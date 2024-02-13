@@ -12,7 +12,7 @@ dependencies:
 id: olivero_views_block__advertisement_wide_block_1
 theme: olivero
 region: content_above
-weight: -34
+weight: -24
 provider: null
 plugin: 'views_block:advertisement_wide-block_1'
 settings:
@@ -26,4 +26,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: "/category/*\r\n/user/*"
+    pages: '/category/*'

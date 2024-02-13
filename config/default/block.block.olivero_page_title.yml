@@ -2,8 +2,6 @@ uuid: 41a291d1-af61-4e91-8ffb-51f5e75d7eb7
 langcode: en
 status: true
 dependencies:
-  module:
-    - system
   theme:
     - olivero
 _core:
@@ -11,7 +9,7 @@ _core:
 id: olivero_page_title
 theme: olivero
 region: content_above
-weight: -31
+weight: -22
 provider: null
 plugin: page_title_block
 settings:
@@ -19,8 +17,4 @@ settings:
   label: CATEGORY
   label_display: visible
   provider: core
-visibility:
-  request_path:
-    id: request_path
-    negate: false
-    pages: '/category/*'
+visibility: {  }
