@@ -12,7 +12,7 @@ dependencies:
 id: olivero_mustread
 theme: olivero
 region: content
-weight: -6
+weight: -5
 provider: null
 plugin: 'block_content:353917d0-25e0-4e0b-9b3f-86497d7a1abf'
 settings:

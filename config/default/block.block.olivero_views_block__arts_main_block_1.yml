@@ -12,7 +12,7 @@ dependencies:
 id: olivero_views_block__arts_main_block_1
 theme: olivero
 region: content
-weight: -2
+weight: -1
 provider: null
 plugin: 'views_block:arts_main-block_1'
 settings:

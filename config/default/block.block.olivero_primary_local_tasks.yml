@@ -2,6 +2,8 @@ uuid: b8f203ed-a784-4645-8004-dcbb57519bef
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - olivero
 _core:
@@ -19,4 +21,8 @@ settings:
   provider: core
   primary: true
   secondary: false
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\r\n/user/*\r\n/category/*"
