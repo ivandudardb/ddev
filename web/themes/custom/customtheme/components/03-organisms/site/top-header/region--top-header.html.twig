@@ -5,17 +5,15 @@
  *
  * Available variables:
  * - content: The content for this region, typically blocks.
- * - attributes: HTML attributes for the region div.
+ * - attributes: HTML attributes for the region <div>.
  * - region: The name of the region variable as defined in the theme's
  *   .info.yml file.
  *
  * @see template_preprocess_region()
  */
 #}
-{% extends "@organisms/site/site-header/site-header.twig" %}
-
-{% block header__menu %}
-  <div{{ attributes.addClass('header__menu_wrapper') }}>
+{% if content %}
+  <div{{ attributes.addClass('top_header') }}>
     {{ content }}
   </div>
-{% endblock %}
+{% endif %}

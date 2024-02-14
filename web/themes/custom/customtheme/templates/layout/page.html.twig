@@ -51,6 +51,7 @@
 {% extends "@templates/_default.twig" %}
   {% block page_header %}
     {% if page.header %}
+      {{ page.top_header }}
       {{ page.header }}
     {% endif %}
   {% endblock %}

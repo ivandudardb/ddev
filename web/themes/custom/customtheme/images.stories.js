@@ -1,9 +1,9 @@
-import image from './image/responsive-image.twig';
-import figure from './image/figure.twig';
-import iconTwig from './icons/icons.twig';
+import image from './components/01-atoms/images/image/responsive-image.twig';
+import figure from './components/01-atoms/images/image/figure.twig';
+import iconTwig from './components/01-atoms/images/icons/icons.twig';
 
-import imageData from './image/image.yml';
-import figureData from './image/figure.yml';
+import imageData from './components/01-atoms/images/image/image.yml';
+import figureData from './components/01-atoms/images/image/figure.yml';
 
 const svgIcons = require.context('../../../images/icons/', true, /\.svg$/);
 const icons = [];

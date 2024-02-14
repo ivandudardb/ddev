@@ -11,6 +11,7 @@ libraries:
 ckeditor_stylesheets:
   - dist/css/style.css
 regions:
+  top_header: Top header
   header: Header
   content: Content
   sidebar: Sidebar

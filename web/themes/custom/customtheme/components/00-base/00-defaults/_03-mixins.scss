@@ -65,4 +65,25 @@ $outer-container-break: $small;
   list-style: none;
   margin: 0;
   padding: 0;
+
+}
+
+@mixin top-menu{
+  display: flex;
+}
+@mixin top-list{
+  @include list-reset;
+  padding: 0 9px;
+}
+
+@mixin link-top {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+@mixin link-hover{
+  color: #4c4084;
 }
