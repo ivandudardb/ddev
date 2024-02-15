@@ -1,0 +1,30 @@
+uuid: 3ee9ec52-08f4-4f03-8d12-4dabfe2fece2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:353917d0-25e0-4e0b-9b3f-86497d7a1abf'
+  module:
+    - block_content
+    - system
+  theme:
+    - customtheme
+id: customtheme_mustread
+theme: customtheme
+region: content
+weight: 14
+provider: null
+plugin: 'block_content:353917d0-25e0-4e0b-9b3f-86497d7a1abf'
+settings:
+  id: 'block_content:353917d0-25e0-4e0b-9b3f-86497d7a1abf'
+  label: 'Must Read'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

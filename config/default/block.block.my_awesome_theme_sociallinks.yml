@@ -1,0 +1,25 @@
+uuid: c6aeae26-b2a8-4420-8259-802abdf1931e
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.social-links
+  module:
+    - system
+  theme:
+    - my_awesome_theme
+id: my_awesome_theme_sociallinks
+theme: my_awesome_theme
+region: header
+weight: -7
+provider: null
+plugin: 'system_menu_block:social-links'
+settings:
+  id: 'system_menu_block:social-links'
+  label: 'social links header'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -4,6 +4,8 @@
   display: flex;
   flex-wrap: wrap;
   border-top: 1px solid;
+  margin-right: 15px;
+
 
   @include medium {
     display: inline-block;
@@ -79,11 +81,15 @@
 
 /* LI (Nested) */
 .main-menu__item--sub {
+  text-align: right;
+  display: block;
+  max-width: 200px;
+  margin-left: -320px;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  @include li-height;
   @include medium {
-    display: block;
-
-    &:not(:first-child) {
-      border-top: 1px solid clr(highlight);
-    }
   }
-}
+}:hover{
+  @include link-hover;
+ }

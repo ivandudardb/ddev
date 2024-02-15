@@ -3,7 +3,8 @@ $main-menu-medium: $medium;
 
 /* Nav */
 .main-nav {
-  display: none;
+  display: flex!important;
+  justify-content: center;
 
   @include medium {
     display: block;
@@ -77,8 +78,8 @@ $main-menu-medium: $medium;
         &.active,
         &:active,
         &:hover {
-          background-color: clr(accent-high);
-          color: clr(background);
+
+          color: clr(secondary);
         }
       }
     }

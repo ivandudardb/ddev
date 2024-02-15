@@ -8,11 +8,13 @@ dependencies:
   - drupal:emulsify_twig (^4.0)
 libraries:
   - customtheme/global
+  - customtheme/fonts
 ckeditor_stylesheets:
   - dist/css/style.css
 regions:
   top_header: Top header
   header: Header
+  navbar: Navbar
   content: Content
   sidebar: Sidebar
   footer: Footer

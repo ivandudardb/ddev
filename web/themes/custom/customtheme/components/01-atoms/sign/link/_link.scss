@@ -1,0 +1,11 @@
+@mixin sign {
+  color: clr(accent);
+
+  &:hover {
+    color: clr(accent-high);
+  }
+}
+
+.sign {
+  @include link-top;
+}

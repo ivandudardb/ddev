@@ -1,0 +1,4 @@
+sign_url: '#'
+sign_content: 'Sign in / Join'
+sign_attributes:
+  'target': '_blank'

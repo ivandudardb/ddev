@@ -3,10 +3,9 @@
   display: block;
   padding: $space $space-triple $space $space-double;
   color: clr(accent);
-  font-size: 1.2rem;
-  font-weight: bold;
-  line-height: 1.5;
   text-decoration: none;
+  text-transform: uppercase!important;
+  @include main-link;
 
   &--with-sub {
     width: 80%;
@@ -30,16 +29,6 @@
     border-bottom: none;
     font-size: 1.1rem;
     text-transform: none;
-
-    &::after {
-      display: inline-block;
-      content: '>';
-      margin-left: 0.5rem;
-    }
-
-    &--sub::after {
-      display: none;
-    }
   }
 }
 
@@ -52,6 +41,8 @@
   padding-left: $space-triple;
   color: clr(accent);
   font-weight: normal;
+  @include main-link;
+  text-transform: capitalize!important;
 
   @include medium {
     display: block;

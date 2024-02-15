@@ -4,3 +4,33 @@
  * @file
  * Functions to support theming.
  */
+function customtheme_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = array(
+      'bg-primary' => t('Primary'),
+      'bg-secondary' => t('Secondary'),
+      'bg-light' => t('Light'),
+      'bg-dark' => t('Dark'),
+      'bg-white' => t('White'),
+      'bg-transparent' => t('Transparent'),
+  );
+  $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = array(
+      'bg-primary' => t('Primary'),
+      'bg-secondary' => t('Secondary'),
+      'bg-light' => t('Light'),
+      'bg-dark' => t('Dark'),
+      'bg-white' => t('White'),
+      'bg-transparent' => t('Transparent'),
+  );
+
+  $form['fonts']['fonts']['bootstrap_barrio_google_fonts']['#options']['open_sans'] = 'Open Sans';
+  $form['fonts']['fonts']['bootstrap_barrio_google_fonts']['#options']['roboto'] = 'Roboto';
+  $form['fonts']['fonts']['bootstrap_barrio_google_fonts']['#options']['sansita_swashed'] = 'Sansita Swashed';
+
+}
+
+function customtheme_preprocess_page(&$variables)
+{
+  $fonts = theme_get_setting('bootstrap_barrio_google_fonts');
+  if ($fonts)
+    $variables['#attached']['library'][] = (in_array($fonts, ['open_sans', 'roboto', 'sansita_swashed']) ? 'YOURTHEME' : 'bootstrap_barrio' ) . '/' . $fonts;
+}

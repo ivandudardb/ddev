@@ -1,0 +1,29 @@
+uuid: bce9ea95-0ae0-4252-958f-af1e285a2d8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sport_main
+  module:
+    - system
+    - views
+  theme:
+    - my_awesome_theme
+id: my_awesome_theme_views_block__sport_main_block_1
+theme: my_awesome_theme
+region: content
+weight: -8
+provider: null
+plugin: 'views_block:sport_main-block_1'
+settings:
+  id: 'views_block:sport_main-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

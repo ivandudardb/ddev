@@ -1,0 +1,26 @@
+uuid: 4717585a-d9f2-43d6-9f4a-b39c428af9de
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - my_awesome_theme
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: my_awesome_theme_page_title
+theme: my_awesome_theme
+region: header
+weight: -31
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: CATEGORY
+  label_display: visible
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/category/*'

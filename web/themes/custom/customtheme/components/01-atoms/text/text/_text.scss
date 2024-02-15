@@ -1,44 +1,33 @@
-/* Create a mixin for paragraph styles that can be implemented
- * in components with other classnames.
-*/
-@mixin paragraph($margin: 0 0 1em) {
-  margin: $margin;
+.logo-and-date{
+  text-align: center;
 }
-
-.paragraph {
-  @include paragraph;
-}
-
-.blockquote {
-  font-style: italic;
-  border-left: solid 3px clr(accent);
-  margin-left: 1em;
-  padding-left: 1em;
-}
-
-.hr {
-  border-style: solid;
-  border-width: 1px 0 0;
-  color: currentColor;
-}
-
-/* TODO: BEM selectors should be applied to wysiwyg-created content */
-
-.text-long {
-  p {
-    @extend .paragraph;
-  }
-
-  blockquote {
-    @extend .blockquote;
-  }
-
-  hr {
-    @extend .hr;
-  }
-}
-
-pre {
+.logo{
+  padding: 0;
   margin: 0;
-  background-color: var(--c-background-section);
+  max-height: 60px;
+}
+.data-p{
+  padding: 0;
+  margin: 0;
+}
+
+
+.data-p{
+ @include date
+}
+.data-p:hover{
+  @include date
+ }
+.logo_link{
+  line-height: 60px;
+  font-size: 60px;
+  font-weight: 500;
+  text-transform: uppercase;
+  @include logo
+}:hover{
+  color: $text!important;
+ }
+.weather{
+  font-weight: 500;
+  @include date
 }

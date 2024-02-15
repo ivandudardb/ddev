@@ -1,0 +1,28 @@
+uuid: 9dcc6c72-8617-40f2-83fd-2477156a9c96
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - customtheme
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: customtheme_primary_local_tasks
+theme: customtheme
+region: content
+weight: -25
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\r\n/user/*\r\n/category/*"

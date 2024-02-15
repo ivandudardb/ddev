@@ -1,0 +1,28 @@
+{#
+/**
+ * Available variables:
+ * - link_content - the content of the link (typically text)
+ * - link_url - the url this link should poing to
+ * - link_attributes - array of attribute,value pairs
+ * - link_base_class - the base class name
+ * - link_modifiers - array of modifiers to add to the base classname
+ * - link_blockname - blockname prepended to the base classname
+ *
+ * Available blocks:
+ * - link_content - used to replace the content of the link
+ *     Example: to insert the image component
+ */
+#}
+{% set sign_base_class = sign_base_class|default('sign') %}
+
+<a
+  {{ bem(sign_base_class, sign_modifiers, sign_blockname) }}
+  {% for attribute, value in sign_attributes %}
+    {{ attribute }}="{{ value }}"
+  {% endfor %}
+  href="{{ sign_url }}"
+>
+  {% block sign_content %}
+    {{ sign_content }}
+  {% endblock %}
+</a>

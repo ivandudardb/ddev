@@ -1,0 +1,29 @@
+uuid: 077bae29-c1c8-4841-9a57-8efa1e263fab
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news_main
+  module:
+    - system
+    - views
+  theme:
+    - customtheme
+id: customtheme_views_block__news_main_block_1
+theme: customtheme
+region: content
+weight: 23
+provider: null
+plugin: 'views_block:news_main-block_1'
+settings:
+  id: 'views_block:news_main-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
