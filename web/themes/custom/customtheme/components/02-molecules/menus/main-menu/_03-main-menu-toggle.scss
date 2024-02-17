@@ -1,5 +1,6 @@
 /* Toggle */
 .toggle-expand {
+  z-index: 100;
   @include link;
 
   position: absolute;
@@ -13,7 +14,7 @@
 
   /* See main-menu.js */
   &--open {
-    background-color: clr(accent);
+    background-color: white;
   }
 
   @include medium {
@@ -42,9 +43,9 @@
   display: inline-block;
   float: right;
   text-align: center;
-
   .toggle-expand--open & {
     display: none;
+
   }
 
   svg {

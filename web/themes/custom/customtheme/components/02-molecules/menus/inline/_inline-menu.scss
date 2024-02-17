@@ -1,6 +1,5 @@
 .inline-menu {
   @include list-reset;
-  background-color: black;
   margin-block-start: 1em;
   margin-block-end: 1em;
   padding-inline-start: 40px;
@@ -29,4 +28,6 @@
   line-height: 22px;
   font-weight: 400;
   margin-bottom: 0;
-}
+}:hover{
+  @include link-hover;
+ }

@@ -11,23 +11,30 @@
   margin: 0;
 }
 
-
 .data-p{
- @include date
+ @include date();
+
+  &:hover {
+    color: $text!important;
+  }
 }
-.data-p:hover{
-  @include date
- }
+
 .logo_link{
   line-height: 60px;
   font-size: 60px;
   font-weight: 500;
   text-transform: uppercase;
-  @include logo
-}:hover{
-  color: $text!important;
- }
+  @include logo();
+
+  &:hover{
+    color: $text!important;
+}}
+
 .weather{
   font-weight: 500;
-  @include date
+  @include date();
+
+  &:hover {
+    color: black!important;
+  }
 }

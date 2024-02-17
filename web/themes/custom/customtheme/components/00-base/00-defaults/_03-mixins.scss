@@ -85,7 +85,7 @@ $outer-container-break: $small;
 }
 
 @mixin link-hover{
-  color: $purple;
+  color: $purple!important;
 }
 
 @mixin main-link{
@@ -108,4 +108,8 @@ $outer-container-break: $small;
 @mixin logo{
   color: $text;
   text-decoration: none;
+}
+
+@mixin white{
+  color: $white!important;
 }

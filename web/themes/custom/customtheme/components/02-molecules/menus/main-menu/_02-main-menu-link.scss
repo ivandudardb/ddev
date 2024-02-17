@@ -4,7 +4,7 @@
   padding: $space $space-triple $space $space-double;
   color: clr(accent);
   text-decoration: none;
-  text-transform: uppercase!important;
+
   @include main-link;
 
   &--with-sub {
@@ -49,12 +49,4 @@
     padding: $space-one-third $space;
     color: clr(highlight);
   }
-}
-
-.main-menu--sub-2 {
-  background-color: clr(highlight-high);
-}
-
-.main-menu__link--sub-2 {
-  padding-left: $space-quadruple;
 }

@@ -4,7 +4,6 @@
   display: flex;
   flex-wrap: wrap;
   border-top: 1px solid;
-  margin-right: 15px;
 
 
   @include medium {
@@ -38,9 +37,11 @@
   position: relative;
   display: block;
   width: 20%;
-  background-color: clr(accent-high);
   color: clr(text-inverse);
   cursor: pointer;
+  &:hover{
+    @include white();
+  }
 
   @include medium {
     display: none;
@@ -48,15 +49,16 @@
 
   /* Down triangle */
   &::after {
+    background: transparent!important;
     position: absolute;
     right: 50%;
     top: 50%;
-    content: '';
+    content: '\003E';
+    font-size: 40px;
     display: block;
     margin-right: -12px;
     margin-top: -6px;
     width: 0;
-    border: 15px solid;
     border-bottom-color: transparent;
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
@@ -64,13 +66,20 @@
 
   /* See main-menu.js */
   &--open {
-    background-color: clr(accent-high);
-    color: clr(muted);
+   @include white();
 
     &::after {
       margin-top: -20px;
       border-top-color: transparent;
-      border-bottom: 15px solid;
+      content: '\003E';
+      display: inline-block;
+      transform: rotate(90deg);
+    }
+    &:active{
+      @include white();
+    }
+    &:hover{
+      @include white();
     }
   }
 }
@@ -83,13 +92,22 @@
 .main-menu__item--sub {
   text-align: right;
   display: block;
-  max-width: 200px;
-  margin-left: -320px;
-  border-right: 1px solid black;
-  border-left: 1px solid black;
+  max-width: 150px;
+  margin-left: -270px;
+  border-right: $border;
+  border-left: $border;
   @include li-height;
   @include medium {
+    &:last-child{
+      border-bottom: $border;
+    }
+    &:first-child{
+      border-top: $border;
+    }
   }
 }:hover{
   @include link-hover;
  }
+.main-menu__link--sub-1{
+  max-height: 25px;
+}

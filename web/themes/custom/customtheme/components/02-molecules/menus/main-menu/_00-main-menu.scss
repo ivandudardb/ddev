@@ -34,15 +34,96 @@ $main-menu-medium: $medium;
 /* UL */
 .main-menu {
   @include list-reset;
-
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
   position: relative;
   z-index: 10;
   border-bottom: 1px solid;
-
   @include medium {
     border-bottom: none;
   }
 }
+
+@media screen and (max-width: 840px){
+  html{
+    overflow-y: hidden;
+  }
+ .main-nav{
+   top: 0;
+   visibility: hidden;
+   display: flex;
+   justify-content: flex-start;
+   padding: 20px 20px 0;
+   background-size: cover;
+
+
+   height: 100vh;
+   overflow-y: hidden;
+ }
+  .main-nav{
+    background: url('https://demo.tagdiv.com/newspaper_pulses_pro/wp-content/uploads/2019/12/51-1.jpg'), linear-gradient(rgba(255, 255, 255, 0.5), rgba(97, 12, 99, 0.5)) no-repeat;
+  }
+  .main-nav--open{
+    visibility: visible;
+    z-index: 150;
+  }
+  .main-menu{
+    display: flex;
+    flex-direction: column;
+    border: none!important;
+    justify-content: start!important;
+    width: 100%!important;
+  }
+  .main-menu__item{
+    border: none!important;
+    padding: 0;
+    margin: 0!important;
+    width: 100%!important;
+  }
+  .main-menu__link{
+    text-transform: capitalize;
+    line-height: 21px!important;
+    font-size: 21px!important;
+    margin: 0!important;
+    padding: 12px 30px 12px 12px!important;
+    display: inline!important;
+    @include white();
+  }
+  .mobile_container{
+    display: block!important;
+    position: relative!important;
+  }
+  .toggle-expand--open{
+    position: absolute!important;
+    bottom: 0!important;
+    right: 0!important;
+    visibility: hidden;
+  }
+  .toggle-expand__close{
+    visibility: visible;
+  }
+  .toggle-expand__text_close{
+    font-size: 40px!important;
+  }
+  .main-menu__item--with-sub{
+    width: 70vh!important;
+  }
+  .main-menu__item--sub{
+    margin-left: 20px!important;
+    padding: 0!important;
+    text-align: left!important;
+  }
+
+}
+
+
+@media screen and (min-width: 768px){
+  .main-menu__link{
+    text-transform: uppercase!important;
+  }
+}
+
 
 /*
  * Sub Navigation
@@ -54,7 +135,6 @@ $main-menu-medium: $medium;
   overflow: hidden;
   width: 100%;
   border-bottom: none;
-  background-color: clr(muted);
 
   @include medium {
     position: absolute;
@@ -91,8 +171,4 @@ $main-menu-medium: $medium;
   }
 }
 
-.main-menu--sub-2 {
-  @include medium {
-    display: none; /* Never shown on large screens */
-  }
-}
+
