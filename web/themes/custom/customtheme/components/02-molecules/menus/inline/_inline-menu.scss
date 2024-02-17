@@ -1,5 +1,10 @@
 .inline-menu {
   @include list-reset;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  padding-inline-start: 40px;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
 .inline-menu__item {
@@ -22,5 +27,10 @@
   font-weight: 600;
   letter-spacing: 1.5px;
   text-decoration: none;
-  text-transform: uppercase;
-}
+  font-size: 13px;
+  line-height: 22px;
+  font-weight: 400;
+  margin-bottom: 0;
+}:hover{
+  @include link-hover;
+ }

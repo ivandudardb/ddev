@@ -8,6 +8,8 @@
   line-height: 1.5;
   text-decoration: none;
 
+  @include main-link;
+
   &--with-sub {
     width: 80%;
   }
@@ -58,12 +60,4 @@
     padding: $space-one-third $space;
     color: clr(highlight);
   }
-}
-
-.main-menu--sub-2 {
-  background-color: clr(highlight-high);
-}
-
-.main-menu__link--sub-2 {
-  padding-left: $space-quadruple;
 }

@@ -65,4 +65,51 @@ $outer-container-break: $small;
   list-style: none;
   margin: 0;
   padding: 0;
+
+}
+
+@mixin top-menu{
+  display: flex;
+}
+@mixin top-list{
+  @include list-reset;
+  padding: 0 9px;
+}
+
+@mixin link-top {
+  text-decoration: none;
+  color: $white;
+  font-size: 13px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+@mixin link-hover{
+  color: $purple!important;
+}
+
+@mixin main-link{
+  font-size: 14px!important;
+  line-height: 55px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+@mixin li-height{
+  line-height: 24px;
+  font-size: 14px;
+}
+
+@mixin date {
+  color: $text;
+  font-size: 14px;
+}
+
+@mixin logo{
+  color: $text;
+  text-decoration: none;
+}
+
+@mixin white{
+  color: $white!important;
 }

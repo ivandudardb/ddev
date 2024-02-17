@@ -5,40 +5,30 @@
   margin: $margin;
 }
 
-.paragraph {
-  @include paragraph;
-}
+.data-p{
+ @include date();
 
-.blockquote {
-  font-style: italic;
-  border-left: solid 3px clr(accent);
-  margin-left: 1em;
-  padding-left: 1em;
-}
-
-.hr {
-  border-style: solid;
-  border-width: 1px 0 0;
-  color: currentColor;
-}
-
-/* TODO: BEM selectors should be applied to wysiwyg-created content */
-
-.text-long {
-  p {
-    @extend .paragraph;
-  }
-
-  blockquote {
-    @extend .blockquote;
-  }
-
-  hr {
-    @extend .hr;
+  &:hover {
+    color: $text!important;
   }
 }
 
-pre {
-  margin: 0;
-  background-color: var(--c-background-section);
+.logo_link{
+  line-height: 60px;
+  font-size: 60px;
+  font-weight: 500;
+  text-transform: uppercase;
+  @include logo();
+
+  &:hover{
+    color: $text!important;
+}}
+
+.weather{
+  font-weight: 500;
+  @include date();
+
+  &:hover {
+    color: black!important;
+  }
 }

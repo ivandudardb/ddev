@@ -1,7 +1,6 @@
 {% set header__base_class = 'header' %}
 {# If `directory` is defined, set the path relative for Drupal.
  # Otherwise, set the path relative to the Component Library. #}
-{% set header__logo_src = directory ? '/' ~ directory ~ '/images/logo.png' : 'logo.png' %}
 
 <header {{ bem(header__base_class) }}>
   <div {{ bem('inner', [], header__base_class) }}>
@@ -13,6 +12,7 @@
       </div>
       <div {{ bem('menu', [], header__base_class) }}>
         {% block header__menu %}
+
           {% include "@molecules/menus/main-menu/main-menu.twig" %}
         {% endblock %}
       </div>
