@@ -1,34 +1,40 @@
-/* Create a mixin for paragraph styles that can be implemented
- * in components with other classnames.
-*/
-@mixin paragraph($margin: 0 0 1em) {
-  margin: $margin;
+.logo-and-date {
+  text-align: center;
 }
 
-.data-p{
- @include date();
+.logo {
+  padding: 0;
+  margin: 0;
+  max-height: 60px;
+}
+
+.data-p {
+  padding: 0;
+  margin: 0;
+  @include date();
 
   &:hover {
-    color: $text!important;
+    color: $text !important;
   }
 }
 
-.logo_link{
+.logo_link {
   line-height: 60px;
   font-size: 60px;
   font-weight: 500;
   text-transform: uppercase;
   @include logo();
 
-  &:hover{
-    color: $text!important;
-}}
+  &:hover {
+    color: $text !important;
+  }
+}
 
-.weather{
+.weather {
   font-weight: 500;
   @include date();
 
   &:hover {
-    color: black!important;
+    color: black !important;
   }
 }

@@ -22,6 +22,6 @@ export const dateExample = () => date(dateData);
 
 export const preformatted = () => pre();
 
-export const weather  = () => paragraph();
+export const weather = () => paragraph();
 
 export const codeExample = () => code(codeData);

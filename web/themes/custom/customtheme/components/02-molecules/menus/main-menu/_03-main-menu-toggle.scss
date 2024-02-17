@@ -43,9 +43,9 @@
   display: inline-block;
   float: right;
   text-align: center;
+
   .toggle-expand--open & {
     display: none;
-
   }
 
   svg {
