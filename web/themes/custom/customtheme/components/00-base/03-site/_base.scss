@@ -30,27 +30,20 @@ body {
   word-wrap: normal;
 }
 
-
-
-
-
-h1, h2, h1 a, h2 a {
-  font-family: "Source Sans 3", sans-serif;
-}
-h1, h1 a {
-  font-weight: 700;
-}
-h2, h2 a {
-  font-weight: 700;
-}
-h3, h4, h5, h6, h3 a {
-  font-family: "Source Sans 3", sans-serif;
-}
-h3, h3 a {
+h3 a {
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-body, p, a, li ul {
-  font-family: "Source Sans 3", sans-serif;
+
+h1 h2 a {
+  font-weight: 700;
+}
+
+h1 h2 h3 h4 h5 h6 a {
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+body p li ul {
+  font-family: 'Source Sans 3', sans-serif;
 }

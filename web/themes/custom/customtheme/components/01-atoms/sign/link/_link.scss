@@ -1,7 +1,7 @@
-
 .sign {
-  @include link-top;
+  @include link-top();
 
-}:hover{
-   @include link-hover;
- }
+  &:hover {
+    @include link-hover();
+  }
+}

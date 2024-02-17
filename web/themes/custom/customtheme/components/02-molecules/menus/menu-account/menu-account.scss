@@ -1,8 +1,11 @@
-.menu-account__item{
-  @include top-list;
+.menu-account__item {
+  @include list-top();
 }
-.menu-account__link{
-  @include link-top;
-}:hover{
-  @include link-hover;
- }
+
+.menu-account__link {
+  @include link-top();
+
+  &:hover {
+    @include link-hover();
+  }
+}

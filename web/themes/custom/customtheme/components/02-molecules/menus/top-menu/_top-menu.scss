@@ -1,12 +1,15 @@
-.top-menu-black_background{
-  @include top-menu;
+.top-menu-black_background {
+  @include top-menu();
 }
 
-.top-menu-black_background__item{
-  @include top-list;
+.top-menu-black_background__item {
+  @include list-top();
 }
-.top-menu-black_background__link{
-  @include link-top;
-} :hover{
-  @include link-hover;
+
+.top-menu-black_background__link {
+  @include link-top();
+
+  &:hover {
+    @include link-hover();
   }
+}

@@ -1,40 +1,40 @@
-.logo-and-date{
+.logo-and-date {
   text-align: center;
 }
-.logo{
+
+.logo {
   padding: 0;
   margin: 0;
   max-height: 60px;
 }
-.data-p{
+
+.data-p {
   padding: 0;
   margin: 0;
-}
-
-.data-p{
- @include date();
+  @include date();
 
   &:hover {
-    color: $text!important;
+    color: $text !important;
   }
 }
 
-.logo_link{
+.logo_link {
   line-height: 60px;
   font-size: 60px;
   font-weight: 500;
   text-transform: uppercase;
   @include logo();
 
-  &:hover{
-    color: $text!important;
-}}
+  &:hover {
+    color: $text !important;
+  }
+}
 
-.weather{
+.weather {
   font-weight: 500;
   @include date();
 
   &:hover {
-    color: black!important;
+    color: black !important;
   }
 }

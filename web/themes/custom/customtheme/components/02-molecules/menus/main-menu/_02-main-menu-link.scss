@@ -5,7 +5,7 @@
   color: clr(accent);
   text-decoration: none;
 
-  @include main-link;
+  @include main-link();
 
   &--with-sub {
     width: 80%;
@@ -15,13 +15,13 @@
   &:hover {
     color: clr(text);
 
-    @include medium {
+    @include medium() {
       background-color: clr(accent-high);
       color: clr(highlight-high);
     }
   }
 
-  @include medium {
+  @include medium() {
     position: relative;
     display: inline-block;
     padding: $space;
@@ -41,8 +41,8 @@
   padding-left: $space-triple;
   color: clr(accent);
   font-weight: normal;
-  @include main-link;
-  text-transform: capitalize!important;
+  text-transform: capitalize !important;
+  @include main-link();
 
   @include medium {
     display: block;

@@ -1,14 +1,14 @@
 .inline-menu {
   @include list-reset;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
+
+  margin-block: 1em;
   padding-inline-start: 40px;
   padding-top: 3px;
   padding-bottom: 3px;
 }
 
 .inline-menu__item {
-  margin-right: 12px ;
+  margin-right: 12px;
 
   @include large {
     display: inline;
@@ -22,12 +22,15 @@
 
 .inline-menu__link {
   @include link;
-  color: $top-menu-text;
+
+  color: $white;
   text-decoration: none;
   font-size: 13px;
   line-height: 22px;
   font-weight: 400;
   margin-bottom: 0;
-}:hover{
-  @include link-hover;
- }
+
+  &:hover {
+    @include link-hover;
+  }
+}
