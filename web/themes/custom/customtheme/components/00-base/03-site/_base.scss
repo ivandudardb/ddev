@@ -47,3 +47,9 @@ h1 h2 h3 h4 h5 h6 a {
 body p li ul {
   font-family: 'Source Sans 3', sans-serif;
 }
+
+.top_header {
+  background-color: $text;
+  display: flex;
+  justify-content: space-between;
+}
