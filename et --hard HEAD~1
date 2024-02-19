@@ -1,0 +1,125 @@
+[33mcommit 7fc2f83129b4fe6fea0fcacdd75ed78df11ab561[m[33m ([m[1;36mHEAD -> [m[1;32m7410v2.master[m[33m)[m
+Author: ivandudardb <i.dudar@dev-branch.com>
+Date:   Wed Feb 14 19:11:52 2024 +0200
+
+    7410 - made menu top
+
+[33mcommit ee7d0158e5c05ec65a44c5ef7004acbdcbfc7998[m[33m ([m[1;32mtheme[m[33m, [m[1;32mmaster[m[33m)[m
+Author: ivandudardb <i.dudar@dev-branch.com>
+Date:   Wed Feb 14 12:51:31 2024 +0200
+
+    working
+
+[33mcommit ac81dd79b1c10c44b290a02bc91d18db8f868aa5[m[33m ([m[1;31morigin/master[m[33m)[m
+Merge: 732b5fd5 e21caa50
+Author: ivandudardb <159035865+ivandudardb@users.noreply.github.com>
+Date:   Wed Feb 14 10:46:25 2024 +0200
+
+    Merge pull request #14 from ivandudardb/7357.master
+    
+    7357.master
+
+[33mcommit e21caa50727e7fd170a4dd03b1def4df12c71756[m[33m ([m[1;31morigin/7357.master[m[33m, [m[1;32m7357.master[m[33m)[m
+Merge: a8dd5751 732b5fd5
+Author: ivandudardb <i.dudar@dev-branch.com>
+Date:   Wed Feb 14 10:39:06 2024 +0200
+
+    Merge branch 'master' into 7357.master
+
+[33mcommit 732b5fd5746c19f3808526278e352b786ca1a362[m
+Merge: a008bad5 d2a9b666
+Author: lavrenchuk-dev <109587214+lavrenchuk-dev@users.noreply.github.com>
+Date:   Wed Feb 14 09:17:32 2024 +0200
+
+    Merge pull request #15 from ivandudardb/7358.master
+    
+    7358 - added content to website
+
+[33mcommit a008bad5b87d0f91410aac5ce0a6c105d4719e8b[m
+Merge: ac0226f7 e0303ce2
+Author: lavrenchuk-dev <109587214+lavrenchuk-dev@users.noreply.github.com>
+Date:   Wed Feb 14 09:16:03 2024 +0200
+
+    Merge pull request #17 from ivandudardb/7379.master
+    
+    7379.master
+
+[33mcommit e0303ce2ec43f2cb3420bb50d8236bffb3b028c3[m
+Author: ivandudardb <i.dudar@dev-branch.com>
+Date:   Wed Feb 14 08:55:41 2024 +0200
+
+    7379 - Files removed
+
+[33mcommit 443e2d5e4bbe3316285e0c737091789a26cd8594[m
+Author: ivandudardb <i.dudar@dev-branch.com>
+Date:   Tue Feb 13 17:32:42 2024 +0200
+
+    7379 - installed theme
+
+[33mcommit d2a9b66679a994fedd4b2cc202cd7768d306497b[m[33m ([m[1;31morigin/7358.master[m[33m, [m[1;32m7358.master[m[33m)[m
+Author: ivandudardb <i.dudar@dev-branch.com>
+Date:   Tue Feb 13 13:49:03 2024 +0200
+
+    7358 - added content to website
+
+[33mcommit a8dd57512e5b2392e8a1392896454fb22c444d04[m[33m ([m[1;32muser_block.master[m[33m)[m
+Author: ivandudardb <i.dudar@dev-branch.com>
+Date:   Tue Feb 13 10:24:41 2024 +0200
+
+    rigt way
+
+[33mcommit 5e4797a140fbb59c3fe2624aee6b97018ca20518[m[33m ([m[1;31morigin/user_block.master[m[33m)[m
+Author: ivandudardb <i.dudar@dev-branch.com>
+Date:   Tue Feb 13 10:18:21 2024 +0200
+
+    solving composer problem
+
+[33mcommit 33fe9a264b721d98f0f243acbee628d806387ab1[m
+Merge: 4e8cc82e ac0226f7
+Author: ivandudardb <i.dudar@dev-branch.com>
+Date:   Tue Feb 13 10:11:51 2024 +0200
+
+    Merge branch 'master' into user_block.master
+
+[33mcommit ac0226f718af1d5b9400ac33729d8a0a8eff3157[m
+Merge: 0ee2b104 70e76c72
+Author: ivandudardb <159035865+ivandudardb@users.noreply.github.com>
+Date:   Tue Feb 13 10:06:47 2024 +0200
+
+    Merge pull request #11 from ivandudardb/7352.Master
+    
+    7352.master
+
+[33mcommit 4e8cc82e0043c4312dd9184f829f88ca9262b2ab[m
+Author: ivandudardb <i.dudar@dev-branch.com>
+Date:   Tue Feb 13 09:58:23 2024 +0200
+
+    Created user block on node page.The branch and commit names are incorrect because I haven't created the task yet, but I'm continuing to work.
+
+[33mcommit 70e76c7268f4a578cc0478cf167355709014b202[m[33m ([m[1;31morigin/7352.Master[m[33m, [m[1;32m7352.Master[m[33m)[m
+Author: ivandudardb <i.dudar@dev-branch.com>
+Date:   Tue Feb 13 08:43:02 2024 +0200
+
+    Created buttons 'Previous article' and 'Next article'. Need to add titles to buttons. Trying solve merge problems
+
+[33mcommit 0d8f9e007acdb4c5af9096bd4c6ba708b064d045[m[33m ([m[1;31morigin/7352.master[m[33m, [m[1;32m7352.master[m[33m)[m
+Merge: 20f8f023 0ee2b104
+Author: ivandudardb <i.dudar@dev-branch.com>
+Date:   Mon Feb 12 19:58:40 2024 +0200
+
+    Merge branch 'master' into 7352.master
+
+[33mcommit 20f8f023f2f0e5cd1ec473c52e1370d47ab2c6ed[m
+Author: ivandudardb <i.dudar@dev-branch.com>
+Date:   Mon Feb 12 19:51:24 2024 +0200
+
+    Created buttons 'Previous article' and 'Next article'. Need to add titles to buttons
+
+[33mcommit 0ee2b10444c8946c97e1211d63fe65b2e14cce01[m
+Merge: a7c858f7 e42a9aa3
+Author: lavrenchuk-dev <109587214+lavrenchuk-dev@users.noreply.github.com>
+Date:   Mon Feb 12 18:24:05 2024 +0200
+
+    Merge pull request #9 from ivandudardb/7347.master-1
+    
+    Delete vendor directory
