@@ -3,11 +3,11 @@
 // Color Usage variables - use these (via the `clr` function below)
 // rather than color variables directly.
 $defaultColors: (
-  text: colors-vars.$gray,
+  text: colors-vars.$regular,
   text-inverse: colors-vars.$white,
   background: colors-vars.$white,
   background-section: colors-vars.$gray-lightest,
-  primary: colors-vars.$blue,
+  primary: colors-vars.$black-lighter,
   secondary: colors-vars.$purple,
   accent: colors-vars.$gray-dark,
   accent-high: colors-vars.$black,
