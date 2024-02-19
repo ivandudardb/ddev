@@ -1,0 +1,8 @@
+uuid: 6a96a6f8-1246-426b-8562-1da64e1df440
+langcode: en
+status: true
+dependencies: {  }
+id: user_block
+label: 'Author block'
+revision: 0
+description: ''

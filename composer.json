@@ -24,6 +24,10 @@
         "drupal/emulsify_twig": "^4.0",
         "drupal/entity_pager": "^1.0",
         "drupal/webform": "^6.2",
+        "drupal/menu_item_extras": "^3.0",
+        "drupal/paragraphs": "^1.17",
+        "drupal/social_media_links": "^2.9",
+        "drupal/token_filter": "^2.1",
         "drush/drush": "^12.4"
     },
     "conflict": {
