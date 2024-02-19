@@ -114,3 +114,7 @@ $outer-container-break: $small;
 @mixin white {
   color: $white !important;
 }
+
+@mixin container {
+  max-width: 1600px !important;
+}
