@@ -16,7 +16,6 @@
     ],
     "require": {
         "composer/installers": "^2.0",
-        "drupal/addtoany": "^2.0",
         "drupal/components": "^3.0@beta",
         "drupal/core-composer-scaffold": "^10.2",
         "drupal/core-project-message": "^10.2",
