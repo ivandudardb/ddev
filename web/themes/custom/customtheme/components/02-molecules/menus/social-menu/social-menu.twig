@@ -1,6 +1,6 @@
 {% set social_list_base_class = 'social_list' %}
 <div {{ bem(social_list_base_class) }}>
-  <ul>
+  <ul class="social-ul">
     {% for key, item in social_item %}
       <div {{ bem('item') }}>
         <a href="{{ item.url }}">

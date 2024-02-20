@@ -5,6 +5,10 @@ $main-menu-medium: $medium;
 .main-nav {
   display: flex !important;
   justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: left 0.6s ease-in-out;
 
   @include medium {
     display: block;
@@ -46,20 +50,41 @@ $main-menu-medium: $medium;
   }
 }
 
+@media screen and (min-width: 840px){
+  .main-nav{
+    position: static;
+  }
+}
+
 @media screen and (max-width: 840px) {
   html {
     overflow-y: hidden;
   }
 
   .main-nav {
+    position: fixed;
     top: 0;
     visibility: hidden;
     display: flex;
     justify-content: flex-start;
     padding: 20px 20px 0;
-    height: 100vh;
+    height: 113%;
     overflow-y: hidden;
     background: url('https://demo.tagdiv.com/newspaper_pulses_pro/wp-content/uploads/2019/12/51-1.jpg');
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &:before {
+      background: linear-gradient(to bottom,rgba(76,64,132,0.9) 0%,rgba(28,24,51,0.9) 100%);
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: .98;
+    }
   }
 
   .main-nav--open {
@@ -123,7 +148,7 @@ $main-menu-medium: $medium;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 840px) {
   .main-menu__link {
     text-transform: uppercase !important;
   }
