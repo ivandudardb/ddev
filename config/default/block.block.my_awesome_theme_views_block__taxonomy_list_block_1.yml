@@ -1,0 +1,29 @@
+uuid: 5e3a80e8-3214-497a-841d-86e044b1f737
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.taxonomy_list
+  module:
+    - system
+    - views
+  theme:
+    - my_awesome_theme
+id: my_awesome_theme_views_block__taxonomy_list_block_1
+theme: my_awesome_theme
+region: content
+weight: -32
+provider: null
+plugin: 'views_block:taxonomy_list-block_1'
+settings:
+  id: 'views_block:taxonomy_list-block_1'
+  label: 'taxonomy list'
+  label_display: '0'
+  provider: views
+  views_label: 'taxonomy list'
+  items_per_page: '6'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/category/*'

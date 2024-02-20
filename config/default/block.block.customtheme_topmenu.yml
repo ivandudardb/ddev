@@ -1,0 +1,25 @@
+uuid: 24e8f16c-f761-48e2-9c76-932e8fe58224
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.top-menu
+  module:
+    - system
+  theme:
+    - customtheme
+id: customtheme_topmenu
+theme: customtheme
+region: top_header
+weight: -35
+provider: null
+plugin: 'system_menu_block:top-menu'
+settings:
+  id: 'system_menu_block:top-menu'
+  label: 'Top Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,29 @@
+uuid: e2664e52-b892-4e7c-bf40-63e4a882c844
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.arts_main
+  module:
+    - system
+    - views
+  theme:
+    - my_awesome_theme
+id: my_awesome_theme_views_block__arts_main_block_1
+theme: my_awesome_theme
+region: content
+weight: -1
+provider: null
+plugin: 'views_block:arts_main-block_1'
+settings:
+  id: 'views_block:arts_main-block_1'
+  label: Arts
+  label_display: visible
+  provider: views
+  views_label: Arts
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

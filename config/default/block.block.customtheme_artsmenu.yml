@@ -1,0 +1,29 @@
+uuid: 771d9fbc-e659-4cc8-b3ef-10582f80b404
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.arts-menu
+  module:
+    - system
+  theme:
+    - customtheme
+id: customtheme_artsmenu
+theme: customtheme
+region: content
+weight: -9
+provider: null
+plugin: 'system_menu_block:arts-menu'
+settings:
+  id: 'system_menu_block:arts-menu'
+  label: 'arts menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/news/arts\r\n/news/culture\r\n/news/politics\r\n/news/style\r\n/news/travel"
