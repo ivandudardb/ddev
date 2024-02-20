@@ -29,6 +29,8 @@
         "drupal/social_media_links": "^2.9",
         "drupal/token_filter": "^2.1",
         "drush/drush": "^12.4"
+        "drupal/devel": "^5.0",
+        "drupal/webform": "^6.2"
     },
     "conflict": {
         "drupal/drupal": "*"
