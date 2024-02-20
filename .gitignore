@@ -4,3 +4,5 @@
 /web/modules/contrib
 /vendor
 /web/themes/contrib
+web/themes/custom/customtheme/node_modules
+web/themes/custom/my_awesome_theme
