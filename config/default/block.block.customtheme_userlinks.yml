@@ -1,0 +1,29 @@
+uuid: c4df2403-4bc6-4654-8b3e-f156913556fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.user-links
+  module:
+    - system
+  theme:
+    - customtheme
+id: customtheme_userlinks
+theme: customtheme
+region: content
+weight: -20
+provider: null
+plugin: 'system_menu_block:user-links'
+settings:
+  id: 'system_menu_block:user-links'
+  label: 'user links'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /user/1

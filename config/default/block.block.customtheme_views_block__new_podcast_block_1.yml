@@ -1,0 +1,29 @@
+uuid: d1439a2c-77af-4d0c-8446-807a2cced766
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.new_podcast
+  module:
+    - system
+    - views
+  theme:
+    - customtheme
+id: customtheme_views_block__new_podcast_block_1
+theme: customtheme
+region: content
+weight: 6
+provider: null
+plugin: 'views_block:new_podcast-block_1'
+settings:
+  id: 'views_block:new_podcast-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
