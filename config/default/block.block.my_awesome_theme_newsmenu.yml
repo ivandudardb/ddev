@@ -1,0 +1,29 @@
+uuid: 0111bcab-4865-47e2-ad85-c32fa46b889c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.news-menu
+  module:
+    - system
+  theme:
+    - my_awesome_theme
+id: my_awesome_theme_newsmenu
+theme: my_awesome_theme
+region: content
+weight: -30
+provider: null
+plugin: 'system_menu_block:news-menu'
+settings:
+  id: 'system_menu_block:news-menu'
+  label: 'news menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /news

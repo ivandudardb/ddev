@@ -1,0 +1,29 @@
+uuid: e50dcd03-6ff5-482c-bbf6-99f785ba84a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.business
+  module:
+    - system
+    - views
+  theme:
+    - customtheme
+id: customtheme_views_block__business_block_1
+theme: customtheme
+region: content
+weight: 5
+provider: null
+plugin: 'views_block:business-block_1'
+settings:
+  id: 'views_block:business-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

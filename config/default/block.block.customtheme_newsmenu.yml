@@ -1,0 +1,29 @@
+uuid: eb552e73-ce63-4d6c-8faf-65c455337396
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.news-menu
+  module:
+    - system
+  theme:
+    - customtheme
+id: customtheme_newsmenu
+theme: customtheme
+region: content
+weight: -11
+provider: null
+plugin: 'system_menu_block:news-menu'
+settings:
+  id: 'system_menu_block:news-menu'
+  label: 'news menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /news

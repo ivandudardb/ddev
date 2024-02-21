@@ -1,0 +1,31 @@
+uuid: 9550fca8-03d8-4be0-9c66-0981f3b3d8cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.contact
+  module:
+    - system
+    - webform
+  theme:
+    - customtheme
+id: customtheme_webform
+theme: customtheme
+region: content
+weight: 7
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Webform
+  label_display: '0'
+  provider: webform
+  webform_id: contact
+  default_data: ''
+  redirect: false
+  lazy: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

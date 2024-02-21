@@ -1,0 +1,29 @@
+uuid: 9e017a4e-5253-459b-8a87-158fa1c882e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.business-menu
+  module:
+    - system
+  theme:
+    - customtheme
+id: customtheme_businessmenu
+theme: customtheme
+region: content
+weight: -10
+provider: null
+plugin: 'system_menu_block:business-menu'
+settings:
+  id: 'system_menu_block:business-menu'
+  label: 'business menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/news/business\r\n/news/magazine\r\n/news/sport"

@@ -1,0 +1,25 @@
+uuid: 4946460d-1ae6-4aa7-9f26-bb8db23413fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.about-us
+  module:
+    - system
+  theme:
+    - customtheme
+id: customtheme_aboutus
+theme: customtheme
+region: content
+weight: -27
+provider: null
+plugin: 'system_menu_block:about-us'
+settings:
+  id: 'system_menu_block:about-us'
+  label: 'About Us'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

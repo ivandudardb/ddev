@@ -1,0 +1,29 @@
+uuid: 6abb185b-6d33-4421-8299-2fc0d133cc9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sport_main
+  module:
+    - system
+    - views
+  theme:
+    - customtheme
+id: customtheme_views_block__sport_main_block_1
+theme: customtheme
+region: content
+weight: 11
+provider: null
+plugin: 'views_block:sport_main-block_1'
+settings:
+  id: 'views_block:sport_main-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
