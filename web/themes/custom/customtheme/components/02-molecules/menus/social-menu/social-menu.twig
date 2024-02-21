@@ -2,7 +2,7 @@
 <div {{ bem(social_list_base_class) }}>
   <ul class="social-ul">
     {% for key, item in social_item %}
-      <div {{ bem('item') }}>
+      <div {{ bem('social-item') }}>
         <a href="{{ item.url }}">
           <img src="{{ item.image }}" alt="Social">
         </a>

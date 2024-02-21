@@ -1,5 +1,6 @@
 .top-menu-black_background {
   @include top-menu();
+  padding: 0 0 0 1rem;
 }
 
 .top-menu-black_background__item {

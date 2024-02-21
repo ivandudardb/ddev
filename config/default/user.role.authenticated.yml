@@ -10,7 +10,6 @@ dependencies:
     - contact
     - file
     - filter
-    - fontawesome
     - search
     - shortcut
     - system
@@ -23,7 +22,6 @@ is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
-  - 'access fontawesome additional settings'
   - 'access shortcuts'
   - 'access site-wide contact form'
   - 'delete own files'
