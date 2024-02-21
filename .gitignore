@@ -4,3 +4,5 @@
 /web/modules/contrib
 /vendor
 /web/themes/contrib
+.cache
+.editorconfig
