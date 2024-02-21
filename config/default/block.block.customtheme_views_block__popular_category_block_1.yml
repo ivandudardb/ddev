@@ -10,8 +10,8 @@ dependencies:
     - customtheme
 id: customtheme_views_block__popular_category_block_1
 theme: customtheme
-region: content
-weight: -18
+region: footer
+weight: -31
 provider: null
 plugin: 'views_block:popular_category-block_1'
 settings:

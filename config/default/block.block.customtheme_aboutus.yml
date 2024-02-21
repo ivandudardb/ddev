@@ -10,8 +10,8 @@ dependencies:
     - customtheme
 id: customtheme_aboutus
 theme: customtheme
-region: content
-weight: -27
+region: footer
+weight: -32
 provider: null
 plugin: 'system_menu_block:about-us'
 settings:

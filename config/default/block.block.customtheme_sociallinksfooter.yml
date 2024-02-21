@@ -10,8 +10,8 @@ dependencies:
     - customtheme
 id: customtheme_sociallinksfooter
 theme: customtheme
-region: content
-weight: -28
+region: footer
+weight: -33
 provider: null
 plugin: 'system_menu_block:social-links-footer'
 settings:

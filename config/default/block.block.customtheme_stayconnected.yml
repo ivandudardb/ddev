@@ -11,7 +11,7 @@ dependencies:
 id: customtheme_stayconnected
 theme: customtheme
 region: content
-weight: 8
+weight: 2
 provider: null
 plugin: 'system_menu_block:stay-connected'
 settings:

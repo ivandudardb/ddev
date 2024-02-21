@@ -12,7 +12,7 @@ dependencies:
 id: customtheme_views_block__must_read_arts_block_1
 theme: customtheme
 region: content
-weight: 16
+weight: 10
 provider: null
 plugin: 'views_block:must_read_arts-block_1'
 settings:

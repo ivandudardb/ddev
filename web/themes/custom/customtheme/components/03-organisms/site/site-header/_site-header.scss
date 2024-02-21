@@ -13,6 +13,15 @@
       flex-flow: row nowrap;
       justify-content: space-between;
       padding: $space 0;
+      width: 100%;
+
+      .header__menu {
+        width: 100%;
+
+        &wrapper {
+          width: 100%;
+        }
+      }
     }
   }
 
@@ -28,28 +37,16 @@
   }
 }
 
-.header__primary{
-  width: 100%;
-  .header__menu{
-    width: 100%;
-    &wrapper{
-      width: 100%;
-    }
-  }
-}
-
-
-
-.header__menu_wrapper{
+.header__menu_wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  .logo-and-date{
+  .logo-and-date {
     margin: 0 auto;
   }
 
-  .social-menu{
+  .social-menu {
     margin-left: 0;
   }
 
@@ -58,4 +55,3 @@
     display: block;
   }
 }
-

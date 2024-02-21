@@ -51,12 +51,14 @@ body p li ul {
 .top_header {
   background-color: $text;
 }
-.container{
+
+.container {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   @include container();
 }
-.header__inner{
+
+.header__inner {
   @include container();
 }
