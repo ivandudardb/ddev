@@ -1,0 +1,8 @@
+{% set body_weather = content['body'][0]['#text'] | striptags %}
+
+{%include "@atoms/text/text/03-weather.twig" with {
+  weather: body_weather
+}
+%}
+
+

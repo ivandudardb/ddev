@@ -1,7 +1,7 @@
 {
   "project": {
     "platform": "drupal",
-    "name": "customtheme",
+    "name": "Custom_theme",
     "machineName": "customtheme"
   },
   "starter": {

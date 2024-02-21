@@ -1,13 +1,12 @@
-{# Set classes #}
-{% set menu_class = 'social-menu' %}
-{% set list__base_class = menu_class %}
-{% set list__modifiers = menu_modifiers %}
-{% set list__blockname = menu_blockname %}
-
-{# List #}
-{% extends "@atoms/lists/list.twig" %}
-{% block list__content %}
-  {% for item in social_menu_items %}
-    {% include "@molecules/menus/social-menu/_social-menu-item.twig" %}
-  {% endfor %}
-{% endblock %}
+{% set social_list_base_class = 'social_list' %}
+<div {{ bem(social_list_base_class) }}>
+  <ul class="social-ul">
+    {% for key, item in social_item %}
+      <div {{ bem('social-item') }}>
+        <a href="{{ item.url }}">
+          <img src="{{ item.image }}" alt="Social">
+        </a>
+      </div>
+    {% endfor %}
+  </ul>
+</div>

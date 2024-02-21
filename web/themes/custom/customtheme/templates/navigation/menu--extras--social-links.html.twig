@@ -1,0 +1,11 @@
+{% set social_list = [] %}
+{% for key, item in items %}
+
+  {% set image_url = item.entity.fields.field_social_header_image.entity.fileuri %}
+  {% set image_uri = file_url(image_url) %}
+  {% set social_image = { 'image': image_uri, 'url': item.url } %}
+  {% set social_list = social_list|merge([social_image]) %}
+{% endfor %}
+{% include '@molecules/menus/social-menu/social-menu.twig' with  {
+  social_item: social_list
+} %}

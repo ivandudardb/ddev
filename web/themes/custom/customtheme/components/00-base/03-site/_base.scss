@@ -29,3 +29,34 @@ body {
   width: 1px;
   word-wrap: normal;
 }
+
+h3 a {
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h1 h2 a {
+  font-weight: 700;
+}
+
+h1 h2 h3 h4 h5 h6 a {
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+body p li ul {
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+.top_header {
+  background-color: $text;
+}
+.container{
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  @include container();
+}
+.header__inner{
+  @include container();
+}

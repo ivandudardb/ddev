@@ -20,15 +20,16 @@
         "drupal/core-composer-scaffold": "^10.2",
         "drupal/core-project-message": "^10.2",
         "drupal/core-recommended": "^10.2",
+        "drupal/devel": "^5.0",
         "drupal/emulsify_twig": "^4.0",
         "drupal/entity_pager": "^1.0",
-        "drush/drush": "^12.4",
+        "drupal/fontawesome": "^2.26",
         "drupal/menu_item_extras": "^3.0",
         "drupal/paragraphs": "^1.17",
         "drupal/social_media_links": "^2.9",
         "drupal/token_filter": "^2.1",
-        "drupal/devel": "^5.0",
-        "drupal/webform": "^6.2"
+        "drupal/webform": "^6.2",
+        "drush/drush": "^12.4"
     },
     "conflict": {
         "drupal/drupal": "*"

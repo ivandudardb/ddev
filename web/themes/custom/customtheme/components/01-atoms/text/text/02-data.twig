@@ -12,14 +12,17 @@
  *   for example: A formatted text field in Drupal
  */
 #}
-{% set blockquote__base_class = blockquote__base_class|default('blockquote') %}
+{% set data__base_class = data__base_class|default('data-p') %}
 
-{% set blockquote__attributes = {
-  class: bem(blockquote__base_class, blockquote__modifiers, blockquote__blockname),
+{% set data__attributes = {
+  class: bem(data__base_class, data__modifiers, data__blockname),
 } %}
 
-<blockquote {{ add_attributes(blockquote__attributes) }}>
-  {% block blockquote__content %}
-    {{ blockquote__content }}
-  {% endblock %}
-</blockquote>
+<div class="logo-and-date">
+  <p class="logo">
+    <a href="#" class="logo_link">PULSES PRO</a>
+  </p>
+  <p {{ add_attributes(data__attributes) }} >
+      {{ "now"|date('l, F j, Y') }}
+  </p>
+</div>

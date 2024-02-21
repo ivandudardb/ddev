@@ -18,7 +18,7 @@
 {# IE 11 support for SVG use - remove if not needed.
 ## See also emulsify.libraries.yml to remove library.
 #}
-{{ attach_library('emulsify/sprite') }}
+{{ attach_library('customtheme/sprite') }}
 {% set unique_name = icon__name ~ '-' ~ random() %}
 
 <svg {{ bem(icon__base_class, icon_modifiers, icon__blockname, icon_extra_class) }}
@@ -45,3 +45,4 @@
   {% endif %}
   <use xlink:href="{{ icon_url }}icons.svg#{{ icon__name }}"></use>
 </svg>
+

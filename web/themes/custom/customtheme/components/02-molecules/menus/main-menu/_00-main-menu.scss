@@ -3,7 +3,12 @@ $main-menu-medium: $medium;
 
 /* Nav */
 .main-nav {
-  display: none;
+  display: flex !important;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: left 0.6s ease-in-out;
 
   @include medium {
     display: block;
@@ -34,15 +39,184 @@ $main-menu-medium: $medium;
 .main-menu {
   @include list-reset;
 
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
   position: relative;
   z-index: 10;
   border-bottom: 1px solid;
-
   @include medium {
     border-bottom: none;
   }
 }
 
+@media screen and (min-width: 840px){
+  .main-nav{
+    position: static;
+  }
+  .main-menu__link {
+    text-transform: uppercase !important;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  html {
+    overflow-y: hidden;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 20px 0;
+    height: 113%;
+    overflow-y: hidden;
+    background: url(../../../../../../../sites/default/files/background/background.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &:before {
+      background: linear-gradient(to bottom,rgba(76,64,132,0.9) 0%,rgba(28,24,51,0.9) 100%);
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: .98;
+    }
+  }
+
+  .main-nav--open {
+    visibility: visible;
+    z-index: 150;
+  }
+
+  .main-menu {
+    display: flex;
+    flex-direction: column;
+    border: none !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    margin-top: 100px;
+  }
+
+  .main-menu__item {
+    border: none !important;
+    padding: 0;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  .main-menu__link {
+    text-transform: capitalize;
+    line-height: 21px !important;
+    font-size: 21px !important;
+    margin: 0 !important;
+    padding: 12px 30px 12px 12px !important;
+    display: inline !important;
+    @include white();
+  }
+
+  .mobile_container {
+    display: block !important;
+    position: relative !important;
+  }
+
+  .toggle-expand{
+    position: relative !important;
+    padding: 0 !important;
+    margin-top: -5rem !important;
+  }
+  .toggle-expand--open {
+    visibility: hidden;
+  }
+
+  .toggle-expand__close {
+    position: relative;
+    visibility: visible;
+    z-index: 1000!important;
+    background: transparent;
+  }
+
+  .toggle-expand__text_close {
+    font-size: 40px !important;
+  }
+
+  .main-menu__item--with-sub {
+    width: 70vh !important;
+  }
+
+  .main-menu__item--sub {
+    margin-left: 20px !important;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+
+  .toggle-expand--open {
+    visibility: visible;
+    z-index: 799 !important;
+    background-color: transparent !important;
+  }
+  .weather {
+    display: none;
+  }
+
+  .logo-and-date {
+    margin: 0 !important;
+
+    .logo {
+      .logo_link {
+        font-size: 24px;
+        line-height: 48px;
+        font-weight: 600;
+      }
+    }
+    .data-p {
+      display: none;
+    }
+  }
+
+  .social_list {
+    display: none;
+  }
+
+  .serch_a {
+    margin: 10px 80px 0 0;
+  }
+  .mobile_container {
+    text-align: right;
+
+    .toggle-expand {
+      width: 50px;
+
+      &__open{
+       margin: 18px;
+      }
+      &__close{
+        margin-top: -6rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .main-menu__link{
+    font-size: 12px;
+    line-height: 42px!important;
+    font-weight: 600!important;
+  }
+  .logo_link{
+    font-size: 34px;
+  }
+  .data-p{
+    font-size: 13px;
+  }
+}
 /*
  * Sub Navigation
  */
@@ -53,7 +227,6 @@ $main-menu-medium: $medium;
   overflow: hidden;
   width: 100%;
   border-bottom: none;
-  background-color: clr(muted);
 
   @include medium {
     position: absolute;
@@ -77,8 +250,7 @@ $main-menu-medium: $medium;
         &.active,
         &:active,
         &:hover {
-          background-color: clr(accent-high);
-          color: clr(background);
+          color: clr(secondary);
         }
       }
     }
@@ -87,11 +259,5 @@ $main-menu-medium: $medium;
   /* See main-menu.js */
   &-open {
     height: auto;
-  }
-}
-
-.main-menu--sub-2 {
-  @include medium {
-    display: none; /* Never shown on large screens */
   }
 }
