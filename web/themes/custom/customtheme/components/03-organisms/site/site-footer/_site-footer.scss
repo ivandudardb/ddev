@@ -1,6 +1,6 @@
 .footer {
-  background-color: clr(highlight-high);
   padding: $space 0;
+  display: flex;
 
   &__inner {
     @include wrapper;
@@ -26,6 +26,8 @@
 }
 
 .footer__menu {
+  display: flex;
+
   @include large {
     flex: 1 1 100%;
     margin-left: auto;

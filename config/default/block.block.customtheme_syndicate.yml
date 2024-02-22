@@ -11,7 +11,7 @@ _core:
 id: customtheme_syndicate
 theme: customtheme
 region: content
-weight: -17
+weight: -23
 provider: null
 plugin: node_syndicate_block
 settings:
