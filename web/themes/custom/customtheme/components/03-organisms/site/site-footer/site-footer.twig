@@ -5,8 +5,9 @@
     <div {{ bem('menu', [], footer__base_class) }}>
       {% include "@atoms/text/text/logo.twig" %}
       {% include "@atoms/text/text/copyright.twig" %}
+      {% include "@molecules/menus/inline/inline-menu.twig" %}
       {% block footer__menu %}
-        {% include "@molecules/menus/inline/inline-menu.twig" %}
+
       {% endblock %}
     </div>
   </div>
