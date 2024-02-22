@@ -2,6 +2,7 @@
 
 <footer {{ bem(footer__base_class) }}>
   <div {{ bem('inner', [], footer__base_class) }}>
+    <div {{ bem('footer_wrapper', [], footer__base_class) }}>
     <div {{ bem('menu', [], footer__base_class) }}>
     <div class="left_footer">
       {% include "@atoms/text/text/logo.twig" %}
@@ -13,6 +14,7 @@
         {% include "@molecules/menus/inline/inline-menu.twig" %}
       {% endblock %}
 
+    </div>
     </div>
   </div>
 </footer>
