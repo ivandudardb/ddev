@@ -11,7 +11,7 @@ dependencies:
 id: customtheme_aboutus
 theme: customtheme
 region: footer
-weight: -32
+weight: -33
 provider: null
 plugin: 'system_menu_block:about-us'
 settings:

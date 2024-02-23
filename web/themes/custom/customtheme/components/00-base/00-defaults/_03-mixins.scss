@@ -85,6 +85,13 @@ $outer-container-break: $small;
   font-weight: 400;
 }
 
+@mixin link-footer {
+  text-decoration: none;
+  color: $white;
+  line-height: 1.1;
+  font-weight: 500;
+}
+
 @mixin link-hover {
   color: $purple !important;
 }
