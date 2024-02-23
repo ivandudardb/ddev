@@ -1,0 +1,11 @@
+{% if not is_inline %}
+  {% include "field.html.twig" %}
+{% else %}
+  <span{{ attributes }}>
+    {%- for item in items -%}
+      {% set datetime_attr = item.content['#context'].attributes.datetime %}
+      {% set date = datetime_attr|date_modify('now') %}
+      {{ date|date('F j, Y') }}
+    {%- endfor -%}
+  </span>
+{% endif %}

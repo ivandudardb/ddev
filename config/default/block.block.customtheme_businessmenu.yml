@@ -11,7 +11,7 @@ dependencies:
 id: customtheme_businessmenu
 theme: customtheme
 region: content
-weight: -16
+weight: -17
 provider: null
 plugin: 'system_menu_block:business-menu'
 settings:

@@ -176,8 +176,8 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  block_1:
-    id: block_1
+  news_teaser:
+    id: news_teaser
     display_title: Block
     display_plugin: block
     position: 1

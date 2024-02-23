@@ -11,13 +11,13 @@ _core:
 id: customtheme_page_title
 theme: customtheme
 region: content
-weight: -36
+weight: -32
 provider: null
 plugin: page_title_block
 settings:
   id: page_title_block
-  label: CATEGORY
-  label_display: '0'
+  label: category
+  label_display: visible
   provider: core
 visibility:
   request_path:

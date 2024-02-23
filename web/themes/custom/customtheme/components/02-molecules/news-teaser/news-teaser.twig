@@ -1,0 +1,36 @@
+
+<div class="first-block">
+  <div class="image">
+    {% include "@atoms/node-teaser-image/node-teaser-image.twig" with {
+      content: content
+    } %}
+
+  </div>
+  <div class="taxonomy-term">
+    {% include "@atoms/node-teaser-term/node-teaser-term.twig" with {
+      content: content
+    }
+    %}
+  </div>
+</div>
+
+<div class="second-block">
+  <div class="title">
+    {% include "@atoms/title/title.twig" with {
+      node_url: url,
+      node_title: node.label
+    }
+    %}
+  </div>
+  <div class="author-info">
+    {% include "@atoms/node-teaser-date/node-teaser-date.twig" with {
+      author_name: author_name,
+      node: node
+    } %}
+  </div>
+  <div class="text">
+    {% include "@atoms/node-teaser-text/node-teaser-text.twig" with {
+      node: node
+    } %}
+  </div>
+</div>

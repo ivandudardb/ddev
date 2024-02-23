@@ -1,4 +1,4 @@
-uuid: 9bace1cc-9076-427b-9bec-412ebf0f3407
+uuid: afb48870-3a83-412e-9e6b-d335c24f81e4
 langcode: en
 status: true
 dependencies:
@@ -9,14 +9,14 @@ dependencies:
     - views
   theme:
     - customtheme
-id: customtheme_views_block__advertisement_wide_block_1_2
+id: customtheme_views_block__advertisement_wide_advertisement_wide
 theme: customtheme
 region: content
-weight: -27
+weight: -34
 provider: null
-plugin: 'views_block:advertisement_wide-block_1'
+plugin: 'views_block:advertisement_wide-advertisement_wide'
 settings:
-  id: 'views_block:advertisement_wide-block_1'
+  id: 'views_block:advertisement_wide-advertisement_wide'
   label: ''
   label_display: visible
   provider: views
@@ -25,5 +25,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    negate: true
-    pages: "/newspaper_pulses_pro\r\n/user/*"
+    negate: false
+    pages: '/category/*'
