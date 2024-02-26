@@ -9,7 +9,7 @@ _core:
 id: customtheme_primary_admin_actions
 theme: customtheme
 region: content
-weight: -28
+weight: -29
 provider: null
 plugin: local_actions_block
 settings:
