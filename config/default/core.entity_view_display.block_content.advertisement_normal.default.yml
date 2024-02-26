@@ -8,24 +8,11 @@ dependencies:
     - field.field.block_content.advertisement_normal.field_advertisement_normal_image
   module:
     - image
-    - link
 id: block_content.advertisement_normal.default
 targetEntityType: block_content
 bundle: advertisement_normal
 mode: default
 content:
-  field_advertisement_link:
-    type: link
-    label: hidden
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    weight: 1
-    region: content
   field_advertisement_normal_image:
     type: image
     label: hidden
@@ -37,4 +24,5 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  field_advertisement_link: true

@@ -1,16 +1,1 @@
-
-
-{% set advertisement_link = view.field.field_advertisement_link.original_value %}
-{% set cleaned_advertisement_link = advertisement_link|replace({'"': ''}) %}
-
-
-
-
-
-{% for key, item in view.field %}
-  <div {{ bem('social-item') }}>
-    <a href="{{ cleaned_advertisement_link }}">
-      <img src="{{ item.original_value }}" alt="Social">
-    </a>
-  </div>
-{% endfor %}
+{% include "@atoms/advertisement/advertisement-wide.twig" %}
