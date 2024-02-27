@@ -12,7 +12,7 @@ dependencies:
 id: customtheme_views_block__news_main_block_1
 theme: customtheme
 region: content
-weight: 17
+weight: 18
 provider: null
 plugin: 'views_block:news_main-block_1'
 settings:

@@ -26,7 +26,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Advertisement
+      title: '- Advertisement -'
       fields:
         field_advertisement_link:
           id: field_advertisement_link
@@ -249,8 +249,8 @@ display:
       tags:
         - 'config:field.storage.node.field_advertisement_link'
         - 'config:field.storage.node.field_dvertisement_photo'
-  block_1:
-    id: block_1
+  advertisement_wide:
+    id: advertisement_wide
     display_title: Block
     display_plugin: block
     position: 1

@@ -1,0 +1,6 @@
+{% set advertisement = view.field.field_dvertisement_photo.original_value %}
+
+{% include "@atoms/advertisement/advertisement-wide.twig" with {
+  advertisement: advertisement
+}
+%}

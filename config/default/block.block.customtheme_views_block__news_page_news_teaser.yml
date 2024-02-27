@@ -1,24 +1,24 @@
-uuid: d6a35cab-554b-44e2-b7d5-d2f24b71541c
+uuid: 9db0340f-e3d7-4d91-9a5e-c8a2f0f8e483
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.advertisement_wide
+    - views.view.news_page
   module:
     - system
     - views
   theme:
     - customtheme
-id: customtheme_views_block__advertisement_wide_block_1
+id: customtheme_views_block__news_page_news_teaser
 theme: customtheme
 region: content
-weight: -32
+weight: 1
 provider: null
-plugin: 'views_block:advertisement_wide-block_1'
+plugin: 'views_block:news_page-news_teaser'
 settings:
-  id: 'views_block:advertisement_wide-block_1'
+  id: 'views_block:news_page-news_teaser'
   label: ''
-  label_display: visible
+  label_display: '0'
   provider: views
   views_label: ''
   items_per_page: none
@@ -26,4 +26,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: "/category/*\r\n/user/*"
+    pages: /category/news
