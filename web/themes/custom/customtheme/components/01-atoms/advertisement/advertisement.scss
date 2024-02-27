@@ -7,4 +7,10 @@
 
 .adv-wide {
   padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 90%;
+  }
 }

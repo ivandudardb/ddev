@@ -40,11 +40,12 @@
 
       .views-row {
         margin-right: 5px;
+
         .contextual-region {
           h2 {
             a {
               color: $link_hover;
-              padding: 2px 3px 2px;
+              padding: 2px 3px;
               font-size: 10px;
               text-transform: uppercase;
               letter-spacing: 1px;
@@ -85,16 +86,17 @@
         margin: 0;
         padding: 0;
         line-height: 1;
-       a {
-         padding: 3px 4px 2px;
-         background-color: #4c4084;
-         font-weight: 400;
-         text-transform: uppercase;
-         letter-spacing: 1px;
-         margin: 0;
-         font-size: 10px;
-         color: $link_hover;
-       }
+
+        a {
+          padding: 3px 4px 2px;
+          background-color: #4c4084;
+          font-weight: 400;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          margin: 0;
+          font-size: 10px;
+          color: $link_hover;
+        }
       }
     }
   }
@@ -104,7 +106,7 @@
 
     .title {
       a {
-       @include title;
+        @include title;
 
         &:hover {
           @include title-hover;
@@ -124,8 +126,8 @@
       span {
         display: none;
         @include date;
-
       }
+
       .dash {
         display: none;
       }
@@ -135,6 +137,7 @@
 
 #block-customtheme-views-block-latest-news-block-1--2 {
   border: $border;
+  margin-bottom: 40px;
 }
 
 .latest_news {
@@ -148,7 +151,7 @@
   .views-row {
     min-width: 108px;
     margin-bottom: 15px;
-    padding: 5px 5px 75px 5px;
+    padding: 5px 5px 75px;
 
     .views-field-field-photo {
       float: right;
@@ -205,20 +208,55 @@
 @media screen and (min-width: 650px) {
   .latest_news {
     .views-row {
-      padding: 5px 5px 115px 5px;
+      padding: 40px 10px 100px;
+
+      .views-field-title {
+        line-height: 1.1;
+
+        .field-content {
+          a {
+            font-size: 15px;
+            line-height: 1.1;
+
+          }
+        }
+      }
+
+      .views-field-field-photo {
+        .field-content {
+          img {
+            min-width: 65px;
+          }
+        }
+      }
     }
   }
 }
 
 @media screen and (min-width: 840px) {
   .latest_news {
-    .views-row {
-      padding: 5px 5px 35px 5px;
-    }
-  }
-
-  .latest_news {
+    padding: 7px;
     margin-top: 150px;
+
+    h2 {
+      font-size: 18px;
+    }
+
+    .views-row {
+      padding: 5px 5px 25px;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+      .views-field-field-photo {
+        .field-content {
+          img {
+            min-width: 53px;
+            max-width: 65px;
+          }
+        }
+      }
+    }
   }
 
   #block-customtheme-page-title {
@@ -232,12 +270,5 @@
   .category_list {
     margin-right: -45%;
     padding-bottom: 10px;
-  }
-  .views-field-field-photo {
-    .field-content {
-      img {
-        min-width: 65px;
-      }
-    }
   }
 }
