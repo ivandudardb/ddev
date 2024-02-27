@@ -13,7 +13,7 @@ _core:
 id: customtheme_main_menu
 theme: customtheme
 region: navbar
-weight: -36
+weight: -33
 provider: null
 plugin: 'system_menu_block:main'
 settings:

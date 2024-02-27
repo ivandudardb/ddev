@@ -16,10 +16,10 @@ dependencies:
     - field.field.node.new.field_slogan
     - field.field.node.new.field_teaser_text
     - field.field.node.new.field_text_and_image
-    - image.style.teaser
     - node.type.new
+    - responsive_image.styles.mobile_news_teaser
   module:
-    - image
+    - responsive_image
     - user
 id: node.new.teaser
 targetEntityType: node
@@ -35,11 +35,11 @@ content:
     weight: 0
     region: content
   field_photo:
-    type: image
+    type: responsive_image
     label: hidden
     settings:
-      image_link: ''
-      image_style: teaser
+      responsive_image_style: mobile_news_teaser
+      image_link: content
       image_loading:
         attribute: lazy
     third_party_settings: {  }

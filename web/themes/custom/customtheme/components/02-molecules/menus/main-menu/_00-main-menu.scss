@@ -50,7 +50,7 @@ $main-menu-medium: $medium;
   }
 }
 
-@media screen and (min-width: 840px) {
+@media screen and (min-width: 768px) {
   .main-nav {
     position: static;
   }
@@ -60,7 +60,7 @@ $main-menu-medium: $medium;
   }
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 768px) {
   .main-nav {
     position: fixed;
     top: 0;
