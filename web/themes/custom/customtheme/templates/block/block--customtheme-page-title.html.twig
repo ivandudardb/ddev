@@ -1,7 +1,11 @@
 <div {{ bem('block') }}>
   {{ title_prefix }}
   {% if label %}
-    <h2 class="category_title">Category</h2>
+    <h2 class="category_title">
+    {% trans %}
+      Category
+    {% endtrans %}
+    </h2>
   {% endif %}
   {{ title_suffix }}
   {% block content %}
