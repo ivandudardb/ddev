@@ -11,7 +11,7 @@ _core:
 id: customtheme_page_title
 theme: customtheme
 region: content
-weight: -32
+weight: -33
 provider: null
 plugin: page_title_block
 settings:
@@ -23,4 +23,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: "/category/*\r\n/node/162"
+    pages: "/category/*\r\n"

@@ -70,7 +70,7 @@
 
     &__h2 {
       text-align: center;
-      color: $block-title
+      color: $block-title-footer
     }
 
     .top-menu-black_background {
@@ -78,7 +78,7 @@
 
       .top-menu-black_background__item {
         :hover {
-          color: $block-title !important;
+          color: $block-title-footer !important;
         }
 
         .top-menu-black_background__link {
@@ -113,7 +113,7 @@
         display: flex;
 
         :hover {
-          color: $block-title !important;
+          color: $block-title-footer !important;
         }
 
         .views-field-name {
@@ -165,7 +165,7 @@
               @include link-footer;
 
               :hover {
-                color: $block-title !important;
+                color: $block-title-footer !important;
               }
             }
           }

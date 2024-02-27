@@ -11,8 +11,8 @@ dependencies:
     - customtheme
 id: customtheme_views_block__advertisement_wide_advertisement_wide
 theme: customtheme
-region: content
-weight: -34
+region: navbar
+weight: -32
 provider: null
 plugin: 'views_block:advertisement_wide-advertisement_wide'
 settings:
