@@ -1,0 +1,14 @@
+uuid: 741cf1aa-2fd4-4c44-8ae2-5b3997f9ed85
+langcode: en
+status: true
+dependencies: {  }
+name: teaser_mobile
+label: 'teaser mobile'
+effects:
+  2a1c34be-9167-4d5d-8a74-09ce408b7c30:
+    uuid: 2a1c34be-9167-4d5d-8a74-09ce408b7c30
+    id: image_resize
+    weight: 2
+    data:
+      width: 212
+      height: 212
