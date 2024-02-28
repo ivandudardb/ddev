@@ -11,7 +11,7 @@ dependencies:
 id: customtheme_newsmenu
 theme: customtheme
 region: content
-weight: -14
+weight: -13
 provider: null
 plugin: 'system_menu_block:news-menu'
 settings:

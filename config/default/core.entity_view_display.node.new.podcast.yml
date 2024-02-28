@@ -1,9 +1,9 @@
-uuid: 33a80d8e-5e6e-403e-97f0-3b1c485b29fe
+uuid: b9dc952e-3014-4bfc-ab51-a7500e5b640b
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.podcast
     - field.field.node.new.body
     - field.field.node.new.field_audio
     - field.field.node.new.field_category
@@ -18,52 +18,58 @@ dependencies:
     - field.field.node.new.field_teaser_text
     - field.field.node.new.field_text_and_image
     - node.type.new
-    - responsive_image.styles.mobile_news_teaser
+    - responsive_image.styles.new_podcast
   module:
+    - file
+    - layout_builder
     - responsive_image
     - user
-id: node.new.teaser
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.new.podcast
 targetEntityType: node
 bundle: new
-mode: teaser
+mode: podcast
 content:
-  field_category:
-    type: entity_reference_label
+  addtoany:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_audio:
+    type: file_audio
     label: hidden
     settings:
-      link: true
+      controls: true
+      autoplay: false
+      loop: false
+      multiple_file_display_type: tags
     third_party_settings: {  }
     weight: 0
     region: content
-  field_photo:
+  field_photo_for_new_podcast:
     type: responsive_image
     label: hidden
     settings:
-      responsive_image_style: mobile_news_teaser
+      responsive_image_style: new_podcast
       image_link: content
       image_loading:
         attribute: lazy
     third_party_settings: {  }
     weight: 1
     region: content
-  field_teaser_text:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 2
-    region: content
 hidden:
-  addtoany: true
   body: true
-  field_audio: true
+  field_category: true
   field_comments: true
   field_conclusion: true
   field_middle_photo: true
   field_paragraphs: true
-  field_photo_for_new_podcast: true
+  field_photo: true
   field_regular_text: true
   field_slogan: true
+  field_teaser_text: true
   field_text_and_image: true
   links: true

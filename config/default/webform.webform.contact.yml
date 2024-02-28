@@ -19,14 +19,13 @@ description: 'Basic email contact webform.'
 categories: {  }
 elements: |-
   name:
-    '#title': 'Your Email'
+    '#title': 'Subscribe to our newsletter'
     '#type': email
     '#required': true
-    '#default_value': '[current-user:mail]'
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
-    '#submit__label': 'Send message'
+    '#submit__label': Subscribe
 css: ''
 javascript: ''
 settings:

@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.new.field_middle_photo
     - field.field.node.new.field_paragraphs
     - field.field.node.new.field_photo
+    - field.field.node.new.field_photo_for_new_podcast
     - field.field.node.new.field_regular_text
     - field.field.node.new.field_slogan
     - field.field.node.new.field_teaser_text
@@ -125,6 +126,14 @@ content:
   field_photo:
     type: image_image
     weight: 27
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_photo_for_new_podcast:
+    type: image_image
+    weight: 37
     region: content
     settings:
       progress_indicator: throbber

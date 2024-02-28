@@ -1,0 +1,14 @@
+uuid: 7ebb8f55-81f1-45ce-9105-885ffd0a7258
+langcode: en
+status: true
+dependencies: {  }
+name: new_podcast
+label: 'New Podcast'
+effects:
+  49f5e6d6-8a3d-40a7-9c60-fd3c2f7f33ef:
+    uuid: 49f5e6d6-8a3d-40a7-9c60-fd3c2f7f33ef
+    id: image_resize
+    weight: 1
+    data:
+      width: 93
+      height: 93

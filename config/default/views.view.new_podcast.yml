@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.podcast
     - field.storage.node.field_audio
     - field.storage.node.field_photo
     - image.style.latest_pics
@@ -468,7 +469,10 @@ display:
       style:
         type: default
       row:
-        type: fields
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: podcast
       query:
         type: views_query
         options:
@@ -491,8 +495,8 @@ display:
       tags:
         - 'config:field.storage.node.field_audio'
         - 'config:field.storage.node.field_photo'
-  block_1:
-    id: block_1
+  new_podcast:
+    id: new_podcast
     display_title: Block
     display_plugin: block
     position: 1
