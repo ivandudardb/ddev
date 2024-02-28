@@ -1,0 +1,14 @@
+uuid: 51cf523a-8095-496d-8b41-58ce12776f0c
+langcode: en
+status: true
+dependencies: {  }
+name: right_sidebar_main_page
+label: 'right sidebar main page'
+effects:
+  d0f9b241-e19a-499c-9472-ba47f1ac8e45:
+    uuid: d0f9b241-e19a-499c-9472-ba47f1ac8e45
+    id: image_resize
+    weight: 1
+    data:
+      width: 78
+      height: 78

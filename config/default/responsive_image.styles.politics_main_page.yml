@@ -1,0 +1,39 @@
+uuid: ccacb560-8208-4ca2-b60e-65a8db7f5343
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.politics_main_page
+    - image.style.politics_main_page_mobile
+  theme:
+    - customtheme
+id: politics_main_page
+label: 'politics main page'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: politics_main_page
+    breakpoint_id: customtheme.large
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: politics_main_page
+    breakpoint_id: customtheme.medium
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: politics_main_page_mobile
+    breakpoint_id: customtheme.small-large
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: politics_main_page_mobile
+    breakpoint_id: customtheme.small-med
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: politics_main_page_mobile
+    breakpoint_id: customtheme.small
+    multiplier: 1x
+breakpoint_group: customtheme
+fallback_image_style: politics_main_page

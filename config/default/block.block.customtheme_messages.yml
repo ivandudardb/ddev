@@ -11,7 +11,7 @@ _core:
 id: customtheme_messages
 theme: customtheme
 region: content
-weight: -22
+weight: -18
 provider: null
 plugin: system_messages_block
 settings:

@@ -4,13 +4,13 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_photo
-    - image.style.latest_pics
+    - responsive_image.styles.right_sidebar_main_page
     - taxonomy.vocabulary.news
   content:
     - 'taxonomy_term:news:832ea5a3-5909-4ef5-94e1-fc9667c40ed6'
   module:
-    - image
     - node
+    - responsive_image
     - taxonomy
     - user
 id: culture_main
@@ -203,10 +203,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: image
+          type: responsive_image
           settings:
+            responsive_image_style: right_sidebar_main_page
             image_link: content
-            image_style: latest_pics
             image_loading:
               attribute: lazy
           group_column: ''

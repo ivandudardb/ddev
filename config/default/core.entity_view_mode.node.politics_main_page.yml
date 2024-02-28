@@ -1,0 +1,11 @@
+uuid: c044cc05-3598-4215-a1f3-51b4426af619
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.politics_main_page
+label: 'politics main page'
+description: ''
+targetEntityType: node
+cache: true

@@ -1,4 +1,4 @@
-uuid: f275a38f-367f-4f2c-8a7c-db17c0209e75
+uuid: 5f51f348-ec5f-4213-93ba-adeeada98b48
 langcode: en
 status: true
 dependencies:
@@ -9,21 +9,21 @@ dependencies:
     - views
   theme:
     - customtheme
-id: customtheme_views_block__politics_page_block_1
+id: customtheme_views_block__politics_page_politics_main_page
 theme: customtheme
 region: content
-weight: -5
+weight: -23
 provider: null
-plugin: 'views_block:politics_page-block_1'
+plugin: 'views_block:politics_page-politics_main_page'
 settings:
-  id: 'views_block:politics_page-block_1'
+  id: 'views_block:politics_page-politics_main_page'
   label: ''
-  label_display: '0'
+  label_display: visible
   provider: views
   views_label: ''
-  items_per_page: none
+  items_per_page: '5'
 visibility:
   request_path:
     id: request_path
     negate: false
-    pages: /news/politics
+    pages: '<front>'
