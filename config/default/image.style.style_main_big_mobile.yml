@@ -1,0 +1,14 @@
+uuid: a495e96b-96c4-4bb4-bca1-c752fb4ed1f8
+langcode: en
+status: true
+dependencies: {  }
+name: style_main_big_mobile
+label: 'style main big mobile'
+effects:
+  9738507e-18f5-496a-807d-690708576c6d:
+    uuid: 9738507e-18f5-496a-807d-690708576c6d
+    id: image_resize
+    weight: 1
+    data:
+      width: 712
+      height: 534

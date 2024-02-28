@@ -1,26 +1,26 @@
-uuid: e8570719-c67f-44bb-9aa7-567145f6c71e
+uuid: fce1bb86-8ffb-4405-bd3b-79e1bc36945d
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.style_main_big
+    - views.view.arts_main
   module:
     - system
     - views
   theme:
     - customtheme
-id: customtheme_views_block__style_main_big_block_1
+id: customtheme_views_block__arts_main_arts_main
 theme: customtheme
 region: content
-weight: 13
+weight: -15
 provider: null
-plugin: 'views_block:style_main_big-block_1'
+plugin: 'views_block:arts_main-arts_main'
 settings:
-  id: 'views_block:style_main_big-block_1'
-  label: ''
+  id: 'views_block:arts_main-arts_main'
+  label: arts
   label_display: visible
   provider: views
-  views_label: ''
+  views_label: arts
   items_per_page: none
 visibility:
   request_path:

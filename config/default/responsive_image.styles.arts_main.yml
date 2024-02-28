@@ -1,0 +1,39 @@
+uuid: aac92076-d1ac-4c18-ba2d-adc4a93140a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.arts_main
+    - image.style.arts_main_mobile
+  theme:
+    - customtheme
+id: arts_main
+label: 'arts main'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: arts_main
+    breakpoint_id: customtheme.large
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: arts_main
+    breakpoint_id: customtheme.medium
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: arts_main_mobile
+    breakpoint_id: customtheme.small-large
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: arts_main_mobile
+    breakpoint_id: customtheme.small-med
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: arts_main_mobile
+    breakpoint_id: customtheme.small
+    multiplier: 1x
+breakpoint_group: customtheme
+fallback_image_style: arts_main

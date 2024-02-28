@@ -12,7 +12,7 @@ dependencies:
 id: customtheme_views_block__politics_page_politics_main_page
 theme: customtheme
 region: content
-weight: -24
+weight: -23
 provider: null
 plugin: 'views_block:politics_page-politics_main_page'
 settings:
