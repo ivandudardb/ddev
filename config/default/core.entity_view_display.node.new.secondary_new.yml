@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.new.field_middle_photo
     - field.field.node.new.field_paragraphs
     - field.field.node.new.field_photo
+    - field.field.node.new.field_photo_for_new_podcast
     - field.field.node.new.field_regular_text
     - field.field.node.new.field_slogan
     - field.field.node.new.field_teaser_text
@@ -62,6 +63,7 @@ hidden:
   field_conclusion: true
   field_middle_photo: true
   field_paragraphs: true
+  field_photo_for_new_podcast: true
   field_regular_text: true
   field_slogan: true
   field_teaser_text: true

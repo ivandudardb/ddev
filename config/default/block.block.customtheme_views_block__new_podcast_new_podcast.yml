@@ -1,4 +1,4 @@
-uuid: d1439a2c-77af-4d0c-8446-807a2cced766
+uuid: c96766d0-89e6-4a36-a9f3-edfed159c0b1
 langcode: en
 status: true
 dependencies:
@@ -9,14 +9,14 @@ dependencies:
     - views
   theme:
     - customtheme
-id: customtheme_views_block__new_podcast_block_1
+id: customtheme_views_block__new_podcast_new_podcast
 theme: customtheme
 region: content
-weight: -1
+weight: -28
 provider: null
-plugin: 'views_block:new_podcast-block_1'
+plugin: 'views_block:new_podcast-new_podcast'
 settings:
-  id: 'views_block:new_podcast-block_1'
+  id: 'views_block:new_podcast-new_podcast'
   label: ''
   label_display: visible
   provider: views

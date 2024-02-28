@@ -11,7 +11,7 @@ _core:
 id: customtheme_help
 theme: customtheme
 region: content
-weight: -26
+weight: -25
 provider: null
 plugin: help_block
 settings:
