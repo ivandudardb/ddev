@@ -1,0 +1,14 @@
+uuid: 88fddae4-4f27-4ed5-ad86-110e8159fdcf
+langcode: en
+status: true
+dependencies: {  }
+name: must_read_secondary_new_mobile
+label: 'Must read secondary new mobile'
+effects:
+  22e664c7-09e0-4a4f-85ba-02c1cad9afd8:
+    uuid: 22e664c7-09e0-4a4f-85ba-02c1cad9afd8
+    id: image_resize
+    weight: 1
+    data:
+      width: 351
+      height: 210

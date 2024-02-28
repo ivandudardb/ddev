@@ -1,22 +1,22 @@
-uuid: d8e84620-0223-48a9-ae43-a47cad456168
+uuid: 8f7c7652-5e56-4f62-b053-f7290f352b10
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.sport_page
+    - views.view.must_read_politics
   module:
     - system
     - views
   theme:
     - customtheme
-id: customtheme_views_block__sport_page_block_1
+id: customtheme_views_block__must_read_politics_must_read_main_new
 theme: customtheme
 region: content
-weight: 6
+weight: -19
 provider: null
-plugin: 'views_block:sport_page-block_1'
+plugin: 'views_block:must_read_politics-must_read_main_new'
 settings:
-  id: 'views_block:sport_page-block_1'
+  id: 'views_block:must_read_politics-must_read_main_new'
   label: ''
   label_display: '0'
   provider: views
@@ -26,4 +26,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: /news/sport
+    pages: '<front>'

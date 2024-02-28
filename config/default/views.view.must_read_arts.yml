@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.must_read_secondary_new
     - field.storage.node.field_photo
     - image.style.must_read_arts
     - node.type.new
@@ -453,7 +454,10 @@ display:
       style:
         type: default
       row:
-        type: fields
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: must_read_secondary_new
       query:
         type: views_query
         options:
@@ -475,8 +479,8 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_photo'
-  block_1:
-    id: block_1
+  must_read_secondary_new:
+    id: must_read_secondary_new
     display_title: Block
     display_plugin: block
     position: 1
