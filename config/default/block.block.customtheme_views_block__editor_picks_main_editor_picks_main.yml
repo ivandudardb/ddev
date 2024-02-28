@@ -1,4 +1,4 @@
-uuid: 26c1c5ce-a088-4dae-901e-fcd075c2d70a
+uuid: af355fee-98ab-45db-bd71-3bc6e5fb3ac7
 langcode: en
 status: true
 dependencies:
@@ -9,14 +9,14 @@ dependencies:
     - views
   theme:
     - customtheme
-id: customtheme_views_block__editor_picks_main_block_1
+id: customtheme_views_block__editor_picks_main_editor_picks_main
 theme: customtheme
 region: content
-weight: -5
+weight: -31
 provider: null
-plugin: 'views_block:editor_picks_main-block_1'
+plugin: 'views_block:editor_picks_main-editor_picks_main_page'
 settings:
-  id: 'views_block:editor_picks_main-block_1'
+  id: 'views_block:editor_picks_main-editor_picks_main_page'
   label: ''
   label_display: visible
   provider: views

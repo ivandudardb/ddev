@@ -1,22 +1,22 @@
-uuid: e6201287-9053-43a3-9c26-5b291dfd535c
+uuid: d4bdab7d-c05c-4877-bcef-86e6f58f03c1
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.main_new
+    - views.view.few_main_news
   module:
     - system
     - views
   theme:
     - customtheme
-id: customtheme_views_block__main_new_block_1
+id: customtheme_views_block__few_main_news_secondary_news
 theme: customtheme
 region: content
-weight: -7
+weight: -32
 provider: null
-plugin: 'views_block:main_new-block_1'
+plugin: 'views_block:few_main_news-secondary_news'
 settings:
-  id: 'views_block:main_new-block_1'
+  id: 'views_block:few_main_news-secondary_news'
   label: ''
   label_display: '0'
   provider: views

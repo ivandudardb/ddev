@@ -1,0 +1,14 @@
+uuid: ac9682d5-b76b-418a-9f91-ea4512924ca1
+langcode: en
+status: true
+dependencies: {  }
+name: round_photo_main_mobile
+label: 'round photo main mobile'
+effects:
+  598ea526-a655-48f1-8278-6a3f551d601a:
+    uuid: 598ea526-a655-48f1-8278-6a3f551d601a
+    id: image_resize
+    weight: 1
+    data:
+      width: 143
+      height: 143

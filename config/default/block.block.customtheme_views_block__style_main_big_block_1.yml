@@ -12,7 +12,7 @@ dependencies:
 id: customtheme_views_block__style_main_big_block_1
 theme: customtheme
 region: content
-weight: 12
+weight: 13
 provider: null
 plugin: 'views_block:style_main_big-block_1'
 settings:

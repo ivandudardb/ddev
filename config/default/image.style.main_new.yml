@@ -10,5 +10,5 @@ effects:
     id: image_resize
     weight: 1
     data:
-      width: 650
-      height: 490
+      width: 698
+      height: 523

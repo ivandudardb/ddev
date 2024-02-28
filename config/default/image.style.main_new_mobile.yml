@@ -1,0 +1,14 @@
+uuid: 262fb226-40c3-48b6-96e5-339ccc9321b6
+langcode: en
+status: true
+dependencies: {  }
+name: main_new_mobile
+label: 'main new mobile'
+effects:
+  536f512d-7a80-43fa-8aff-ce36f31dfaef:
+    uuid: 536f512d-7a80-43fa-8aff-ce36f31dfaef
+    id: image_resize
+    weight: 1
+    data:
+      width: 710
+      height: 531
