@@ -12,7 +12,7 @@ dependencies:
 id: customtheme_views_block__editor_picks_main_editor_picks_main
 theme: customtheme
 region: content
-weight: -31
+weight: -30
 provider: null
 plugin: 'views_block:editor_picks_main-editor_picks_main_page'
 settings:

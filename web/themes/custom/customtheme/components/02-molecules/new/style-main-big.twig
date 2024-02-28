@@ -1,0 +1,29 @@
+<div class="taxonomy-term">
+  {% include "@atoms/node-teaser-term/node-teaser-term.twig" with {
+    term: term
+  }
+  %}
+</div>
+<div class="image">
+  {% include "@atoms/node-teaser-image/node-teaser-image.twig" with {
+    image: image,
+  } %}
+</div>
+<div class="title">
+  {% include "@atoms/title/title.twig" with {
+    img_src: img_src,
+    title: title
+  }
+  %}
+</div>
+<div class="author-info">
+  {% include "@atoms/node-teaser-date/node-teaser-date.twig" with {
+    author: author,
+    created: created
+  } %}
+</div>
+<div class="text">
+  {% include "@atoms/node-teaser-text/node-teaser-text.twig" with {
+    text: text
+  } %}
+</div>

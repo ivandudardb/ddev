@@ -1,0 +1,11 @@
+uuid: fffff462-1c28-4e25-822c-6be240174e53
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.style_main_big
+label: 'style main big'
+description: ''
+targetEntityType: node
+cache: true

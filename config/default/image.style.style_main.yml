@@ -3,12 +3,12 @@ langcode: en
 status: true
 dependencies: {  }
 name: style_main
-label: 'style main'
+label: 'style main big'
 effects:
   340680af-6960-4281-9419-17f72c3e7658:
     uuid: 340680af-6960-4281-9419-17f72c3e7658
     id: image_resize
     weight: 1
     data:
-      width: 745
-      height: 555
+      width: 742
+      height: 556

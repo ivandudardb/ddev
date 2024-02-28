@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.style_main_big
     - field.storage.node.field_photo
     - field.storage.node.field_teaser_text
     - node.type.new
@@ -455,7 +456,10 @@ display:
       style:
         type: default
       row:
-        type: fields
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: style_main_big
       query:
         type: views_query
         options:
@@ -478,8 +482,8 @@ display:
       tags:
         - 'config:field.storage.node.field_photo'
         - 'config:field.storage.node.field_teaser_text'
-  block_1:
-    id: block_1
+  style_main_big:
+    id: style_main_big
     display_title: Block
     display_plugin: block
     position: 1
