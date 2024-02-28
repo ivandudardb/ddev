@@ -74,7 +74,6 @@
 {% set image_url = content.field_photo.0 %}
 {% set term = content.field_category.0 %}
 {% set created = node.createdtime|format_date('custom', 'F j, Y') %}
-{% set text = node.field_teaser_text.value %}
 
 {% include "@molecules/new/secondary-new.twig" with {
   image: image_url,

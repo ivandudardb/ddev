@@ -1,0 +1,14 @@
+uuid: 3287ebc7-44b6-44a1-8199-10883e3bcd47
+langcode: en
+status: true
+dependencies: {  }
+name: politics_main_page_mobile
+label: 'politics main page mobile'
+effects:
+  11b3d83f-038d-44f7-95dd-64caccb29940:
+    uuid: 11b3d83f-038d-44f7-95dd-64caccb29940
+    id: image_resize
+    weight: 1
+    data:
+      width: 214
+      height: 214

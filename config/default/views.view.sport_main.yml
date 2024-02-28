@@ -4,13 +4,13 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_photo
-    - image.style.latest_pics
+    - responsive_image.styles.right_sidebar_main_page
     - taxonomy.vocabulary.news
   content:
     - 'taxonomy_term:news:7204547b-3bcd-4be0-8c42-814ea1c73428'
   module:
-    - image
     - node
+    - responsive_image
     - taxonomy
     - user
 id: sport_main
@@ -203,10 +203,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: image
+          type: responsive_image
           settings:
+            responsive_image_style: right_sidebar_main_page
             image_link: content
-            image_style: latest_pics
             image_loading:
               attribute: lazy
           group_column: ''

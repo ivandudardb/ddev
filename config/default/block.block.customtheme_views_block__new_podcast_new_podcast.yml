@@ -12,7 +12,7 @@ dependencies:
 id: customtheme_views_block__new_podcast_new_podcast
 theme: customtheme
 region: content
-weight: -28
+weight: -27
 provider: null
 plugin: 'views_block:new_podcast-new_podcast'
 settings:

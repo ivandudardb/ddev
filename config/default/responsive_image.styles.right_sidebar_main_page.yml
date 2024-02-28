@@ -1,0 +1,39 @@
+uuid: 3ae958a0-2356-414c-a6c8-8f6ea87e6475
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.right_sidebar_main_page
+    - image.style.right_sidebar_main_page_mobile
+  theme:
+    - customtheme
+id: right_sidebar_main_page
+label: 'right sidebar main page'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: right_sidebar_main_page
+    breakpoint_id: customtheme.large
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: right_sidebar_main_page
+    breakpoint_id: customtheme.medium
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: right_sidebar_main_page_mobile
+    breakpoint_id: customtheme.small-large
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: right_sidebar_main_page_mobile
+    breakpoint_id: customtheme.small-med
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: right_sidebar_main_page_mobile
+    breakpoint_id: customtheme.small
+    multiplier: 1x
+breakpoint_group: customtheme
+fallback_image_style: right_sidebar_main_page
