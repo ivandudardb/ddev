@@ -1,0 +1,11 @@
+uuid: dc6dbd12-f796-4327-b7ea-35c72f84ecb3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.must_read_main_new
+label: 'Must read main new'
+description: ''
+targetEntityType: node
+cache: true

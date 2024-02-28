@@ -1,0 +1,11 @@
+uuid: 8302598a-f974-43b6-bba0-228dc0c8e56b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.must_read_secondary_new
+label: 'Must read secondary new'
+description: ''
+targetEntityType: node
+cache: true

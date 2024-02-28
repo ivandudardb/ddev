@@ -1,22 +1,22 @@
-uuid: 857b9bd7-b778-4cd8-bb79-50606a0ef760
+uuid: 77515fc0-80e8-4858-b724-f418744b7f17
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.must_read_politics
+    - views.view.must_read_arts
   module:
     - system
     - views
   theme:
     - customtheme
-id: customtheme_views_block__must_read_politics_block_1
+id: customtheme_views_block__must_read_arts_must_read_secondary_new
 theme: customtheme
 region: content
-weight: 8
+weight: -18
 provider: null
-plugin: 'views_block:must_read_politics-block_1'
+plugin: 'views_block:must_read_arts-must_read_secondary_new'
 settings:
-  id: 'views_block:must_read_politics-block_1'
+  id: 'views_block:must_read_arts-must_read_secondary_new'
   label: ''
   label_display: '0'
   provider: views

@@ -1,0 +1,14 @@
+uuid: 4a61b85d-1ccb-4132-b1a6-02c9e6795277
+langcode: en
+status: true
+dependencies: {  }
+name: must_read_secondary_new
+label: 'Must read secondary new'
+effects:
+  2851c80f-0ab9-4e8d-a5be-2c247109a062:
+    uuid: 2851c80f-0ab9-4e8d-a5be-2c247109a062
+    id: image_resize
+    weight: 1
+    data:
+      width: 385
+      height: 174

@@ -1,0 +1,14 @@
+uuid: 378fa361-5b39-4e76-a47a-48143407171a
+langcode: en
+status: true
+dependencies: {  }
+name: must_read_main_new
+label: 'Must read main new'
+effects:
+  4d846bcc-cdeb-4486-a18d-3781d4edc24a:
+    uuid: 4d846bcc-cdeb-4486-a18d-3781d4edc24a
+    id: image_resize
+    weight: 1
+    data:
+      width: 562
+      height: 478
