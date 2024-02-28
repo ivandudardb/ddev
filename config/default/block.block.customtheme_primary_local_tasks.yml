@@ -11,7 +11,7 @@ _core:
 id: customtheme_primary_local_tasks
 theme: customtheme
 region: content
-weight: -30
+weight: -25
 provider: null
 plugin: local_tasks_block
 settings:

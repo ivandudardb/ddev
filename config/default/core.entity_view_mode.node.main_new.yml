@@ -1,0 +1,11 @@
+uuid: f39f5049-147d-4bdb-8e58-30f8c2164bfa
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.main_new
+label: 'Main new'
+description: ''
+targetEntityType: node
+cache: true

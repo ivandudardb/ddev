@@ -1,0 +1,14 @@
+uuid: 1f14e54a-810e-41e9-b64b-ffd231ee11df
+langcode: en
+status: true
+dependencies: {  }
+name: editor_picks_main_page
+label: 'round photo main'
+effects:
+  b9bfc927-5e26-42a6-a93c-3ac88e580bbb:
+    uuid: b9bfc927-5e26-42a6-a93c-3ac88e580bbb
+    id: image_resize
+    weight: 1
+    data:
+      width: 60
+      height: 60

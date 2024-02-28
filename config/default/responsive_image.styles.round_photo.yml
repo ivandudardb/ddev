@@ -1,0 +1,39 @@
+uuid: 24b6aea5-f47b-4454-836d-6a4ad33e5a2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.editor_picks_main_page
+    - image.style.round_photo_main_mobile
+  theme:
+    - customtheme
+id: round_photo
+label: 'round photo main'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: editor_picks_main_page
+    breakpoint_id: customtheme.large
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: editor_picks_main_page
+    breakpoint_id: customtheme.medium
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: round_photo_main_mobile
+    breakpoint_id: customtheme.small-large
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: round_photo_main_mobile
+    breakpoint_id: customtheme.small-med
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: round_photo_main_mobile
+    breakpoint_id: customtheme.small
+    multiplier: 1x
+breakpoint_group: customtheme
+fallback_image_style: editor_picks_main_page

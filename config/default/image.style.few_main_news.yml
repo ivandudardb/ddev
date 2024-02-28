@@ -3,12 +3,12 @@ langcode: en
 status: true
 dependencies: {  }
 name: few_main_news
-label: 'few main news'
+label: 'secondary news'
 effects:
   024fd801-81e7-4fbd-98aa-d75d21f45de8:
     uuid: 024fd801-81e7-4fbd-98aa-d75d21f45de8
     id: image_resize
     weight: 1
     data:
-      width: 310
-      height: 140
+      width: 334
+      height: 150

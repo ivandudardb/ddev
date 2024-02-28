@@ -1,0 +1,11 @@
+uuid: 5bd7ae72-09dd-4a77-bf51-c383d33d2b21
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.secondary_new
+label: 'Secondary new'
+description: ''
+targetEntityType: node
+cache: true

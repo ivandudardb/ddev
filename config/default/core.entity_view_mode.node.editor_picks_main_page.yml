@@ -1,0 +1,11 @@
+uuid: 732deae1-6759-4640-9c9a-395f6ac459b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.editor_picks_main_page
+label: 'Editor Picks Main Page'
+description: ''
+targetEntityType: node
+cache: true

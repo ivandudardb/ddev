@@ -1,4 +1,4 @@
-uuid: e50dcd03-6ff5-482c-bbf6-99f785ba84a1
+uuid: a93374b8-2a77-4bca-bc7b-1891a79530da
 langcode: en
 status: true
 dependencies:
@@ -9,14 +9,14 @@ dependencies:
     - views
   theme:
     - customtheme
-id: customtheme_views_block__business_block_1
+id: customtheme_views_block__business_business_main_page
 theme: customtheme
 region: content
-weight: -3
+weight: -29
 provider: null
-plugin: 'views_block:business-block_1'
+plugin: 'views_block:business-business_main_page'
 settings:
-  id: 'views_block:business-block_1'
+  id: 'views_block:business-business_main_page'
   label: ''
   label_display: visible
   provider: views

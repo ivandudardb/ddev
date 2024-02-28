@@ -1,0 +1,14 @@
+uuid: 456dbfb0-9ba0-4fd0-8da4-4278db1a8886
+langcode: en
+status: true
+dependencies: {  }
+name: secondary_news_mobile
+label: 'Secondary news mobile'
+effects:
+  573bac35-3fdf-482a-9469-b7aba8c4d31c:
+    uuid: 573bac35-3fdf-482a-9469-b7aba8c4d31c
+    id: image_resize
+    weight: 1
+    data:
+      width: 712
+      height: 320
