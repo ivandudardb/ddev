@@ -1,6 +1,7 @@
 .main--with-sidebar {
   display: flex;
   flex-direction: column;
+  max-width: 1224px !important;
 
   .main-sidebar {
     order: 2;

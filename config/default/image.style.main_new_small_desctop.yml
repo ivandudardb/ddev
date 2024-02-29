@@ -1,0 +1,14 @@
+uuid: 57488b64-d1d8-4261-b9dc-42c27281d806
+langcode: en
+status: true
+dependencies: {  }
+name: main_new_small_desctop
+label: 'main new small desctop'
+effects:
+  de8c346e-a263-465b-92d8-746d56c7b258:
+    uuid: de8c346e-a263-465b-92d8-746d56c7b258
+    id: image_resize
+    weight: 1
+    data:
+      width: 340
+      height: 255
