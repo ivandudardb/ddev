@@ -1,0 +1,52 @@
+uuid: e5a8d55f-4269-4e96-a40e-e0b00845720e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.sidebar
+    - field.field.node.new.body
+    - field.field.node.new.field_audio
+    - field.field.node.new.field_category
+    - field.field.node.new.field_comments
+    - field.field.node.new.field_conclusion
+    - field.field.node.new.field_middle_photo
+    - field.field.node.new.field_paragraphs
+    - field.field.node.new.field_photo
+    - field.field.node.new.field_photo_for_new_podcast
+    - field.field.node.new.field_regular_text
+    - field.field.node.new.field_slogan
+    - field.field.node.new.field_teaser_text
+    - field.field.node.new.field_text_and_image
+    - node.type.new
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.new.sidebar
+targetEntityType: node
+bundle: new
+mode: sidebar
+content:
+  addtoany:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+hidden:
+  body: true
+  field_audio: true
+  field_category: true
+  field_comments: true
+  field_conclusion: true
+  field_middle_photo: true
+  field_paragraphs: true
+  field_photo: true
+  field_photo_for_new_podcast: true
+  field_regular_text: true
+  field_slogan: true
+  field_teaser_text: true
+  field_text_and_image: true
+  links: true

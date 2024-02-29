@@ -42,19 +42,11 @@
   margin: 0 0 14px;
 
   .custom-date {
-    font-size: 13px;
-    line-height: 1;
-    font-style: italic;
-    font-weight: 400;
-    color: $text;
+    @include data;
 
     span {
       a {
-        font-size: 13px;
-        line-height: 1;
-        font-style: italic;
-        font-weight: 400;
-        color: $text;
+       @include data;
       }
     }
   }

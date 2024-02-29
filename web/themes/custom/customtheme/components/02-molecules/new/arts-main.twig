@@ -1,24 +1,29 @@
-<div class="category_link-term">
-  {% include "@atoms/node-teaser-term/node-teaser-term.twig" with {
-    term: term
-  }
-  %}
-</div>
-<div class="image">
-  {% include "@atoms/node-teaser-image/node-teaser-image.twig" with {
-    image: image,
-  } %}
-</div>
-<div class="main-title">
-  {% include "@atoms/title/title.twig" with {
-    img_src: img_src,
-    title: title
-  }
-  %}
-</div>
-<div class="author-info">
-  {% include "@atoms/node-teaser-date/node-teaser-date.twig" with {
-    author: author,
-    created: created
-  } %}
+<div class="arts-container">
+  <div class="must-main-photo">
+    <div class="image">
+      {% include "@atoms/node-teaser-image/node-teaser-image.twig" with {
+        image: image,
+      } %}
+    </div>
+    <div class="category_link">
+      {% include "@atoms/node-teaser-term/node-teaser-term.twig" with {
+        term: term
+      }
+      %}
+    </div>
+  </div>
+  <div class="main-title">
+    {% include "@atoms/title/title.twig" with {
+      img_src: img_src,
+      title: title
+    }
+    %}
+  </div>
+  <div class="author-info">
+    {% include "@atoms/node-teaser-date/node-teaser-date.twig" with {
+      author: author,
+      created: created
+    } %}
+  </div>
+
 </div>

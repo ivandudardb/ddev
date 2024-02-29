@@ -1,0 +1,591 @@
+.layout--threecol-section layout--threecol-section--33-34-33 {
+  width: 100%;
+
+  .layout__region {
+    width: 100vw;
+    border-width: 0!important;
+  }
+}
+
+.layout--threecol-section--25-50-25 {
+  display: flex;
+  flex-direction: column;
+}
+
+.blue-h2 {
+  font-size: 24px;
+  font-weight: 900;
+  color: $pager-active;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.podcast {
+  .heading {
+    margin: 0;
+
+    a {
+      font-size: 15px;
+      line-height: 1.1;
+      font-weight: 700;
+
+      &:hover {
+        color: $title-color;
+      }
+    }
+  }
+}
+
+.podcast-data {
+  .main-data {
+    display: inline-block;
+    @include data;
+  }
+
+  span {
+    a {
+      @include data;
+    }
+  }
+}
+
+.podcast-block {
+  background-color: $podcast-bg;
+  width: auto;
+  margin-right: -15px;
+  margin-left: -15px;
+
+  .podcast-container-big {
+    padding: 0 15px;
+  }
+}
+
+.webform-block {
+  background-color: $podcast-bg;
+  width: auto;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.form-item__label {
+  font-size: 24px;
+  font-weight: 900;
+  color: #4c4084;
+  margin: 20px 0 0 0 ;
+  text-transform: capitalize;
+  padding: 20px 0 0 0;
+}
+
+
+
+
+
+
+
+
+.magazine-block {
+  border: $border;
+  padding: 15px 20px 20px;
+
+
+}
+
+.sidebar {
+  border-bottom: $border;
+
+  .author-info {
+    .custom-date {
+      .dash {
+        display: none;
+      }
+    }
+  }
+}
+
+.more-link {
+  a {
+    background-color: $text;
+    font-size: 11px;
+    line-height: 35px;
+    letter-spacing: 1px;
+    height: auto;
+    display: block;
+    text-align: center;
+    color: $white;
+    border-radius: 3px;
+    position: relative;
+
+    &:hover {
+      background-color: $pager-active;
+      transition: 0.3s;
+    }
+  }
+}
+
+.politics {
+  display: flex;
+  padding: 15px 0;
+
+  .left {
+    margin-right: 15px;
+    position: relative;
+
+    .category_link {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  .right {
+    width: 70%;
+    border-top: $border;
+
+    .text {
+      display: none;
+    }
+
+    .author-info {
+      .custom-date{
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.politics-block {
+  .blue-h2 {
+    position: relative;
+    padding-top: 25px;
+    padding-left: 15px;
+
+    &::after {
+      font-size: 60px;
+      content: "latest";
+      text-transform: uppercase;
+      position: absolute;
+      top: -8px;
+      left: 0;
+      color: #f3f3f3;
+      z-index: -1;
+    }
+  }
+}
+
+.sport {
+  padding: 15px;
+  margin-top: 25px;
+  border: $border;
+
+  .contextual-region {
+    .contextual-region {
+      .more-link {
+        max-width: 150px;
+      }
+    }
+  }
+}
+
+.sidebar-right {
+  .left-part {
+    width: 75%;
+  }
+
+  .image {
+    width: 25%;
+
+    div {
+      width: 100%;
+
+      a {
+        width: 100%;
+        display: block;
+
+        picture {
+          width: 100%;
+          display: flex;
+          justify-content: right;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.culture-block {
+  border: $border;
+  padding: 15px;
+
+  .contextual-region {
+    .contextual-region {
+      .more-link {
+        max-width: 150px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .layout--threecol-section--25-50-25 {
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    .layout__region--first {
+      margin-right: 20px;
+    }
+
+    .layout__region--second {
+      margin-right: 20px;
+    }
+  }
+
+  .blue-h2 {
+    font-size: 18px;
+  }
+
+  .politics {
+    .right {
+      .main-title {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .sidebar-right {
+    margin-bottom:  0;
+
+    .left-part {
+      width: 65%;
+
+      .author-info {
+        display: none;
+      }
+    }
+
+    .image {
+      width: 35%;
+    }
+  }
+
+  .magazine-block {
+    position: sticky;
+    top: 0;
+  }
+}
+
+@media screen and (min-width: 1019px) {
+  .blue-h2 {
+    font-size: 19px;
+  }
+
+  .politics {
+    .left {
+    width: 40%;
+    }
+
+    .right {
+      .main-title {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .main-title {
+    font-size: 14px;
+  }
+
+  .sidebar-right {
+    margin-bottom:  0;
+
+    .left-part {
+      width: 65%;
+
+      .author-info {
+        display: inline-block;
+      }
+    }
+
+    .image {
+      width: 35%;
+      max-width: 78px;
+    }
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .blue-h2 {
+    font-size: 24px;
+  }
+  .politics {
+    .right {
+      .text {
+        display: inline-block;
+      }
+
+      .main-title {
+        font-size: 21px;
+      }
+    }
+  }
+
+  .main-title {
+    font-size: 15px;
+  }
+}
+
+.must-read {
+  background-color: $pager-active;
+  color: $white;
+  padding: 50px 15px 80px;
+  margin-right: -20px;
+  margin-left: -20px;
+  margin-top: 60px;
+  width: auto;
+
+  .must-text {
+    font-size: 15px;
+    line-height: 24px;
+
+    .text-long {
+      text-align: left;
+    }
+  }
+
+  .must-h2 {
+    font-size: 40px;
+    font-weight: 900;
+    margin: 0;
+  }
+}
+
+.block-must-read-main {
+  margin-top: -50px;
+}
+
+.must-main-photo {
+  position: relative;
+
+  .category_link {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.must-read-secondary {
+  .contextual-region {
+    .contextual-region {
+      margin-top: 35px;
+      display: flex;
+      flex-wrap: wrap;
+
+      .views-row {
+        width: 45%;
+        margin-right: 10px;
+        padding-bottom: 18px;
+      }
+    }
+  }
+}
+
+.must-read-secondary {
+  .author-info {
+    .custom-date {
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+.layout--twocol-section--33-67 {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+.layout--twocol-section--33-67 {
+  display: flex;
+
+  .layout__region--first {
+    flex: 0 1 42% !important;
+    margin-right: 20px;
+  }
+
+  .layout__region--second {
+    flex: 0 1 52% !important;
+    margin-top: -65px;
+  }
+}
+
+  .block-must-read-main {
+    margin-top: -30px;
+  }
+
+  .must-read-secondary {
+    .contextual-region {
+      .contextual-region {
+        .views-row {
+          margin-right: 18px;
+        }
+      }
+    }
+  }
+
+  .must-read {
+    padding: 30px 15px 40px;
+  }
+}
+
+@media screen and (min-width: 1019px) {
+  .must-read-secondary {
+    .main-title {
+      font-size: 17px;
+    }
+
+    .author-info {
+      margin-top: 5px;
+      .custom-date {
+        span {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .layout--twocol-section--33-67 {
+    .layout__region--second {
+      margin-top: -15px;
+    }
+  }
+
+  .must-read-main {
+    .author-info {
+      margin-top: 5px;
+    }
+  }
+}
+
+.arts-block {
+  border: $border;
+  padding: 15px;
+}
+.arts-container {
+  margin-bottom: 20px;
+
+  .author-info {
+    .custom-date {
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+.style-block {
+  margin-top: 50px;
+
+  .blue-h2 {
+    &::after {
+      font-size: 60px;
+      content: "latest";
+      text-transform: uppercase;
+      position: absolute;
+      top: -38px;
+      left: 0;
+      color: #f3f3f3;
+      z-index: -1;
+    }
+  }
+}
+
+.style-main-big {
+  margin-bottom: 40px;
+
+  .must-main-photo {
+    margin-bottom: 15px;
+  }
+
+  .main-title-big {
+    margin-bottom: 5px;
+  }
+
+  .author-info {
+    margin: 0;
+  }
+}
+
+.travel-block {
+  border: $border;
+  padding: 15px;
+
+  .contextual-region {
+    .contextual-region {
+      .more-link{
+        max-width: 150px;
+      }
+    }
+  }
+}
+
+.news-block {
+  border: $border;
+  padding: 15px;
+
+  .contextual-region {
+    .contextual-region {
+      .more-link{
+        max-width: 150px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .style-block {
+    .blue-h2 {
+      margin-bottom: 10px;
+    }
+  }
+
+  .arts-block {
+    position: sticky;
+    top: 0;
+  }
+}
+
+.layout--threecol-section--25-50-25 {
+  .layout__region--first {
+    flex: 0 1 22%;
+  }
+
+  .layout__region--second {
+    flex: 0 1 55%;
+  }
+
+  .layout__region--third {
+    flex: 0 1 23%;
+  }
+
+  .style-main-big {
+    .must-main-photo {
+      .image {
+        div {
+          a {
+            picture {
+              img {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

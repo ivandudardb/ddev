@@ -71,7 +71,7 @@
  */
 #}
 
-<article {{ bem("node") }}>
+<article {{ bem("podcast") }}>
 
   {{ title_prefix }}
   {% if not page %}
@@ -89,8 +89,8 @@
   {% if display_submitted %}
     <footer>
       {{ author_picture }}
-      <div{{ author_attributes }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+      <div{{ author_attributes }} class="podcast-data">
+        {{ author_name }} <span>-</span> <div class="main-data">{{ date }}</div>
         {{ metadata }}
       </div>
     </footer>

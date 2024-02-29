@@ -1,0 +1,7 @@
+{% set created = node.createdtime|format_date('custom', 'F j, Y') %}
+
+{% include "@molecules/new/magazine.twig" with {
+  title: label,
+  created: created,
+}
+%}

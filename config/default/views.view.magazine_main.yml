@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.sidebar
     - taxonomy.vocabulary.news
   content:
     - 'taxonomy_term:news:101d57df-01e5-4068-bdba-6e03a21d64f9'
@@ -252,7 +253,10 @@ display:
       style:
         type: default
       row:
-        type: fields
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: sidebar
       query:
         type: views_query
         options:
@@ -278,8 +282,8 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  block_1:
-    id: block_1
+  magazine_main:
+    id: magazine_main
     display_title: Block
     display_plugin: block
     position: 1

@@ -163,3 +163,11 @@ $outer-container-break: $small;
   font-weight: 900;
   color: #4c4084;
 }
+
+@mixin data {
+  font-size: 13px;
+  line-height: 1;
+  font-style: italic;
+  font-weight: 400;
+  color: $text;
+}

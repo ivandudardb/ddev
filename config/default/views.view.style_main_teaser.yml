@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.politics_main_page
     - node.type.new
     - taxonomy.vocabulary.news
   content:
@@ -188,7 +188,8 @@ display:
       row:
         type: 'entity:node'
         options:
-          view_mode: teaser
+          relationship: none
+          view_mode: politics_main_page
       query:
         type: views_query
         options:
