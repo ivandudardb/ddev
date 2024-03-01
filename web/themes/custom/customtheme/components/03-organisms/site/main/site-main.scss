@@ -44,14 +44,14 @@
 
 .category_list {
   div {
-    .contextual-region {
+    div {
       display: flex;
       justify-content: center;
 
       .views-row {
         margin-right: 5px;
 
-        .contextual-region {
+        div {
           h2 {
             a {
               color: $link_hover;
