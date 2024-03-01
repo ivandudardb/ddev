@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - image.style.new_podcast
-    - image.style.round_photo_main_mobile
+    - image.style.new_podcast_mobile
   theme:
     - customtheme
 id: new_podcast
@@ -22,17 +22,17 @@ image_style_mappings:
     multiplier: 1x
   -
     image_mapping_type: image_style
-    image_mapping: round_photo_main_mobile
+    image_mapping: new_podcast_mobile
     breakpoint_id: customtheme.small-large
     multiplier: 1x
   -
     image_mapping_type: image_style
-    image_mapping: round_photo_main_mobile
+    image_mapping: new_podcast_mobile
     breakpoint_id: customtheme.small-med
     multiplier: 1x
   -
     image_mapping_type: image_style
-    image_mapping: round_photo_main_mobile
+    image_mapping: new_podcast_mobile
     breakpoint_id: customtheme.small
     multiplier: 1x
 breakpoint_group: customtheme

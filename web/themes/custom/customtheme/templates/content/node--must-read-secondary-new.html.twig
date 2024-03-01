@@ -2,7 +2,7 @@
 {% set term = content.field_category.0 %}
 {% set created = node.createdtime|format_date('custom', 'F j, Y') %}
 
-<div class="must-read-main">
+<div class="must-read-secondary">
   {% include "@molecules/new/must-read-secondary-new.twig" with {
     image: image_url,
     term: term,

@@ -5,6 +5,7 @@ dependencies:
   config:
     - image.style.main_new
     - image.style.main_new_mobile
+    - image.style.main_new_small_desctop
   theme:
     - customtheme
 id: main_new
@@ -22,7 +23,7 @@ image_style_mappings:
     multiplier: 1x
   -
     image_mapping_type: image_style
-    image_mapping: main_new_mobile
+    image_mapping: main_new_small_desctop
     breakpoint_id: customtheme.small-large
     multiplier: 1x
   -

@@ -1,21 +1,24 @@
-<div>
-  <div class="title">
-    {% include "@atoms/title/title.twig" with {
-      img_src: img_src,
-      title: title
-    }
-    %}
+<div class="editor-container">
+  <div class="left">
+    <div class="main-title">
+      {% include "@atoms/title/title.twig" with {
+        img_src: img_src,
+        title: title
+      }
+      %}
+    </div>
+    <div class="author-info">
+      {% include "@atoms/node-teaser-date/node-teaser-date.twig" with {
+        author: author,
+        created: created
+      } %}
+    </div>
   </div>
-  <div class="author-info">
-    {% include "@atoms/node-teaser-date/node-teaser-date.twig" with {
-      author: author,
-      created: created
+
+  <div class="image">
+    {% include "@atoms/node-teaser-image/node-teaser-image.twig" with {
+      image: image,
     } %}
   </div>
-</div>
 
-<div class="image">
-  {% include "@atoms/node-teaser-image/node-teaser-image.twig" with {
-    image: image,
-  } %}
 </div>

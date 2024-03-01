@@ -1,0 +1,11 @@
+uuid: dafa8662-17a2-4aab-ad7d-a83f894bb9e4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.right_sidebar_main_page
+label: 'right sidebar main page'
+description: ''
+targetEntityType: node
+cache: true

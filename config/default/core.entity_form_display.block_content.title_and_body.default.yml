@@ -1,0 +1,33 @@
+uuid: b3d1960b-a519-408c-8712-1bc5f8da3a13
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.title_and_body
+    - field.field.block_content.title_and_body.body
+  module:
+    - text
+id: block_content.title_and_body.default
+targetEntityType: block_content
+bundle: title_and_body
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

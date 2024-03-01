@@ -1,0 +1,8 @@
+uuid: 75598cd9-4f2c-4d56-80df-959f385f32d1
+langcode: en
+status: true
+dependencies: {  }
+id: title_and_body
+label: 'title and body'
+revision: 0
+description: ''

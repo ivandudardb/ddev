@@ -1,15 +1,17 @@
-<div class="image">
-  {% include "@atoms/node-teaser-image/node-teaser-image.twig" with {
-    image: image,
-  } %}
+<div class="must-main-photo">
+  <div class="image">
+    {% include "@atoms/node-teaser-image/node-teaser-image.twig" with {
+      image: image,
+    } %}
+  </div>
+  <div class="category_link">
+    {% include "@atoms/node-teaser-term/node-teaser-term.twig" with {
+      term: term
+    }
+    %}
+  </div>
 </div>
-<div class="taxonomy-term">
-  {% include "@atoms/node-teaser-term/node-teaser-term.twig" with {
-    term: term
-  }
-  %}
-</div>
-<div class="title">
+<div class="main-title">
   {% include "@atoms/title/title.twig" with {
     img_src: img_src,
     title: title

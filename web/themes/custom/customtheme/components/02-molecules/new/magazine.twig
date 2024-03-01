@@ -1,0 +1,17 @@
+<div class="sidebar">
+  <div class="main-title">
+    {% include "@atoms/title/title.twig" with {
+      img_src: img_src,
+      title: title
+    }
+    %}
+  </div>
+
+  <div class="author-info">
+    {% include "@atoms/node-teaser-date/node-teaser-date.twig" with {
+      author: author,
+      created: created
+    } %}
+  </div>
+
+</div>

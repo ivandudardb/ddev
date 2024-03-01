@@ -1,6 +1,7 @@
 .main--with-sidebar {
   display: flex;
   flex-direction: column;
+  max-width: 1224px !important;
 
   .main-sidebar {
     order: 2;
@@ -305,7 +306,11 @@
   }
 
   .teasers {
+    margin: 0;
+
     .first-block {
+      margin-bottom: 30px;
+
       .image {
         div {
           img {

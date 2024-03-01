@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.right_sidebar_main_page
     - field.storage.node.field_photo
     - node.type.new
     - responsive_image.styles.right_sidebar_main_page
@@ -331,7 +332,10 @@ display:
       style:
         type: default
       row:
-        type: fields
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: right_sidebar_main_page
       query:
         type: views_query
         options:

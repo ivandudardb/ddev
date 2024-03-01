@@ -139,6 +139,35 @@ $outer-container-break: $small;
   font-size: 16px;
   font-weight: 700;
 }
+
 @mixin title-hover {
   color: $purple;
+}
+
+@mixin main-title-big {
+  font-size: 21px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+@mixin main-title {
+  margin: 0 0 6px;
+  padding: 13px 0 0;
+  font-size: 17px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+@mixin block-main-title {
+  font-size: 24px;
+  font-weight: 900;
+  color: #4c4084;
+}
+
+@mixin data {
+  font-size: 13px;
+  line-height: 1;
+  font-style: italic;
+  font-weight: 400;
+  color: $text;
 }
