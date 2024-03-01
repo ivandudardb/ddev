@@ -20,6 +20,9 @@
 }
 
 .footer-links {
+  display: flex;
+  justify-content: center;
+
   .social_list {
     display: block;
   }
@@ -53,6 +56,7 @@
   }
 
   .copyright {
+    padding: 0 20px;
     margin: 0;
     color: $white;
   }
@@ -111,7 +115,7 @@
   div {
     width: 100%;
 
-    .contextual-region {
+    div {
       width: 100%;
 
       .views-row {
@@ -154,7 +158,7 @@
   div {
     width: 100%;
 
-    .contextual-region {
+    div {
       width: 100%;
 
       .views-row {
@@ -169,8 +173,8 @@
               font-size: 15px;
               @include link-footer;
 
-              :hover {
-                color: $block-title-footer !important;
+              &:hover {
+                color: $block-title-footer;
               }
             }
           }
@@ -210,7 +214,7 @@
 @media screen and (min-width: 768px) {
   .popular_footer {
     div {
-      .contextual-region {
+      div {
         .views-row {
           .views-field-name {
             .field-content {
@@ -226,7 +230,7 @@
 
   .editor_footer {
     div {
-      .contextual-region {
+      div {
         .views-row {
           .views-field-title {
             .field-content {
@@ -315,7 +319,7 @@
     min-width: 250px;
 
     div {
-      .contextual-region {
+      div {
         .views-row {
           margin: 0;
 
@@ -353,7 +357,7 @@
 @media screen and (min-width: 1050px) {
   .editor_footer {
     div {
-      .contextual-region {
+      .div {
         .views-row {
           .views-field-title {
             .field-content {
@@ -445,7 +449,7 @@
 
   .editor_footer {
     div {
-      .contextual-region {
+      div {
         .views-row {
           .views-field-title {
             .field-content {
