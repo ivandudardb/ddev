@@ -70,35 +70,19 @@
  *   in different view modes.
  */
 #}
+{% set image_url = content.field_photo.0 %}
+{% set created = node.createdtime|format_date('custom', 'F j, Y') %}
+{% set audio = content.field_audio.0 %}
 
-<article {{ bem("podcast") }}>
-
-  {{ title_prefix }}
-  {% if not page %}
-    {% include "@atoms/text/headings/_heading.twig" with {
-      "heading_level": 2,
-      "heading": label,
-      "heading_url": url,
-      "heading_link_attributes": {
-        'rel': 'bookmark'
-      },
-    } %}
-  {% endif %}
-  {{ title_suffix }}
-
-  {% if display_submitted %}
-    <footer>
-      {{ author_picture }}
-      <div{{ author_attributes }} class="podcast-data">
-        {{ author_name }} <span>-</span> <div class="main-data">{{ date }}</div>
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
-
-  <div{{ content_attributes }}>
-    {{ content }}
-  </div>
-
-</article>
+<div class="podcast-node">
+  {% include "@molecules/audio/audio.twig" with {
+    image: image_url,
+    img_src: url,
+    title: label,
+    author: author_name,
+    created: created,
+    audio: audio,
+  }
+  %}
+</div>
 
