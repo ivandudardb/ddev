@@ -1,0 +1,19 @@
+uuid: e1cba2fa-58ca-4fa3-a358-e87a0916bd31
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - user
+id: user.field_author_social
+field_name: field_author_social
+entity_type: user
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
