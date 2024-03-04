@@ -20,7 +20,6 @@ dependencies:
     - node.type.new
     - views.view.advertisement_wide
     - views.view.author_block_view
-    - views.view.more_articles
     - views.view.must_read
     - views.view.pager
     - views.view.view_counter
@@ -83,56 +82,6 @@ third_party_settings:
                   link: true
                 third_party_settings: {  }
             weight: 0
-            additional: {  }
-          914e24a9-fec4-49cb-8dcd-3968503b8eb9:
-            uuid: 914e24a9-fec4-49cb-8dcd-3968503b8eb9
-            region: content
-            configuration:
-              id: 'field_block:node:new:uid'
-              label: 'Authored by'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_label
-                label: hidden
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 2
-            additional: {  }
-          6cd928cb-11b7-4bd4-b9b9-7f344accfb41:
-            uuid: 6cd928cb-11b7-4bd4-b9b9-7f344accfb41
-            region: content
-            configuration:
-              id: 'field_block:node:new:created'
-              label: 'Authored on'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: timestamp
-                label: hidden
-                settings:
-                  date_format: medium
-                  custom_date_format: ''
-                  timezone: ''
-                  tooltip:
-                    date_format: long
-                    custom_date_format: ''
-                  time_diff:
-                    enabled: false
-                    future_format: '@interval hence'
-                    past_format: '@interval ago'
-                    granularity: 2
-                    refresh: 60
-                    description: ''
-                third_party_settings: {  }
-            weight: 3
             additional: {  }
           5bcfa137-e4c6-4162-be00-51a9a26ae7ff:
             uuid: 5bcfa137-e4c6-4162-be00-51a9a26ae7ff
@@ -391,25 +340,12 @@ third_party_settings:
       -
         layout_id: layout_twocol_section
         layout_settings:
-          label: bottom
+          label: comments
           context_mapping: {  }
           column_widths: 50-50
         components:
-          57a7ee96-3085-45a6-ba41-57ba038b5eaa:
-            uuid: 57a7ee96-3085-45a6-ba41-57ba038b5eaa
-            region: first
-            configuration:
-              id: 'views_block:more_articles-block_1'
-              label: ''
-              label_display: visible
-              provider: views
-              context_mapping: {  }
-              views_label: ''
-              items_per_page: none
-            weight: 0
-            additional: {  }
-          89206867-905d-42a7-9d3f-7c6564a9a5f1:
-            uuid: 89206867-905d-42a7-9d3f-7c6564a9a5f1
+          bedc2871-77f3-4a9c-9d7f-c38be2ca67be:
+            uuid: bedc2871-77f3-4a9c-9d7f-c38be2ca67be
             region: second
             configuration:
               id: 'field_block:node:new:field_comments'
@@ -421,7 +357,7 @@ third_party_settings:
                 view_mode: view_mode
               formatter:
                 type: comment_default
-                label: above
+                label: hidden
                 settings:
                   view_mode: default
                   pager_id: 0

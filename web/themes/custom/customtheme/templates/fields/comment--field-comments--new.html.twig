@@ -80,7 +80,17 @@
         {{ user_picture }}
       </div>
       <div class="right-text">
-        <p>{{ submitted }}</p>
+        <div class="date-container">
+          <div class="author">
+            {{ author }}
+          </div>
+          <div class="created">
+            <span>
+              {{ created }}
+            </span>
+          </div>
+        </div>
+
         {% if parent %}
           <p class="visually-hidden">{{ parent }}</p>
         {% endif %}

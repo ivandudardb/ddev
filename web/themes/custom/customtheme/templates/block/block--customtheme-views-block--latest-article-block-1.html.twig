@@ -25,14 +25,14 @@
  * @see template_preprocess_block()
  */
 #}
-<div {{ bem('block-adv') }}>
+<div {{ bem('block-latest-article') }}>
   {{ title_prefix }}
   {% if label %}
-    <h2{{ title_attributes.addClass('adv-h2') }}>{{ label }}</h2>
+    <h2{{ title_attributes.addClass('blue-h2') }}>{{ label }}</h2>
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-    <div class="adv-wide">
+    <div class="latest-article">
       {{ content }}
     </div>
   {% endblock %}

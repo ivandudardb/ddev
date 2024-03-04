@@ -171,3 +171,17 @@ $outer-container-break: $small;
   font-weight: 400;
   color: $text;
 }
+
+@mixin author-info {
+  font-size: 13px;
+  line-height: 20px;
+  font-style: italic;
+}
+
+@mixin paragraph {
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.6;
+  color: $node-category;
+  margin-bottom: 26px;
+}

@@ -1,0 +1,13 @@
+{% set image_url = content.field_photo.0 %}
+{% set created = node.createdtime|format_date('custom', 'F j, Y') %}
+
+<div class="teasers sidebar-right latest-article-block">
+  {% include "@molecules/new/right-sidebar.twig" with {
+    image: image_url,
+    img_src: url,
+    title: label,
+    author: author_name,
+    created: created,
+  }
+  %}
+</div>

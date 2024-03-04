@@ -1,0 +1,282 @@
+.black_category_link {
+  h2 {
+    a {
+      background-color: $node-category;
+    }
+  }
+}
+
+.title-news-full {
+  line-height: 1.1;
+  font-weight: 600;
+  font-size: 24px;
+  margin: 0;
+  color: $title-color;
+}
+
+.counter_block {
+  .views-row {
+    display: flex;
+
+    .views-field-uid {
+      .views-label-uid {
+        margin-right: 5px;
+        font-weight: 400;
+        color: $admin-title;
+        @include author-info;
+      }
+
+      .field-content {
+        a {
+          color: #000;
+          font-weight: 600;
+          margin-right: 10px;
+          @include author-info;
+        }
+      }
+    }
+
+    .views-field-created {
+     span {
+       line-height: 20px;
+       font-weight: 400;
+       color: $admin-title;
+       margin-right: 40px;
+       @include author-info;
+     }
+    }
+
+    .views-field-comment-count {
+      span {
+        color: $admin-title;
+        display: block;
+        position: relative;
+        margin-right: 40px;
+
+        &::before {
+          display: block;
+          position: absolute;
+          left: -20px;
+          top: 5px;
+          content: "";
+          width: 15px;
+          height: 15px;
+          background: url("/sites/default/files/img/icons/comments.png");
+          background-size: cover;
+        }
+      }
+    }
+
+    .views-field-totalcount {
+      span {
+        color: $admin-title;
+        display: block;
+        position: relative;
+        margin-right: 40px;
+
+        &::before {
+          display: block;
+          position: absolute;
+          left: -20px;
+          top: 5px;
+          content: "";
+          width: 15px;
+          height: 15px;
+          background: url("/sites/default/files/img/icons/eye.png");
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
+
+.share_links {
+  display: flex;
+
+  .share_text {
+    min-width: 10px;
+    min-height: 10px;
+    position: relative;
+    margin-right: 50px;
+  }
+
+  a {
+    margin-right: 5px;
+  }
+}
+
+.bold-text {
+  font-weight: 700;
+  @include paragraph;
+}
+
+.text-long {
+  p {
+    @include paragraph;
+  }
+}
+
+.middle-photo {
+  margin-bottom: 26px;
+}
+
+.text-and-picture {
+  div {
+    @include paragraph;
+  }
+}
+
+.picture-with-text {
+  img {
+    margin: 0 auto;
+  }
+}
+
+.slogan {
+  div {
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    color: $block-title;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 26px;
+  }
+}
+
+.conclusion {
+  div {
+    @include paragraph;
+  }
+}
+
+.entity-pager-list {
+  display: flex;
+  justify-content: space-between;
+
+  .entity-pager-item{
+    a {
+      color: $pager-link;
+      margin-bottom: 7px;
+      font-size: 14px
+    }
+  }
+}
+
+.block-adv {
+  border: $border;
+
+  .adv-wide {
+    padding-bottom: 10px;
+  }
+}
+
+.more-articles {
+  border: $border;
+  padding: 15px;
+}
+
+.must-read-block {
+  display: none;
+}
+
+.latest-article {
+  border: $border;
+  padding: 15px;
+}
+
+.latest-article-block {
+  justify-content: space-between;
+}
+
+.custom-comment-container {
+  display: flex;
+
+  .left-picture {
+    img {
+      border-radius: 50%;
+      margin: 10px 20px 0 0;
+    }
+  }
+}
+
+.date-container {
+  display: flex;
+
+  .author {
+    span {
+      color: $text;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 14px;
+      line-height: 1;
+      margin-right: 10px;
+    }
+  }
+
+  .created {
+    span {
+      font-size: 11px;
+      line-height: 1;
+      color: $pager-link;
+    }
+  }
+}
+
+.comment-body {
+  .text-long {
+    word-wrap: break-word;
+    line-height: 1.2;
+    margin-bottom: 0;
+    font-size: 14px;
+
+  }
+}
+
+.inline {
+  li {
+    list-style: none;
+
+    a {
+      font-size: 11px;
+      color: $pager-link;
+    }
+  }
+}
+
+.field--type-text-long {
+  .js-text-format-wrapper {
+    .js-form-item {
+      label {
+        color: $title-color;
+      }
+
+      .comment-textarea {
+        max-width: 90%;
+
+        textarea {
+          border: $input-border;
+          margin-bottom: 20px;
+
+          &:focus {
+            border: $border;
+          }
+        }
+      }
+
+      div {
+        input {
+          border: $input-border;
+          width: 90%;
+          margin-bottom: 20px;
+
+          &:focus {
+            border: $border;
+          }
+        }
+      }
+    }
+  }
+}

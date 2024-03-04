@@ -1,4 +1,4 @@
-uuid: 9702712f-46c1-49b3-a1ad-17b11f33c75d
+uuid: b6f2d173-0505-4cb0-9536-895d305ee529
 langcode: en
 status: true
 dependencies:
@@ -12,7 +12,7 @@ dependencies:
 id: customtheme_views_block__latest_article_block_1
 theme: customtheme
 region: sidebar
-weight: -22
+weight: 0
 provider: null
 plugin: 'views_block:latest_article-block_1'
 settings:
@@ -26,4 +26,4 @@ visibility:
   request_path:
     id: request_path
     negate: true
-    pages: "/newspaper_pulses_pro\r\n/user/*\r\n/category/*\r\n/node/162"
+    pages: "/user/*\r\n/category/*\r\n<front>\r\n"
