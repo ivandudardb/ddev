@@ -5,10 +5,11 @@ dependencies: {  }
 name: must_read_arts
 label: 'Must read arts'
 effects:
-  44cbce8e-f0df-4f2c-b35f-56f87016d968:
-    uuid: 44cbce8e-f0df-4f2c-b35f-56f87016d968
-    id: image_resize
+  d6bc9c0f-4157-4698-a8bf-439dca20844f:
+    uuid: d6bc9c0f-4157-4698-a8bf-439dca20844f
+    id: image_scale_and_crop
     weight: 1
     data:
       width: 385
       height: 175
+      anchor: center-center

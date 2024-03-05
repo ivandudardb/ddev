@@ -5,10 +5,11 @@ dependencies: {  }
 name: social
 label: social
 effects:
-  7c55c491-30f1-4fa7-8883-530cbda46475:
-    uuid: 7c55c491-30f1-4fa7-8883-530cbda46475
-    id: image_resize
-    weight: 1
+  a0448a54-a7c1-4c45-b5da-dbb9b6a9115c:
+    uuid: a0448a54-a7c1-4c45-b5da-dbb9b6a9115c
+    id: image_scale_and_crop
+    weight: 2
     data:
       width: 27
       height: 27
+      anchor: center-center

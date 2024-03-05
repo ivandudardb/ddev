@@ -5,10 +5,11 @@ dependencies: {  }
 name: politics_main_page
 label: 'politics main page'
 effects:
-  93d5a9e0-7bda-4a88-a4c3-e55cff311bd0:
-    uuid: 93d5a9e0-7bda-4a88-a4c3-e55cff311bd0
-    id: image_resize
-    weight: 1
+  239189c3-0036-406f-b840-d1135a606d74:
+    uuid: 239189c3-0036-406f-b840-d1135a606d74
+    id: image_scale_and_crop
+    weight: 2
     data:
       width: 297
       height: 178
+      anchor: center-center

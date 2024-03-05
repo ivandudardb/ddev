@@ -46,6 +46,41 @@ third_party_settings:
                 entity: layout_builder.entity
             weight: 1
             additional: {  }
+          e46f1f9e-54fd-4eb7-84ba-2ef8ccad1730:
+            uuid: e46f1f9e-54fd-4eb7-84ba-2ef8ccad1730
+            region: content
+            configuration:
+              id: 'field_block:node:page:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          12f8392b-2b86-4cde-86ef-de94275826be:
+            uuid: 12f8392b-2b86-4cde-86ef-de94275826be
+            region: content
+            configuration:
+              id: 'extra_field_block:node:page:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 3
+            additional: {  }
+          bd917cf7-332b-44c2-adde-a10ef463692d:
+            uuid: bd917cf7-332b-44c2-adde-a10ef463692d
+            region: content
+            configuration:
+              id: 'extra_field_block:node:page:addtoany'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 4
+            additional: {  }
         third_party_settings: {  }
 _core:
   default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg

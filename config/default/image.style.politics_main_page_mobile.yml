@@ -5,10 +5,11 @@ dependencies: {  }
 name: politics_main_page_mobile
 label: 'politics main page mobile'
 effects:
-  11b3d83f-038d-44f7-95dd-64caccb29940:
-    uuid: 11b3d83f-038d-44f7-95dd-64caccb29940
-    id: image_resize
-    weight: 1
+  bf3250eb-2ce8-40eb-a8d8-53d16251d467:
+    uuid: bf3250eb-2ce8-40eb-a8d8-53d16251d467
+    id: image_scale_and_crop
+    weight: 2
     data:
       width: 214
       height: 214
+      anchor: center-center

@@ -5,10 +5,11 @@ dependencies: {  }
 name: teaser
 label: teaser
 effects:
-  e6eca275-f018-4099-a65d-10ef69626e84:
-    uuid: e6eca275-f018-4099-a65d-10ef69626e84
-    id: image_resize
+  8b2a5f44-443a-4636-8c3f-5181dc55d075:
+    uuid: 8b2a5f44-443a-4636-8c3f-5181dc55d075
+    id: image_scale_and_crop
     weight: 2
     data:
       width: 310
       height: 185
+      anchor: center-center

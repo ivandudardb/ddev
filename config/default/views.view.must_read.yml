@@ -308,8 +308,8 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_photo'
-  block_1:
-    id: block_1
+  must_read:
+    id: must_read
     display_title: Block
     display_plugin: block
     position: 1

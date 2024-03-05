@@ -5,10 +5,11 @@ dependencies: {  }
 name: secondary_news_mobile
 label: 'Secondary news mobile'
 effects:
-  573bac35-3fdf-482a-9469-b7aba8c4d31c:
-    uuid: 573bac35-3fdf-482a-9469-b7aba8c4d31c
-    id: image_resize
-    weight: 1
+  3969a794-d6bc-4e5d-810f-686a04452cf0:
+    uuid: 3969a794-d6bc-4e5d-810f-686a04452cf0
+    id: image_scale_and_crop
+    weight: 2
     data:
       width: 712
       height: 320
+      anchor: center-center

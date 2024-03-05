@@ -5,10 +5,11 @@ dependencies: {  }
 name: new_podcast_mobile
 label: 'New Podcast mobile'
 effects:
-  96214b47-2175-45b8-b098-4cb5a98bb293:
-    uuid: 96214b47-2175-45b8-b098-4cb5a98bb293
-    id: image_resize
-    weight: 1
+  64d3a676-e8eb-4a15-a94c-5ae08fa1f656:
+    uuid: 64d3a676-e8eb-4a15-a94c-5ae08fa1f656
+    id: image_scale_and_crop
+    weight: 2
     data:
       width: 142
       height: 142
+      anchor: center-center

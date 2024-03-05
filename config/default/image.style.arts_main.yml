@@ -5,10 +5,11 @@ dependencies: {  }
 name: arts_main
 label: 'arts main'
 effects:
-  3500bd1e-d5d4-4f52-b59f-6c3e3c8b1767:
-    uuid: 3500bd1e-d5d4-4f52-b59f-6c3e3c8b1767
-    id: image_resize
+  42ac0db0-a03c-4674-b25f-3c72b35e113d:
+    uuid: 42ac0db0-a03c-4674-b25f-3c72b35e113d
+    id: image_scale_and_crop
     weight: 1
     data:
       width: 200
       height: 110
+      anchor: center-center

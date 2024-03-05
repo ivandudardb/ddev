@@ -5,10 +5,11 @@ dependencies: {  }
 name: advertisement_normal
 label: 'Advertisement normal'
 effects:
-  3819a055-1296-41f6-ba5f-7afc9459fb78:
-    uuid: 3819a055-1296-41f6-ba5f-7afc9459fb78
-    id: image_resize
+  ce0f1b3b-712a-485a-8c3b-e645a212553d:
+    uuid: ce0f1b3b-712a-485a-8c3b-e645a212553d
+    id: image_scale_and_crop
     weight: 1
     data:
       width: 300
       height: 250
+      anchor: center-center

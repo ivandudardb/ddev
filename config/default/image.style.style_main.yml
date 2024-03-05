@@ -5,10 +5,11 @@ dependencies: {  }
 name: style_main
 label: 'style main big'
 effects:
-  340680af-6960-4281-9419-17f72c3e7658:
-    uuid: 340680af-6960-4281-9419-17f72c3e7658
-    id: image_resize
-    weight: 1
+  f0b717f7-85f6-4b79-b2f7-a9afdd35c42a:
+    uuid: f0b717f7-85f6-4b79-b2f7-a9afdd35c42a
+    id: image_scale_and_crop
+    weight: 2
     data:
       width: 742
       height: 556
+      anchor: center-center

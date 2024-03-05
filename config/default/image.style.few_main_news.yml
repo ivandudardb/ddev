@@ -5,10 +5,11 @@ dependencies: {  }
 name: few_main_news
 label: 'secondary news'
 effects:
-  024fd801-81e7-4fbd-98aa-d75d21f45de8:
-    uuid: 024fd801-81e7-4fbd-98aa-d75d21f45de8
-    id: image_resize
-    weight: 1
+  7b9217f2-cafa-4522-a5b1-70c5fdd1cb45:
+    uuid: 7b9217f2-cafa-4522-a5b1-70c5fdd1cb45
+    id: image_scale_and_crop
+    weight: 2
     data:
       width: 334
       height: 150
+      anchor: center-center

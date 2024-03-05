@@ -5,10 +5,11 @@ dependencies: {  }
 name: teaser_mobile
 label: 'teaser mobile'
 effects:
-  2a1c34be-9167-4d5d-8a74-09ce408b7c30:
-    uuid: 2a1c34be-9167-4d5d-8a74-09ce408b7c30
-    id: image_resize
+  02aafd2a-3d70-4d38-923a-be1beb588fc6:
+    uuid: 02aafd2a-3d70-4d38-923a-be1beb588fc6
+    id: image_scale_and_crop
     weight: 2
     data:
       width: 212
       height: 212
+      anchor: center-center

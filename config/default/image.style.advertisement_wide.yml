@@ -5,10 +5,11 @@ dependencies: {  }
 name: advertisement_wide
 label: 'Advertisement wide'
 effects:
-  56051f35-274b-4e4b-81bc-56be086dfa25:
-    uuid: 56051f35-274b-4e4b-81bc-56be086dfa25
-    id: image_resize
+  ff15b87a-7c3a-46d5-b5e1-174d235dfac7:
+    uuid: ff15b87a-7c3a-46d5-b5e1-174d235dfac7
+    id: image_scale_and_crop
     weight: 1
     data:
       width: 728
       height: 90
+      anchor: center-center

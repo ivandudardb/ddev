@@ -5,10 +5,11 @@ dependencies: {  }
 name: latest_pics
 label: 'latest pics'
 effects:
-  ef75c654-3130-40c1-9403-aa49ba224f7e:
-    uuid: ef75c654-3130-40c1-9403-aa49ba224f7e
-    id: image_resize
+  3037fe42-8f22-4f2d-b74e-17c140381223:
+    uuid: 3037fe42-8f22-4f2d-b74e-17c140381223
+    id: image_scale_and_crop
     weight: 1
     data:
       width: 85
       height: 85
+      anchor: center-center
