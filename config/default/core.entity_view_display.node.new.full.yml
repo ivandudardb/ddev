@@ -20,6 +20,7 @@ dependencies:
     - node.type.new
     - views.view.advertisement_wide
     - views.view.author_block_view
+    - views.view.more_articles
     - views.view.must_read
     - views.view.pager
     - views.view.view_counter
@@ -362,6 +363,19 @@ third_party_settings:
                   view_mode: default
                   pager_id: 0
                 third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          b0458c61-730b-4414-af8a-356a44eaef27:
+            uuid: b0458c61-730b-4414-af8a-356a44eaef27
+            region: first
+            configuration:
+              id: 'views_block:more_articles-block_1'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
             weight: 0
             additional: {  }
         third_party_settings: {  }

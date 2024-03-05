@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.text_and_picture.field_picture
+    - field.field.paragraph.text_and_picture.field_regular_text
     - field.field.paragraph.text_and_picture.field_text
     - image.style.thumbnail
     - paragraphs.paragraphs_type.text_and_picture
   module:
     - image
+    - text
 id: paragraph.text_and_picture.default
 targetEntityType: paragraph
 bundle: text_and_picture
@@ -21,6 +23,16 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_regular_text:
+    type: text_textarea_with_summary
+    weight: 0
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
     third_party_settings: {  }
   field_text:
     type: string_textarea

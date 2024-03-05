@@ -94,19 +94,38 @@
   display: flex;
 
   .share_text {
-    min-width: 10px;
-    min-height: 10px;
+    margin-right: 70px; /* змінив значення margin-right */
     position: relative;
-    margin-right: 50px;
+    height: 72px;
+
+    &:after {
+      position: absolute;
+      content: ''; /* Пустий контент, потрібно для зображення */
+      display: inline-block; /* Встановлюємо властивість, щоб зображення відображалося як блок */
+      width: 20px;
+      height: 20px;
+      background-image: url('/sites/default/files/img/icons/share.png');
+      background-size: cover;
+      background-position: center;
+      top: 25px;
+      right: -40px;
+    }
+  }
+
+  p {
+    display: none;
   }
 
   a {
     margin-right: 5px;
+    display: flex;
+    align-items: center;
   }
 }
 
 .bold-text {
   font-weight: 700;
+  margin-top: 20px;
   @include paragraph;
 }
 
@@ -134,6 +153,7 @@
 
 .slogan {
   div {
+    padding: 20px 3%;
     font-size: 22px;
     line-height: 30px;
     font-weight: 400;
@@ -176,6 +196,7 @@
 .more-articles {
   border: $border;
   padding: 15px;
+  margin-bottom: 26px;
 }
 
 .must-read-block {
@@ -203,8 +224,6 @@
 }
 
 .date-container {
-  display: flex;
-
   .author {
     span {
       color: $text;
@@ -226,12 +245,11 @@
 }
 
 .comment-body {
-  .text-long {
+  p {
     word-wrap: break-word;
     line-height: 1.2;
     margin-bottom: 0;
     font-size: 14px;
-
   }
 }
 
@@ -254,29 +272,137 @@
       }
 
       .comment-textarea {
-        max-width: 90%;
+        width: 90vw;
 
         textarea {
           border: $input-border;
           margin-bottom: 20px;
-
-          &:focus {
-            border: $border;
-          }
+          width: 90vw;
         }
       }
 
       div {
         input {
+          width: 90vw;
           border: $input-border;
-          width: 90%;
           margin-bottom: 20px;
-
-          &:focus {
-            border: $border;
-          }
+          padding: 7px;
         }
       }
     }
   }
+}
+
+.author-block {
+  display: none;
+}
+
+.latest-article {
+  .views-row {
+    .latest-article-block {
+      .image {
+        picture {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+.layout--twocol-section--50-50{
+  .layout__region--first {
+    flex-basis: 100% !important;
+  }
+
+  .layout__region--second {
+    flex-basis: 100% !important;
+  }
+}
+
+.more-articles {
+  .views-field-field-photo {
+    margin-top: -150px;
+    float: right;
+    width: 20%;
+  }
+
+  .views-field-created {
+    margin-bottom: 90px;
+
+    time {
+      font-size: 13px;
+      line-height: 1;
+      font-style: italic;
+      font-weight: 400;
+      color: $text;
+    }
+  }
+
+  .views-field-title {
+    max-width: 70%;
+
+    a {
+      color: $title-color;
+      margin: 0 0 6px 0;
+      font-size: 15px;
+      line-height: 1.1;
+      font-weight: 700;
+    }
+  }
+}
+
+.blue-h2 {
+  margin: 25px 0 10px;
+}
+
+label[for="edit-name"] {
+  display: none;
+}
+
+#edit-name {
+  display: none;
+}
+
+label[for="edit-comment-body-0-value"] {
+  margin: 10px 0 7px;
+  color: $title-color;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.form-item--checkbox__item {
+  font-size: 14px;
+  line-height: 21px;
+
+  #checkbox {
+    margin-right: 5px;
+  }
+}
+
+#edit-comment-body-0-format {
+  display: none;
+}
+
+#edit-actions--2 {
+  input {
+    width: 90vw;
+    background-color: $node-category;
+    padding: 14px 24px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 26px;
+
+    &:hover {
+      color: $white;
+      background-color: $pager-active;
+      transition: 0.5s;
+    }
+  }
+}
+
+.layout--twocol-section {
+  display: block;
 }
