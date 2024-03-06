@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
 
   &__inner {
+    padding-bottom: 50px;
     display: flex;
     flex-flow: column nowrap;
     gap: 1rem;
@@ -27,6 +28,7 @@
     display: block;
   }
 }
+
 .footer__social {
   margin-bottom: $space;
 
@@ -56,6 +58,7 @@
   }
 
   .copyright {
+    line-height: 1.4;
     padding: 0 20px;
     margin: 0;
     color: $white;
@@ -79,6 +82,7 @@
 
     &__h2 {
       text-align: center;
+      font-weight: 900;
       color: $block-title-footer;
     }
 
@@ -172,6 +176,7 @@
             a {
               font-size: 15px;
               @include link-footer;
+              @include gelasio500;
 
               &:hover {
                 color: $block-title-footer;
@@ -208,11 +213,15 @@
 
 .footer_h {
   text-align: center;
+  font-weight: 900;
   color: $block_title-footer;
 }
 
 @media screen and (min-width: 768px) {
   .popular_footer {
+    margin: 0;
+    min-width: 200px;
+
     div {
       div {
         .views-row {
@@ -228,41 +237,11 @@
     }
   }
 
-  .editor_footer {
-    div {
-      div {
-        .views-row {
-          .views-field-title {
-            .field-content {
-              a {
-                font-size: 12px;
-              }
-            }
-          }
-
-          .views-field-created {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-
-  .views-field-field-photo {
-    .field-content {
-      a {
-        img {
-          width: 80%;
-        }
-      }
-    }
-  }
-
   .footer__menu {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 30px 10px 0;
+    padding: 50px 10px 0;
 
     .left_footer {
       padding-left: 10px;
@@ -279,15 +258,18 @@
 
       .copyright {
         font-size: 12px;
+        padding: 0;
+        margin-bottom: 10px;
       }
     }
 
     .about {
-      margin-left: 50px;
+      margin-left: 30px;
 
       &__h2 {
-        margin: 0;
         text-align: start;
+        font-size: 18px;
+        margin: 0 0 7px;
       }
     }
 
@@ -300,15 +282,11 @@
     }
   }
 
-  .popular_footer {
-    margin: 0;
-  }
-
   .footer_h {
     text-align: start;
     padding: 0;
-    margin: 0;
     font-size: 18px;
+    margin: 0 0 7px;
   }
 
   .views-field-name-1 {
@@ -322,11 +300,17 @@
       div {
         .views-row {
           margin: 0;
+          min-height: 50px;
 
           .views-field-field-photo {
             .field-content {
               a {
                 margin-right: 0;
+                margin-top: -30px;
+
+                img {
+                  width: 50%;
+                }
               }
             }
           }
@@ -337,8 +321,16 @@
             .field-content {
               line-height: 1.1;
               font-size: 12px;
-              max-width: 80%;
+              max-width: 70%;
+
+              a {
+                font-size: 12px;
+              }
             }
+          }
+
+          .views-field-created {
+            display: none;
           }
         }
       }
@@ -347,18 +339,20 @@
 
   #block-customtheme-views-block-editor-picks-block-1 {
     align-items: start;
-  }
-
-  .about__h2 {
-    font-size: 18px;
+    max-width: 210px;
   }
 }
 
 @media screen and (min-width: 1050px) {
   .editor_footer {
     div {
-      .div {
+      div {
         .views-row {
+          .views-field-created {
+            display: block;
+            margin: 5px 0 30px;
+          }
+
           .views-field-title {
             .field-content {
               a {
@@ -367,8 +361,16 @@
             }
           }
 
-          .views-field-created {
-            display: block;
+          .views-field-field-photo {
+            .field-content {
+              a {
+                margin-top: -90px;
+
+                img {
+                  width: 70%;
+                }
+              }
+            }
           }
         }
       }
@@ -420,6 +422,10 @@
       font-size: 19px;
     }
   }
+
+  #block-customtheme-views-block-editor-picks-block-1 {
+    max-width: 100%;
+  }
 }
 
 @media screen and (min-width: 1140px) {
@@ -455,6 +461,30 @@
             .field-content {
               a {
                 font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer__menu {
+    .about {
+      margin-left: 200px;
+    }
+  }
+
+  .editor_footer {
+    div {
+      div {
+        .views-row {
+          .views-field-field-photo {
+            .field-content {
+              a {
+                img {
+                  width: 80%;
+                }
               }
             }
           }

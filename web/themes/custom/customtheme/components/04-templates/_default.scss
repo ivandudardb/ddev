@@ -30,7 +30,6 @@ a {
   @include large {
     order: 2;
     width: $sidebar-width;
-    margin-bottom: 0;
   }
 }
 

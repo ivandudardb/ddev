@@ -51,7 +51,7 @@
   margin-left: -15px;
 
   .podcast-container-big {
-    padding: 20px 20px 0 20px;
+    padding: 20px 20px 0;
   }
 }
 
@@ -66,9 +66,9 @@
   font-size: 24px;
   font-weight: 900;
   color: #4c4084;
-  margin: 20px 0 0 0 ;
+  margin: 20px 0 0 ;
   text-transform: capitalize;
-  padding: 20px 0 0 0;
+  padding: 20px 0 0;
 }
 
 .magazine-block {
@@ -86,6 +86,14 @@
       }
     }
   }
+}
+
+.main-title {
+  @include gelasio700;
+}
+
+.main-title-big {
+  @include gelasio700;
 }
 
 .sidebar {
@@ -115,7 +123,7 @@
     color: $white;
     border-radius: 3px;
     position: relative;
-    padding-right: 15px;
+    padding-right: 25px;
 
     &:hover {
       background-color: $pager-active;
@@ -123,14 +131,14 @@
     }
 
     &::after {
-      content: "";
+      content: '';
       width: 16px;
       height: 13px;
       background: url("/themes/custom/customtheme/assets/icons/menu-white-small.png");
       background-size: 100%;
       position: absolute;
       top: 10px;
-      left: 85%;
+      left: 80%;
     }
   }
 }
@@ -159,7 +167,7 @@
     }
 
     .author-info {
-      .custom-date{
+      .custom-date {
         span {
           display: none;
         }
@@ -176,7 +184,7 @@
 
     &::after {
       font-size: 60px;
-      content: "latest";
+      content: 'latest';
       text-transform: uppercase;
       position: absolute;
       top: -8px;
@@ -230,7 +238,6 @@
   }
 }
 
-
 .culture-block {
   border: $border;
   padding: 15px;
@@ -276,7 +283,7 @@
   }
 
   .sidebar-right {
-    margin-bottom:  0;
+    margin-bottom: 0;
 
     .left-part {
       width: 65%;
@@ -309,7 +316,7 @@
     div {
       div {
         .more-link {
-          a:after {
+          a::after {
             left: 85%;
           }
         }
@@ -319,13 +326,17 @@
 }
 
 @media screen and (min-width: 1019px) {
+  .data-p {
+    font-size: 14px;
+  }
+
   .blue-h2 {
     font-size: 19px;
   }
 
   .politics {
     .left {
-    width: 40%;
+      width: 40%;
     }
 
     .right {
@@ -340,7 +351,7 @@
   }
 
   .sidebar-right {
-    margin-bottom:  0;
+    margin-bottom: 0;
 
     .left-part {
       width: 60%;
@@ -460,19 +471,23 @@
   display: block;
 }
 
-@media screen and (min-width: 768px) {
-.layout--twocol-section--33-67 {
-  display: flex;
-  flex-wrap: nowrap;
-
-  .layout__region--first {
-    margin-right: 20px;
-  }
-
-  .layout__region--second {
-    margin-top: -30px;
-  }
+.layout--twocol-section--25-75 {
+  display: block;
 }
+
+@media screen and (min-width: 768px) {
+  .layout--twocol-section--33-67 {
+    display: flex;
+    flex-wrap: nowrap;
+
+    .layout__region--first {
+      margin-right: 20px;
+    }
+
+    .layout__region--second {
+      margin-top: -30px;
+    }
+  }
 
   .block-must-read-main {
     margin-top: -30px;
@@ -494,6 +509,11 @@
 }
 
 @media screen and (min-width: 1019px) {
+  .layout--twocol-section--25-75 {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
   .must-read-secondary {
     .main-title {
       font-size: 17px;
@@ -501,6 +521,7 @@
 
     .author-info {
       margin-top: 5px;
+
       .custom-date {
         span {
           display: inline-block;
@@ -544,6 +565,7 @@
   border: $border;
   padding: 15px;
 }
+
 .arts-container {
   margin-bottom: 20px;
 

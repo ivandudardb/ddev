@@ -25,13 +25,15 @@
  * @see template_preprocess_block()
  */
 #}
-<div {{ bem('latest_news') }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes.addClass('blue-h2') }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
-  {% block content %}
-    {{ content }}
-  {% endblock %}
+<div {{ bem('block') }}>
+  <div class="category-block">
+    {{ title_prefix }}
+    {% if label %}
+      <h2{{ title_attributes.addClass('adv-h2') }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
 </div>

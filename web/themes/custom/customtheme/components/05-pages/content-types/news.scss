@@ -8,10 +8,10 @@
 
 .title-news-full {
   line-height: 1.1;
-  font-weight: 600;
   font-size: 24px;
   margin: 0;
   color: $title-color;
+  @include gelasio600
 }
 
 .counter_block {
@@ -207,7 +207,7 @@
 
 .latest-article {
   border: $border;
-  padding: 15px;
+  padding: 0 15px;
 }
 
 .latest-article-block {
@@ -325,13 +325,13 @@
 
 .more-articles {
   .views-field-field-photo {
-    margin-top: -150px;
+    margin-top: -110px;
     float: right;
     width: 20%;
   }
 
   .views-field-created {
-    margin-bottom: 90px;
+    margin-bottom: 70px;
 
     time {
       font-size: 13px;
@@ -343,7 +343,7 @@
   }
 
   .views-field-title {
-    max-width: 65%;
+    max-width: 60%;
 
     a {
       color: $title-color;
@@ -416,6 +416,29 @@ label[for="edit-comment-body-0-value"] {
 }
 
 @media screen and (min-width: 768px) {
+  .latest-article {
+    padding: 10px;
+
+    .left-part{
+      min-height: 60px;
+
+      .main-title {
+        margin-bottom: 0;
+      }
+
+      .author-info {
+        margin-bottom: 0;
+
+        .custom-date {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .image {
+      width: 25%;
+    }
+  }
   .layout--twocol-section--33-67 {
     .layout__region--second {
       flex-grow: 1 !important;
@@ -429,7 +452,7 @@ label[for="edit-comment-body-0-value"] {
   .main--with-sidebar {
     .main-content--with-sidebar {
       max-width: 70%;
-      margin-right: 15px;
+      margin-right: 20px;
     }
 
     .main-sidebar {
@@ -473,9 +496,30 @@ label[for="edit-comment-body-0-value"] {
   .blue-h2 {
     margin: 0 0 5px;
   }
+
+  .more-articles-block {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 600px) {
+  .more-articles {
+    .views-field-field-photo {
+      margin-top: -140px;
+    }
+
+    .views-field-created {
+      margin-bottom: 110px;
+    }
+  }
 }
 
 @media screen and (min-width: 1019px) {
+  .more-articles-block {
+    display: block;
+  }
+
   .title-news-full {
     font-size: 30px;
     margin-bottom: 10px;
@@ -519,12 +563,13 @@ label[for="edit-comment-body-0-value"] {
       img {
         float: right;
         max-width: 30%;
-        margin-top: -100px;
+        margin-top: -80px;
       }
     }
   }
 
   .must-read-content {
+    min-width: 230px;
     border: $border;
     padding: 15px;
   }
@@ -547,6 +592,8 @@ label[for="edit-comment-body-0-value"] {
     }
 
     .views-field-name {
+      @include gelasio700;
+
       span {
         display: block;
 
@@ -629,12 +676,18 @@ label[for="edit-comment-body-0-value"] {
       }
     }
 
+    .views-field-title {
+      @include gelasio700;
+    }
+
     .views-field-created {
       margin-bottom: 40px;
     }
   }
 
   .slogan {
+    @include gelasio400;
+
     div {
       font-size: 32px;
     }
