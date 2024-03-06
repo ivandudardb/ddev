@@ -51,7 +51,7 @@
   margin-left: -15px;
 
   .podcast-container-big {
-    padding: 15px 15px 0 15px;
+    padding: 20px 20px 0 20px;
   }
 }
 
@@ -124,9 +124,9 @@
 
     &::after {
       content: "";
-      width: 15px;
-      height: 15px;
-      background: url("/themes/custom/customtheme/assets/icons/menu-white.png");
+      width: 16px;
+      height: 13px;
+      background: url("/themes/custom/customtheme/assets/icons/menu-white-small.png");
       background-size: 100%;
       position: absolute;
       top: 10px;
@@ -248,6 +248,7 @@
   .layout--threecol-section--25-50-25 {
     flex-direction: row;
     flex-wrap: nowrap;
+    margin-top: 20px;
 
     .layout__region--first {
       margin-right: 20px;
@@ -342,7 +343,7 @@
     margin-bottom:  0;
 
     .left-part {
-      width: 65%;
+      width: 60%;
 
       .author-info {
         display: inline-block;
@@ -401,6 +402,11 @@
 
     .text-long {
       text-align: left;
+
+      p {
+        color: $white;
+        margin-top: 20px;
+      }
     }
   }
 
@@ -457,14 +463,13 @@
 @media screen and (min-width: 768px) {
 .layout--twocol-section--33-67 {
   display: flex;
+  flex-wrap: nowrap;
 
   .layout__region--first {
-    flex: 0 1 42% !important;
     margin-right: 20px;
   }
 
   .layout__region--second {
-    flex: 0 1 52% !important;
     margin-top: -30px;
   }
 }
@@ -555,6 +560,8 @@
   margin-top: 50px;
 
   .blue-h2 {
+    position: relative;
+
     &::after {
       font-size: 60px;
       content: "latest";
@@ -611,6 +618,15 @@
 }
 
 @media screen and (min-width: 768px) {
+  .style-block {
+    .blue-h2 {
+      &::after {
+        font-size: 70px;
+        top: -45px;
+      }
+    }
+  }
+
   .style-block {
     .blue-h2 {
       margin-bottom: 10px;
@@ -720,6 +736,17 @@
   margin-bottom: 80px;
 }
 
+@media screen and (min-width: 1019px) {
+  .style-block {
+    .blue-h2 {
+      &::after {
+        font-size: 90px;
+        top: -70px;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 768px) {
   .podcast-block {
     margin-right: 5px;
@@ -728,22 +755,16 @@
 
   .custom-form {
     margin: 0 5px 0 0;
-  }
-
-  .stay-connected {
-    margin: 0;
+    padding: 20px;
   }
 
   .podcast-container-big {
     padding-bottom: 15px;
   }
 
-  .custom-form {
-    padding-bottom: 15px;
-  }
-
   .stay-connected {
-    padding-bottom: 15px;
+   padding: 20px;
+    margin: 0;
   }
 
   .menu-connected {

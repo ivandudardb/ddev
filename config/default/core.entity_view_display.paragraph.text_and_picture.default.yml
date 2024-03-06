@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.text_and_picture.field_picture
+    - field.field.paragraph.text_and_picture.field_regular_text
     - field.field.paragraph.text_and_picture.field_text
     - image.style.node_middle
     - paragraphs.paragraphs_type.text_and_picture
   module:
     - image
+    - text
 id: paragraph.text_and_picture.default
 targetEntityType: paragraph
 bundle: text_and_picture
@@ -25,11 +27,18 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
+  field_regular_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
   field_text:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 2
     region: content
 hidden: {  }

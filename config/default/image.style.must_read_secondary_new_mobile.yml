@@ -5,10 +5,11 @@ dependencies: {  }
 name: must_read_secondary_new_mobile
 label: 'Must read secondary new mobile'
 effects:
-  22e664c7-09e0-4a4f-85ba-02c1cad9afd8:
-    uuid: 22e664c7-09e0-4a4f-85ba-02c1cad9afd8
-    id: image_resize
-    weight: 1
+  8525355a-bb5f-4ead-912b-feb24724ec84:
+    uuid: 8525355a-bb5f-4ead-912b-feb24724ec84
+    id: image_scale_and_crop
+    weight: 2
     data:
       width: 351
       height: 210
+      anchor: center-center

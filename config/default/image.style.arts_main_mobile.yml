@@ -5,10 +5,11 @@ dependencies: {  }
 name: arts_main_mobile
 label: 'arts main mobile'
 effects:
-  0197929e-afd6-41d0-ab62-6bd9a911204c:
-    uuid: 0197929e-afd6-41d0-ab62-6bd9a911204c
-    id: image_resize
+  4a3c28ea-64ad-4318-b325-306b447eafaf:
+    uuid: 4a3c28ea-64ad-4318-b325-306b447eafaf
+    id: image_scale_and_crop
     weight: 1
     data:
       width: 680
       height: 374
+      anchor: center-center

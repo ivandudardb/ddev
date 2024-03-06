@@ -1,0 +1,24 @@
+uuid: 2b45277f-4a0b-4840-b8b8-e6a5c87366e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_regular_text
+    - paragraphs.paragraphs_type.text_and_picture
+  module:
+    - text
+id: paragraph.text_and_picture.field_regular_text
+field_name: field_regular_text
+entity_type: paragraph
+bundle: text_and_picture
+label: 'regular text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

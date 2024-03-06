@@ -5,10 +5,11 @@ dependencies: {  }
 name: node_middle
 label: 'text and picture'
 effects:
-  0976aa89-fe01-4f76-9b48-cf924f0d4c12:
-    uuid: 0976aa89-fe01-4f76-9b48-cf924f0d4c12
-    id: image_resize
-    weight: 1
+  25938de4-5bb4-4421-a676-c6e6a8ea90eb:
+    uuid: 25938de4-5bb4-4421-a676-c6e6a8ea90eb
+    id: image_scale_and_crop
+    weight: 2
     data:
       width: 259
       height: 388
+      anchor: center-center

@@ -14,7 +14,9 @@
  */
 #}
 {% include "@atoms/forms/_textarea.twig" %}
-{% include "@atoms/forms/textfields/input-name.twig" %}
-{% include "@atoms/forms/textfields/input-email.twig" %}
-{% include "@atoms/forms/textfields/input-website.twig" %}
+<div class="group-input">
+  {% include "@atoms/forms/textfields/input-name.twig" %}
+  {% include "@atoms/forms/textfields/input-email.twig" %}
+  {% include "@atoms/forms/textfields/input-website.twig" %}
+</div>
 {% include "@atoms/forms/checkbox/_checkbox-item.twig" %}

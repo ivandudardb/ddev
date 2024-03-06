@@ -5,10 +5,11 @@ dependencies: {  }
 name: main_new_small_desctop
 label: 'main new small desctop'
 effects:
-  de8c346e-a263-465b-92d8-746d56c7b258:
-    uuid: de8c346e-a263-465b-92d8-746d56c7b258
-    id: image_resize
+  5ce34b62-57cd-4595-a4e6-4817be76c283:
+    uuid: 5ce34b62-57cd-4595-a4e6-4817be76c283
+    id: image_scale_and_crop
     weight: 1
     data:
       width: 340
       height: 255
+      anchor: center-center

@@ -5,10 +5,11 @@ dependencies: {  }
 name: main_new_mobile
 label: 'main new mobile'
 effects:
-  536f512d-7a80-43fa-8aff-ce36f31dfaef:
-    uuid: 536f512d-7a80-43fa-8aff-ce36f31dfaef
-    id: image_resize
+  f4f888e2-023f-4162-88d6-fdd591de448f:
+    uuid: f4f888e2-023f-4162-88d6-fdd591de448f
+    id: image_scale_and_crop
     weight: 1
     data:
       width: 710
       height: 531
+      anchor: center-center

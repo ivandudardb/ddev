@@ -5,10 +5,11 @@ dependencies: {  }
 name: editor_picks_main_page
 label: 'round photo main'
 effects:
-  b9bfc927-5e26-42a6-a93c-3ac88e580bbb:
-    uuid: b9bfc927-5e26-42a6-a93c-3ac88e580bbb
-    id: image_resize
-    weight: 1
+  f03cfd86-c99e-494f-96ee-781c129827b8:
+    uuid: f03cfd86-c99e-494f-96ee-781c129827b8
+    id: image_scale_and_crop
+    weight: 2
     data:
       width: 60
       height: 60
+      anchor: center-center

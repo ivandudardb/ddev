@@ -1,0 +1,672 @@
+.black_category_link {
+  h2 {
+    a {
+      background-color: $node-category;
+    }
+  }
+}
+
+.title-news-full {
+  line-height: 1.1;
+  font-weight: 600;
+  font-size: 24px;
+  margin: 0;
+  color: $title-color;
+}
+
+.counter_block {
+  .views-row {
+    display: flex;
+
+    .views-field-uid {
+      .views-label-uid {
+        margin-right: 5px;
+        font-weight: 400;
+        color: $admin-title;
+        @include author-info;
+      }
+
+      .field-content {
+        a {
+          color: #000;
+          font-weight: 600;
+          margin-right: 10px;
+          @include author-info;
+        }
+      }
+    }
+
+    .views-field-created {
+     span {
+       line-height: 20px;
+       font-weight: 400;
+       color: $admin-title;
+       margin-right: 40px;
+       @include author-info;
+     }
+    }
+
+    .views-field-comment-count {
+      span {
+        color: $admin-title;
+        display: block;
+        position: relative;
+        margin-right: 40px;
+
+        &::before {
+          display: block;
+          position: absolute;
+          left: -20px;
+          top: 5px;
+          content: "";
+          width: 15px;
+          height: 15px;
+          background: url("/sites/default/files/img/icons/comments.png");
+          background-size: cover;
+        }
+      }
+    }
+
+    .views-field-totalcount {
+      span {
+        color: $admin-title;
+        display: block;
+        position: relative;
+        margin-right: 40px;
+
+        &::before {
+          display: block;
+          position: absolute;
+          left: -20px;
+          top: 5px;
+          content: "";
+          width: 15px;
+          height: 15px;
+          background: url("/sites/default/files/img/icons/eye.png");
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
+
+.share_links {
+  display: flex;
+
+  .share_text {
+    margin-right: 70px; /* змінив значення margin-right */
+    position: relative;
+    height: 72px;
+
+    &:after {
+      position: absolute;
+      content: ''; /* Пустий контент, потрібно для зображення */
+      display: inline-block; /* Встановлюємо властивість, щоб зображення відображалося як блок */
+      width: 20px;
+      height: 20px;
+      background-image: url('/sites/default/files/img/icons/share.png');
+      background-size: cover;
+      background-position: center;
+      top: 25px;
+      right: -40px;
+    }
+  }
+
+  p {
+    display: none;
+  }
+
+  a {
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.bold-text {
+  font-weight: 700;
+  margin-top: 20px;
+  @include paragraph;
+}
+
+.text-long {
+  p {
+    @include paragraph;
+  }
+}
+
+.middle-photo {
+  margin-bottom: 26px;
+}
+
+.text-and-picture {
+  div {
+    @include paragraph;
+  }
+}
+
+.picture-with-text {
+  img {
+    margin: 0 auto;
+  }
+}
+
+.slogan {
+  div {
+    padding: 20px 3%;
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    color: $block-title;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 26px;
+  }
+}
+
+.conclusion {
+  div {
+    @include paragraph;
+  }
+}
+
+.entity-pager-list {
+  display: flex;
+  justify-content: space-between;
+
+  .entity-pager-item{
+    a {
+      color: $pager-link;
+      margin-bottom: 7px;
+      font-size: 14px
+    }
+  }
+}
+
+.block-adv {
+  border: $border;
+  max-width: 1068px;
+  margin: 0 auto;
+
+  .adv-wide {
+    padding-bottom: 10px;
+  }
+}
+
+.more-articles {
+  border: $border;
+  padding: 15px;
+  margin-bottom: 26px;
+}
+
+.must-read-block {
+  display: none;
+}
+
+.latest-article {
+  border: $border;
+  padding: 15px;
+}
+
+.latest-article-block {
+  justify-content: space-between;
+}
+
+.custom-comment-container {
+  display: flex;
+
+  .left-picture {
+    img {
+      border-radius: 50%;
+      margin: 10px 30px 0 0;
+    }
+  }
+}
+
+.date-container {
+  display: flex;
+
+  .author {
+    span {
+      color: $text;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 14px;
+      line-height: 1;
+      margin-right: 10px;
+    }
+  }
+
+  .created {
+    span {
+      font-size: 11px;
+      line-height: 1;
+      color: $pager-link;
+    }
+  }
+}
+
+.comment-body {
+  p {
+    word-wrap: break-word;
+    line-height: 1.2;
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+}
+
+.inline {
+  li {
+    list-style: none;
+
+    a {
+      font-size: 11px;
+      color: $pager-link;
+    }
+  }
+}
+
+.field--type-text-long {
+  .js-text-format-wrapper {
+    .js-form-item {
+      label {
+        color: $title-color;
+      }
+
+      .comment-textarea {
+        width: 90vw;
+
+        textarea {
+          border: $input-border;
+          margin-bottom: 20px;
+          width: 90vw;
+        }
+      }
+
+      div {
+        input {
+          width: 90vw;
+          border: $input-border;
+          margin-bottom: 20px;
+          padding: 7px;
+        }
+      }
+    }
+  }
+}
+
+.author-block {
+  display: none;
+}
+
+.latest-article {
+  .views-row {
+    .latest-article-block {
+      .image {
+        picture {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+.layout--twocol-section--50-50{
+  .layout__region--first {
+    flex-basis: 100% !important;
+  }
+
+  .layout__region--second {
+    flex-basis: 100% !important;
+  }
+}
+
+.more-articles {
+  .views-field-field-photo {
+    margin-top: -150px;
+    float: right;
+    width: 20%;
+  }
+
+  .views-field-created {
+    margin-bottom: 90px;
+
+    time {
+      font-size: 13px;
+      line-height: 1;
+      font-style: italic;
+      font-weight: 400;
+      color: $text;
+    }
+  }
+
+  .views-field-title {
+    max-width: 65%;
+
+    a {
+      color: $title-color;
+      margin: 0 0 6px 0;
+      font-size: 15px;
+      line-height: 1.1;
+      font-weight: 700;
+    }
+  }
+}
+
+.blue-h2 {
+  margin: 10px 0;
+}
+
+label[for="edit-name"] {
+  display: none;
+}
+
+#edit-name {
+  display: none;
+}
+
+label[for="edit-comment-body-0-value"] {
+  margin: 10px 0 7px;
+  color: $title-color;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.form-item--checkbox__item {
+  font-size: 14px;
+  line-height: 21px;
+
+  #checkbox {
+    margin-right: 5px;
+  }
+}
+
+#edit-comment-body-0-format {
+  display: none;
+}
+
+#edit-actions--2 {
+  input {
+    width: 90vw;
+    background-color: $node-category;
+    padding: 14px 24px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 26px;
+
+    &:hover {
+      color: $white;
+      background-color: $pager-active;
+      transition: 0.5s;
+    }
+  }
+}
+
+.layout--twocol-section--50-50 {
+  display: block;
+}
+
+.node-photo-main {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .layout--twocol-section--33-67 {
+    .layout__region--second {
+      flex-grow: 1 !important;
+    }
+
+    .layout__region--first {
+    flex-grow: 1 !important;
+    }
+  }
+
+  .main--with-sidebar {
+    .main-content--with-sidebar {
+      max-width: 70%;
+      margin-right: 15px;
+    }
+
+    .main-sidebar {
+      width: 27%;
+
+      div {
+        position: sticky;
+        top: 0;
+      }
+    }
+  }
+
+  .comment-textarea {
+    width: auto !important;
+  }
+
+  .group-input {
+    display: flex;
+
+    input {
+      width: 90% !important;
+    }
+  }
+
+  #edit-actions--2 input {
+    width: auto;
+  }
+
+  .picture-with-text {
+    img {
+      float: right;
+    }
+  }
+
+  .slogan {
+    div {
+      font-size: 24px;
+    }
+  }
+
+  .blue-h2 {
+    margin: 0 0 5px;
+  }
+}
+
+@media screen and (min-width: 1019px) {
+  .title-news-full {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .layout__region--content {
+    .addtoany-block {
+      .share_links {
+        float: right;
+        margin-top: -40px;
+      }
+    }
+  }
+
+  .must-read-block {
+    display: block;
+    margin-right: 10px;
+
+    .views-field-title {
+      width: 65%;
+
+      a {
+        color: $title-color;
+        font-weight: 700;
+        font-size: 14px;
+      }
+    }
+
+    .views-field-created {
+      margin-bottom: 15px;
+
+      time {
+        font-size: 13px;
+        line-height: 1;
+        font-style: italic;
+        font-weight: 400;
+      }
+    }
+
+    .views-field-field-photo {
+      img {
+        float: right;
+        max-width: 30%;
+        margin-top: -100px;
+      }
+    }
+  }
+
+  .must-read-content {
+    border: $border;
+    padding: 15px;
+  }
+
+  .layout--twocol-section {
+    display: flex;
+  }
+
+  .author-block {
+    margin-top: 15px;
+    display: block;
+    border: $border;
+    padding: 20px;
+
+    img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto;
+    }
+
+    .views-field-name {
+      span {
+        display: block;
+
+        a {
+          display: block;
+          text-align: center;
+          margin: 20px 0;
+          font-size: 20px;
+          line-height: 21px;
+          font-weight: 700;
+          color: $node-category;
+        }
+      }
+    }
+
+    .views-field-field-author-website {
+      a {
+        margin-bottom: 6px;
+        font-size: 11px;
+        font-style: italic;
+        line-height: 21px;
+        color: $admin-title;
+        display: block;
+        text-align: center;
+      }
+    }
+
+    .views-field-field-author-de {
+      div {
+        font-size: 14px;
+        line-height: 1.3;
+        text-align: center;
+        color: $title-color;
+      }
+    }
+  }
+
+  .main-content--with-sidebar {
+    width: 120%;
+  }
+
+  .layout--twocol-section {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+
+  .field--type-text-long {
+    .js-text-format-wrapper {
+      .js-form-item {
+        .comment-textarea {
+          width: 40vw;
+
+          textarea {
+            width: 40vw;
+          }
+        }
+
+        div {
+          input {
+            width: 40vw;
+
+          }
+        }
+      }
+    }
+  }
+
+  .block-comment {
+    padding: 15px;
+  }
+
+  .more-articles-block {
+    .views-field-field-photo {
+      width: 35%;
+      margin-top: -120px;
+
+      img {
+        float: right;
+      }
+    }
+
+    .views-field-created {
+      margin-bottom: 40px;
+    }
+  }
+
+  .slogan {
+    div {
+      font-size: 32px;
+    }
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .title-news-full {
+    font-size: 41px;
+  }
+
+  .must-read-block {
+    margin-top: 20px;
+
+    .views-field-title {
+      a {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .field--type-text-long {
+    .js-text-format-wrapper {
+      .js-form-item {
+        .group-input {
+          display: flex;
+
+          input {
+            width: 30%;
+          }
+        }
+      }
+    }
+  }
+}

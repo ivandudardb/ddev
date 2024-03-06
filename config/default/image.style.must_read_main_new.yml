@@ -5,10 +5,11 @@ dependencies: {  }
 name: must_read_main_new
 label: 'Must read main new'
 effects:
-  4d846bcc-cdeb-4486-a18d-3781d4edc24a:
-    uuid: 4d846bcc-cdeb-4486-a18d-3781d4edc24a
-    id: image_resize
+  67eb742d-fe0a-40d3-8d72-639c4b9818f3:
+    uuid: 67eb742d-fe0a-40d3-8d72-639c4b9818f3
+    id: image_scale_and_crop
     weight: 1
     data:
       width: 562
       height: 478
+      anchor: center-center

@@ -5,10 +5,11 @@ dependencies: {  }
 name: right_sidebar_main_page_mobile
 label: 'right sidebar main page mobile'
 effects:
-  b5ff578f-b28c-4e2f-b6c2-f5e85f517bf2:
-    uuid: b5ff578f-b28c-4e2f-b6c2-f5e85f517bf2
-    id: image_resize
-    weight: 1
+  dc767b3a-60b6-459f-86a9-15320581de6b:
+    uuid: dc767b3a-60b6-459f-86a9-15320581de6b
+    id: image_scale_and_crop
+    weight: 2
     data:
       width: 150
       height: 150
+      anchor: center-center

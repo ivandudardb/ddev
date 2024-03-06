@@ -5,10 +5,11 @@ dependencies: {  }
 name: round_photo_main_mobile
 label: 'round photo main mobile'
 effects:
-  598ea526-a655-48f1-8278-6a3f551d601a:
-    uuid: 598ea526-a655-48f1-8278-6a3f551d601a
-    id: image_resize
-    weight: 1
+  1a75b7e5-af61-4d1c-9be3-48686d543490:
+    uuid: 1a75b7e5-af61-4d1c-9be3-48686d543490
+    id: image_scale_and_crop
+    weight: 2
     data:
       width: 123
       height: 123
+      anchor: center-center

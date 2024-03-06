@@ -5,10 +5,11 @@ dependencies: {  }
 name: node_middle_photo
 label: 'node middle'
 effects:
-  77de02db-27ee-42f6-b04a-7c583f0352dc:
-    uuid: 77de02db-27ee-42f6-b04a-7c583f0352dc
-    id: image_resize
-    weight: 1
+  f24ee728-24bf-42ae-bc10-9b6752284d8f:
+    uuid: f24ee728-24bf-42ae-bc10-9b6752284d8f
+    id: image_scale_and_crop
+    weight: 2
     data:
       width: 691
       height: 460
+      anchor: center-center

@@ -1,14 +1,14 @@
-uuid: f9257710-318e-40fb-9b51-db4eb86ec7ff
+uuid: 746f4052-7b6f-408e-bafe-46e62c5037f3
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_photo
-    - image.style.latest_pics
     - node.type.new
+    - responsive_image.styles.right_sidebar_main_page
   module:
-    - image
     - node
+    - responsive_image
     - user
 id: more_articles
 label: 'more articles'
@@ -24,7 +24,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'more articles'
+      title: 'More articles'
       fields:
         title:
           id: title
@@ -200,10 +200,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: image
+          type: responsive_image
           settings:
-            image_link: ''
-            image_style: latest_pics
+            responsive_image_style: right_sidebar_main_page
+            image_link: content
             image_loading:
               attribute: lazy
           group_column: ''
@@ -240,19 +240,22 @@ display:
         options: {  }
       empty: {  }
       sorts:
-        random:
-          id: random
-          table: views
-          field: random
+        created:
+          id: created
+          table: node_field_data
+          field: created
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: random
-          order: ASC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
           expose:
             label: ''
             field_identifier: ''
           exposed: false
+          granularity: second
       arguments: {  }
       filters:
         status:
@@ -279,6 +282,11 @@ display:
         type: default
       row:
         type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
       query:
         type: views_query
         options:
@@ -292,7 +300,7 @@ display:
       footer: {  }
       display_extenders: {  }
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -308,7 +316,7 @@ display:
     display_options:
       display_extenders: {  }
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'

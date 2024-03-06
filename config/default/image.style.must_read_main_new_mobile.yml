@@ -5,10 +5,11 @@ dependencies: {  }
 name: must_read_main_new_mobile
 label: 'Must read main new mobile'
 effects:
-  868f4eb0-9171-4b8a-b74f-8be626f67ccb:
-    uuid: 868f4eb0-9171-4b8a-b74f-8be626f67ccb
-    id: image_resize
+  90740d36-a873-4b24-acda-221114046033:
+    uuid: 90740d36-a873-4b24-acda-221114046033
+    id: image_scale_and_crop
     weight: 1
     data:
       width: 715
       height: 605
+      anchor: center-center

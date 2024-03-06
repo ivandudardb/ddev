@@ -5,10 +5,11 @@ dependencies: {  }
 name: new_podcast
 label: 'New Podcast'
 effects:
-  49f5e6d6-8a3d-40a7-9c60-fd3c2f7f33ef:
-    uuid: 49f5e6d6-8a3d-40a7-9c60-fd3c2f7f33ef
-    id: image_resize
-    weight: 1
+  1aad53d4-a87d-4191-b54a-98d9d784845b:
+    uuid: 1aad53d4-a87d-4191-b54a-98d9d784845b
+    id: image_scale_and_crop
+    weight: 2
     data:
       width: 93
       height: 93
+      anchor: center-center

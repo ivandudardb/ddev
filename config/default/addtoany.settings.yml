@@ -1,6 +1,6 @@
 _core:
   default_config_hash: fMTQlRT4MXb9WtflmxsvPI0VnKTQNjOnlx9oCWO3vYo
-buttons_size: 32
+buttons_size: 40
 additional_html: "<div class=\"share_links\">\r\n<div class=\"share_text\">\r\n<p>Share</p>\r\n</div>\r\n<a class=\"a2a_button_facebook\"></a>\r\n<a class=\"a2a_button_twitter\"></a>\r\n<a class=\"a2a_button_pinterest\"></a>\r\n<a class=\"a2a_button_whatsapp\"></a>\r\n\r\n</div>"
 additional_css: ''
 additional_js: ''

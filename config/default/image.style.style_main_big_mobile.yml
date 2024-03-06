@@ -5,10 +5,11 @@ dependencies: {  }
 name: style_main_big_mobile
 label: 'style main big mobile'
 effects:
-  9738507e-18f5-496a-807d-690708576c6d:
-    uuid: 9738507e-18f5-496a-807d-690708576c6d
-    id: image_resize
-    weight: 1
+  b56c116f-1bf6-4865-92af-4aadc434490c:
+    uuid: b56c116f-1bf6-4865-92af-4aadc434490c
+    id: image_scale_and_crop
+    weight: 2
     data:
       width: 712
       height: 534
+      anchor: center-center
