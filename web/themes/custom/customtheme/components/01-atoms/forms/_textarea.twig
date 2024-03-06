@@ -19,6 +19,6 @@
     'form-item__textarea',
   ]
 %}
-<div{{ wrapper_attributes }}>
-  <textarea{{ attributes.addClass(classes) }}>{{ value }}</textarea>
+<div{{ wrapper_attributes }} class="comment-textarea">
+  <textarea{{ attributes.addClass(classes) }} placeholder="Comment:">{{ value }}</textarea>
 </div>

@@ -1,0 +1,23 @@
+uuid: 2736ab40-62f7-4c77-938c-9a9879d3eb4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_author_social
+  module:
+    - link
+    - user
+id: user.user.field_author_social
+field_name: field_author_social
+entity_type: user
+bundle: user
+label: 'author social'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link
