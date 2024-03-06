@@ -34,14 +34,3 @@ function customtheme_preprocess_page(&$variables)
   if ($fonts)
     $variables['#attached']['library'][] = (in_array($fonts, ['open_sans', 'roboto', 'sansita_swashed']) ? 'YOURTHEME' : 'bootstrap_barrio' ) . '/' . $fonts;
 }
-
-
-use Drupal\entity_pager\EntityPagerLinkInterface;
-
-/**
- * Implements hook_entity_pager_link_alter().
- */
-function mymodule_entity_pager_link_alter(EntityPagerLinkInterface $link) {
-  // Модифікуємо значення #title для посилання.
-  $link->text = 'New Title';
-}
