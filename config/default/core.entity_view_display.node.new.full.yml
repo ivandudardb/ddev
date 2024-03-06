@@ -147,7 +147,7 @@ third_party_settings:
         layout_settings:
           label: main
           context_mapping: {  }
-          column_widths: 33-67
+          column_widths: 25-75
         components:
           9155b47a-bacf-450e-b03d-bd58c6978fed:
             uuid: 9155b47a-bacf-450e-b03d-bd58c6978fed

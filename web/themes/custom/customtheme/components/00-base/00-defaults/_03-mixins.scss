@@ -185,3 +185,27 @@ $outer-container-break: $small;
   color: $node-category;
   margin-bottom: 26px;
 }
+
+@mixin gelasio700 {
+  font-family: 'Gelasio', serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin gelasio500 {
+  font-family: 'Gelasio', serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin gelasio600 {
+  font-family: 'Gelasio', serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@mixin gelasio400 {
+  font-family: 'Gelasio', serif;
+  font-weight: 400;
+  font-style: normal;
+}
