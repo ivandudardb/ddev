@@ -180,30 +180,7 @@ display:
           query_tags: {  }
       relationships: {  }
       group_by: false
-      header:
-        result:
-          id: result
-          table: views
-          field: result
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: result
-          empty: false
-          content: '@total posts'
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: text
-          empty: false
-          content:
-            value: "Emilio Montes has worked a Pulses PRO since its launch in 2011. In the years since, he has led by example the company's tech news team and published over 5,000 articles — a mix of breaking news, reviews, helpful how-tos, industry analysis, and more.\r\n<br>\r\n<a href=\"http://www.emilio-montes.com\">http://www.emilio-montes.com</a>"
-            format: full_html
-          tokenize: false
+      header: {  }
       footer: {  }
       display_extenders: {  }
     cache_metadata:

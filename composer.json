@@ -27,6 +27,7 @@
         "drupal/fontawesome": "^2.26",
         "drupal/menu_item_extras": "^3.0",
         "drupal/paragraphs": "^1.17",
+        "drupal/social_link_field": "^2.0",
         "drupal/social_media_links": "^2.9",
         "drupal/token_filter": "^2.1",
         "drupal/twig_tweak": "^3.3",

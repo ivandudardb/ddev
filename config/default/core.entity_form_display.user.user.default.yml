@@ -6,11 +6,13 @@ dependencies:
     - field.field.user.user.field_author_de
     - field.field.user.user.field_author_social
     - field.field.user.user.field_author_website
+    - field.field.user.user.field_social
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
     - image
     - link
+    - social_media_links_field
     - user
 _core:
   default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
@@ -44,6 +46,12 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  field_social:
+    type: social_media_links_field_default
+    weight: 7
+    region: content
+    settings: {  }
     third_party_settings: {  }
   language:
     weight: 2
