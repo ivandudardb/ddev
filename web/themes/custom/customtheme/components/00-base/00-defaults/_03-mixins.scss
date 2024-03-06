@@ -209,3 +209,13 @@ $outer-container-break: $small;
   font-weight: 400;
   font-style: normal;
 }
+
+@mixin author-button {
+  background-color: $pager-active;
+  padding: 3px 8px;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: $white;
+  text-transform: uppercase;
+}

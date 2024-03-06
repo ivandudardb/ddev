@@ -1,0 +1,65 @@
+.author-page-h2 {
+  color: $author-title;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 25px 0 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.author-page-block {
+  .views-field-name{
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: capitalize;;
+    @include gelasio700;
+    text-align: center;
+    margin-top: 5px;
+
+    a {
+      color: $title-color
+    }
+  }
+
+  .views-field-field-author-de {
+    color: #777777;
+    font-size: 16px;
+    line-height: 1.4;
+    font-style: italic !important;
+    text-align: center;
+    margin-top: 15px;
+    @include gelasio400;
+  }
+
+  .views-field-field-author-website {
+    a {
+      display: block;
+      font-style: italic;
+      color: $admin-title;
+      font-size: 14px;
+      text-align: center;
+      margin-top: 25px;
+    }
+  }
+}
+
+.social-media-links--platforms {
+  margin: 15px 0 40px;
+  display: flex;
+  justify-content: center;
+
+  li {
+    margin-right: 15px !important;
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+
+  .author-button {
+    margin: 10px 10px 0 0;
+    @include author-button;
+  }
+}
