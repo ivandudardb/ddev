@@ -23,7 +23,7 @@
   }
 
   .views-field-field-author-de {
-    color: #777777;
+    color: $author-desc;
     font-size: 16px;
     line-height: 1.4;
     font-style: italic !important;
@@ -51,6 +51,13 @@
 
   li {
     margin-right: 15px !important;
+
+    a {
+      span::before {
+        color: $text;
+        font-size: 15px;
+      }
+    }
   }
 }
 
@@ -62,4 +69,38 @@
     margin: 10px 10px 0 0;
     @include author-button;
   }
+}
+
+.layout--twocol-section--75-25 {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .author-posts-block {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .layout--twocol-section--75-25 {
+    display: flex;
+    flex-wrap: nowrap;
+
+    .layout__region--second {
+      margin-left: 20px;
+
+      .latest_news {
+        margin-top: 0;
+        border: $border;
+      }
+    }
+  }
+
+  .views-field-field-author-de {
+   max-width: 750px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+
 }
