@@ -173,15 +173,39 @@
 }
 
 .entity-pager-list {
-  display: flex;
-  justify-content: space-between;
 
-  .entity-pager-item{
-    a {
+  .entity-pager-item {
+    span {
+      display: block;
+      font-size: 14px;
       color: $pager-link;
       margin-bottom: 7px;
-      font-size: 14px
     }
+
+    a {
+      display: block;
+      font-size: 16px;
+      line-height: 1.2;
+      color: $node-category;
+      @include gelasio600;
+
+      &:hover {
+        color: $pager-active;
+      }
+    }
+  }
+
+  .entity-pager-item-prev {
+    text-align: left;
+    float: left;
+    width: 48%;
+    margin-right: 1%;
+  }
+
+  .entity-pager-item-next {
+    text-align: right;
+    float: left;
+    width: 48%;
   }
 }
 

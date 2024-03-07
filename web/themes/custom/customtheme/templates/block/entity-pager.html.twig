@@ -1,0 +1,60 @@
+{#
+/**
+ * @file
+ * Default theme implementation for an entity pager.
+ *
+ * The list of items are presented next to each other in a usable way using
+ * minimalist amount of CSS (see entity_pager.css).
+ *
+ * Available variables:
+ * - count_word: The word to use for the count of items.
+ * - links: An array of links to render:
+ *   - prev: Link to previous node.
+ *   - all_link: Link to All listing group of records.
+ *   - next: Link to next node in the sequence.
+ *   - count: Count of number of nodes in the group.
+ *
+ * @see template_preprocess_views_view_entity_pager()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+  'views-view-entity-pager',
+  'entity-pager',
+  'count-word-' ~ count_word
+]
+%}
+{% set title_text_prev = title.prev['#markup'] %}
+{% set title_text_next = title.next['#markup'] %}
+
+<div{{ attributes.addClass(classes) }}>
+  <ul class="entity-pager-list">
+    {% for key, link in links %}
+      {% if link %}
+        <li class="entity-pager-item entity-pager-item-{{ key }}">
+          {% set link_url = link['#url'] %}
+          {% set button_text = link['#title']['#markup'] %}
+          <span class="button-text">{{ button_text }}</span>
+          {% if key == 'next' %}
+            {% set title_text = title_text_next %}
+          {% else %}
+            {% set title_text = title_text_prev %}
+          {% endif %}
+          <a href="{{ link_url }}">{{ title_text }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+
+  <div class="pager-titles">
+    {% if previous_title %}
+      <div class="previous-title">{{ previous_title }}</div>
+    {% endif %}
+    {% if next_title %}
+      <div class="next-title">{{ next_title }}</div>
+    {% endif %}
+  </div>
+</div>
