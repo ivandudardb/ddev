@@ -1,0 +1,19 @@
+uuid: 826eb7ed-49a4-4784-ba0f-1685c96cf091
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - user
+id: user.field_author_name_for_compact
+field_name: field_author_name_for_compact
+entity_type: user
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

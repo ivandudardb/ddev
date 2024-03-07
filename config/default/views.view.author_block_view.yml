@@ -3,13 +3,16 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.user.compact
     - field.storage.user.field_author_de
-    - field.storage.user.field_author_social
     - field.storage.user.field_author_website
+    - field.storage.user.field_social
     - field.storage.user.user_picture
   module:
     - image
     - link
+    - node
+    - social_media_links_field
     - user
 id: author_block_view
 label: 'Author block view'
@@ -268,10 +271,10 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_author_social:
-          id: field_author_social
-          table: user__field_author_social
-          field: field_author_social
+        field_social:
+          id: field_social
+          table: user__field_social
+          field: field_social
           relationship: none
           group_type: group
           admin_label: ''
@@ -317,22 +320,23 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: uri
-          type: link
+          click_sort_column: platform
+          type: social_media_links_field_default
           settings:
-            trim_length: 80
-            url_only: false
-            url_plain: false
-            rel: '0'
-            target: '0'
-          group_column: ''
+            appearance:
+              orientation: h
+              show_name: 0
+            link_attributes:
+              target: '<none>'
+              rel: '<none>'
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
-          multi_type: ul
+          multi_type: separator
           separator: ', '
           field_api_classes: false
       pager:
@@ -375,7 +379,10 @@ display:
       style:
         type: default
       row:
-        type: fields
+        type: 'entity:user'
+        options:
+          relationship: none
+          view_mode: compact
       query:
         type: views_query
         options:
@@ -384,7 +391,18 @@ display:
           distinct: false
           replica: false
           query_tags: {  }
-      relationships: {  }
+      relationships:
+        uid:
+          id: uid
+          table: users_field_data
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: nodes
+          entity_type: user
+          entity_field: uid
+          plugin_id: standard
+          required: true
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -396,8 +414,8 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.user.field_author_de'
-        - 'config:field.storage.user.field_author_social'
         - 'config:field.storage.user.field_author_website'
+        - 'config:field.storage.user.field_social'
         - 'config:field.storage.user.user_picture'
   block_1:
     id: block_1
@@ -414,6 +432,6 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.user.field_author_de'
-        - 'config:field.storage.user.field_author_social'
         - 'config:field.storage.user.field_author_website'
+        - 'config:field.storage.user.field_social'
         - 'config:field.storage.user.user_picture'
