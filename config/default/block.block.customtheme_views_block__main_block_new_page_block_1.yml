@@ -12,7 +12,7 @@ dependencies:
 id: customtheme_views_block__main_block_new_page_block_1
 theme: customtheme
 region: content
-weight: 4
+weight: -6
 provider: null
 plugin: 'views_block:main_block_new_page-block_1'
 settings:
