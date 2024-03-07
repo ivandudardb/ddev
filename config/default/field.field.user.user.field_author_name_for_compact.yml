@@ -1,0 +1,23 @@
+uuid: a3502a93-af4b-469c-a9ae-a6dbba08617d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_author_name_for_compact
+  module:
+    - link
+    - user
+id: user.user.field_author_name_for_compact
+field_name: field_author_name_for_compact
+entity_type: user
+bundle: user
+label: 'author name for compact'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

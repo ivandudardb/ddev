@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.user.user.field_author_de
+    - field.field.user.user.field_author_name_for_compact
     - field.field.user.user.field_author_social
     - field.field.user.user.field_author_website
     - field.field.user.user.field_social
@@ -38,6 +39,14 @@ content:
     settings:
       rows: 5
       placeholder: ''
+    third_party_settings: {  }
+  field_author_name_for_compact:
+    type: link_default
+    weight: 8
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
   field_author_website:
     type: link_default
