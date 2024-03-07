@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\node\Entity\Node;
+
 /**
  * @file
  * Functions to support theming.
@@ -33,4 +35,42 @@ function customtheme_preprocess_page(&$variables)
   $fonts = theme_get_setting('bootstrap_barrio_google_fonts');
   if ($fonts)
     $variables['#attached']['library'][] = (in_array($fonts, ['open_sans', 'roboto', 'sansita_swashed']) ? 'YOURTHEME' : 'bootstrap_barrio' ) . '/' . $fonts;
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+
+/**
+ * Реалізує функцію template_preprocess_HOOK() для views-view-entity-pager.html.twig.
+ */
+function customtheme_preprocess_entity_pager(&$variables) {
+  if (isset( $variables["links"]["prev"]["#url"])) {
+    $previous_url = $variables["links"]["prev"]["#url"];
+    $previous_params = $previous_url->getRouteParameters();
+    $previous_node_id = $previous_params['node'];
+    $previous_node = Node::load($previous_node_id);
+    $previous_title = $previous_node ? $previous_node->getTitle() : '';
+  } else {
+    $previous_title = '';
+  }
+
+  if (isset( $variables["links"]["next"]["#url"])) {
+    $next_url = $variables["links"]["next"]["#url"];
+    $next_params = $next_url->getRouteParameters();
+    $next_node_id = $next_params['node'];
+    $next_node = Node::load($next_node_id);
+    $next_title = $next_node ? $next_node->getTitle() : '';
+  } else {
+    $next_title = '';
+  }
+
+  $variables['title'] = [
+    'prev' => [
+      '#markup' => $previous_title,
+    ],
+    'next' => [
+      '#markup' => $next_title,
+    ],
+  ];
 }
