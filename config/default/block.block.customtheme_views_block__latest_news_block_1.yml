@@ -1,0 +1,29 @@
+uuid: 396eeac4-5a11-4d8b-9b1e-8ecd9093fecf
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_news
+  module:
+    - system
+    - views
+  theme:
+    - customtheme
+id: customtheme_views_block__latest_news_block_1
+theme: customtheme
+region: sidebar
+weight: 0
+provider: null
+plugin: 'views_block:latest_news-block_1'
+settings:
+  id: 'views_block:latest_news-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/category/*'

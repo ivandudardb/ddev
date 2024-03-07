@@ -1,0 +1,49 @@
+uuid: d14ccf77-20cb-4c13-9bb1-3125fee07e92
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.news
+  module:
+    - layout_builder
+    - layout_discovery
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          b58cb181-2e80-4bb7-b563-6fed4705a857:
+            uuid: b58cb181-2e80-4bb7-b563-6fed4705a857
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:news:description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: taxonomy_term.news.default
+targetEntityType: taxonomy_term
+bundle: news
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
