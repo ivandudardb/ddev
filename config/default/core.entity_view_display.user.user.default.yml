@@ -8,28 +8,139 @@ dependencies:
     - field.field.user.user.field_author_website
     - field.field.user.user.field_social
     - field.field.user.user.user_picture
+    - views.view.advertisement_wide
+    - views.view.author_name
+    - views.view.author_posts
+    - views.view.latest_news
+  content:
+    - 'block_content:advertisement_normal:4ccbcfd8-96b5-4e08-8571-90ff2ae74d37'
   module:
-    - social_media_links_field
+    - block_content
+    - layout_builder
+    - layout_discovery
     - user
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'advertisement wide'
+          context_mapping: {  }
+        components:
+          c2ec63d4-bf81-4016-9d98-162870e56435:
+            uuid: c2ec63d4-bf81-4016-9d98-162870e56435
+            region: content
+            configuration:
+              id: 'views_block:advertisement_wide-advertisement_wide'
+              label: '- Advertisement -'
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: '- Advertisement -'
+              items_per_page: none
+            weight: 0
+            additional: {  }
+          053e8407-d0aa-4fde-8461-e63d61f8ca91:
+            uuid: 053e8407-d0aa-4fde-8461-e63d61f8ca91
+            region: content
+            configuration:
+              id: 'views_block:author_name-block_1'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 1
+            additional: {  }
+          e58d877a-247e-467c-a36b-587f4feb29fb:
+            uuid: e58d877a-247e-467c-a36b-587f4feb29fb
+            region: content
+            configuration:
+              id: 'field_block:user:user:field_social'
+              label: social
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: '@user.current_user_context:current_user'
+                view_mode: view_mode
+              formatter:
+                type: social_media_links_field_default
+                label: above
+                settings:
+                  appearance:
+                    orientation: h
+                    show_name: 0
+                  link_attributes:
+                    target: '<none>'
+                    rel: '<none>'
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: content
+          context_mapping: {  }
+          column_widths: 75-25
+        components:
+          1ba2de16-0c78-489e-b433-44526c4ead50:
+            uuid: 1ba2de16-0c78-489e-b433-44526c4ead50
+            region: first
+            configuration:
+              id: 'views_block:author_posts-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+          e7925003-a069-4e7c-9333-c58d70bf5034:
+            uuid: e7925003-a069-4e7c-9333-c58d70bf5034
+            region: second
+            configuration:
+              id: 'views_block:latest_news-block_1'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+          899b6584-f1e5-4d41-9e0f-6bb602b83aee:
+            uuid: 899b6584-f1e5-4d41-9e0f-6bb602b83aee
+            region: second
+            configuration:
+              id: 'block_content:4ccbcfd8-96b5-4e08-8571-90ff2ae74d37'
+              label: '- Advertisement -'
+              label_display: visible
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
 _core:
   default_config_hash: mZLyuWM9CQx2ZJVqFGSbzgFnHzudVbHBYmdU256A5Wk
 id: user.user.default
 targetEntityType: user
 bundle: user
 mode: default
-content:
-  field_social:
-    type: social_media_links_field_default
-    label: hidden
-    settings:
-      appearance: {  }
-      link_attributes: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
+content: {  }
 hidden:
   field_author_de: true
   field_author_social: true
   field_author_website: true
+  field_social: true
   member_for: true
   user_picture: true

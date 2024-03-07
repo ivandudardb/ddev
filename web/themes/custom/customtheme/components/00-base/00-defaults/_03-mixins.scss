@@ -152,7 +152,7 @@ $outer-container-break: $small;
 
 @mixin main-title {
   margin: 0 0 6px;
-  padding: 13px 0 0;
+  padding: 17px 0 0;
   font-size: 17px;
   line-height: 1.1;
   font-weight: 700;
@@ -208,4 +208,14 @@ $outer-container-break: $small;
   font-family: 'Gelasio', serif;
   font-weight: 400;
   font-style: normal;
+}
+
+@mixin author-button {
+  background-color: $pager-active;
+  padding: 3px 8px;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: $white;
+  text-transform: uppercase;
 }
