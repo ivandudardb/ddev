@@ -1,0 +1,23 @@
+uuid: 597f1ef9-305d-440b-bac5-9dc0fcde3a48
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.back_to_top_button_container
+    - field.field.block_content.back_to_top_button_container.field_font_awesome_icon
+  module:
+    - fontawesome
+id: block_content.back_to_top_button_container.default
+targetEntityType: block_content
+bundle: back_to_top_button_container
+mode: default
+content:
+  field_font_awesome_icon:
+    type: fontawesome_icon_formatter
+    label: hidden
+    settings:
+      layers: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

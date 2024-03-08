@@ -1,0 +1,21 @@
+uuid: 4c6971f1-b2db-4051-8011-aeec7f8c26b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.back_to_top_button_container
+    - field.storage.block_content.field_font_awesome_icon
+  module:
+    - fontawesome
+id: block_content.back_to_top_button_container.field_font_awesome_icon
+field_name: field_font_awesome_icon
+entity_type: block_content
+bundle: back_to_top_button_container
+label: 'Font Awesome Icon'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: fontawesome_icon

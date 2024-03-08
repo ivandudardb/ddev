@@ -9,6 +9,7 @@ dependencies:
 libraries:
   - customtheme/global
   - customtheme/fonts
+  - customtheme/buttons
 ckeditor_stylesheets:
   - dist/css/style.css
 regions:

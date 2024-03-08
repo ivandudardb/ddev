@@ -211,7 +211,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<div class="button_container"> <a class="author-button"> {{ uid }} </a>   <a class="author-button">{{ comment_count }}</a> </div>'
+            text: '<div class="button-container"> <a class="author-button"> {{ uid }} </a>   <a class="author-button">{{ comment_count }}</a> </div>'
             make_link: false
             path: ''
             absolute: false

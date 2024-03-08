@@ -494,12 +494,19 @@
   }
 }
 
-.back-to-top{
+.font-container {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 40px;
-  height: 20px;
-  background: url("/sites/default/files/img/icons/button.png");
-  background-size: cover;
+}
+
+.back-to-top-button {
+  background-color: $pager-active;
+  border: none;
+}
+
+.button-font {
+  color: $white;
+  font-size: 20px;
+  padding: 10px 6px;
 }
