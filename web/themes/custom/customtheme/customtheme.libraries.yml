@@ -27,4 +27,3 @@ buttons:
     components/01-atoms/buttons/back-to-top.js: {}
   dependencies:
     - core/drupal
-    - core/jquery

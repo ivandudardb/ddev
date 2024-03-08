@@ -1,22 +1,27 @@
-(function ($, Drupal, once) {
+(function (Drupal, once) {
   Drupal.behaviors.backToTop = {
     attach: function (context, settings) {
-      var backButton = once('backToTopButton', '.font-container', context)[0];
-      $(backButton).hide();
-      $(window, context).on('scroll', function() {
-        var scrollPosition = $(window).scrollTop();
-
-        if (scrollPosition > 100) {
-          $(backButton).fadeIn();
-        } else {
-          $(backButton).fadeOut();
-        }
+      let backButtonElements = once('backToTopButton', '.footer .button-back-to-top', context);
+      backButtonElements.forEach(function(backButton) {
+        backButton.style.display = 'none';
+        backButton.addEventListener('click', function (event) {
+          event.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
       });
 
-      $(backButton).on('click', function (event) {
-        event.preventDefault();
-        $('html, body').animate({ scrollTop: 0 }, 1000);
+      window.addEventListener('scroll', function() {
+        let scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollPosition > 100) {
+          backButtonElements.forEach(function(backButton) {
+            backButton.style.display = 'block';
+          });
+        } else {
+          backButtonElements.forEach(function(backButton) {
+            backButton.style.display = 'none';
+          });
+        }
       });
     },
   };
-})(jQuery, Drupal, once);
+})(Drupal, once);

@@ -25,7 +25,9 @@
  * @see template_preprocess_block()
  */
 #}
-<div {{ bem('font-container') }}>
+  {{ attach_library('customtheme/buttons') }}
+
+<div {{ bem('button-back-to-top') }}>
     {% block content %}
       <button class="back-to-top-button">
         <i class="fa-solid fa-eject button-font"></i>
