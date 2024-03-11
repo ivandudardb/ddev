@@ -1,33 +1,27 @@
-let mainMenuAttached = false;
+(function (Drupal, once) {
+  Drupal.behaviors.mainMenu = {
+    attach(context) {
+      const mobileContainers = once('mobileContainer', '.mobile_container', context);
+      if (!mobileContainers.length) {
+        return;
+      }
 
-Drupal.behaviors.mainMenu = {
-  attach() {
-    if (!mainMenuAttached) {
-      mainMenuAttached = true;
+      mobileContainers.forEach(container => {
+        const toggleExpands = container.querySelectorAll('.toggle-expand');
+        const menus = container.querySelectorAll('.main-nav');
 
-      const toggleExpand = document.getElementById('toggle-expand');
-      const menu = document.getElementById('main-nav');
-      if (menu) {
-        const expandMenu = menu.getElementsByClassName('expand-sub');
+        if (!toggleExpands.length || !menus.length || toggleExpands.length !== menus.length) {
+          return;
+        }
 
-        // Mobile Menu Show/Hide.
-        toggleExpand.addEventListener('click', (e) => {
-          toggleExpand.classList.toggle('toggle-expand--open');
-          menu.classList.toggle('main-nav--open');
-          e.preventDefault();
-        });
-
-        // Expose mobile sub menu on click.
-        Array.from(expandMenu).forEach((item) => {
-          item.addEventListener('click', (e) => {
-            const menuItem = e.currentTarget;
-            const subMenu = menuItem.nextElementSibling;
-
-            menuItem.classList.toggle('expand-sub--open');
-            subMenu.classList.toggle('main-menu--sub-open');
+        toggleExpands.forEach((toggleExpand, index) => {
+          toggleExpand.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggleExpand.classList.toggle('toggle-expand--open');
+            menus[index].classList.toggle('main-nav--open');
           });
         });
-      }
+      });
     }
-  },
-};
+  };
+})(Drupal, once);
