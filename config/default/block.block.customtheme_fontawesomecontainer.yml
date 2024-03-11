@@ -1,0 +1,25 @@
+uuid: 7ca1078f-ad31-4d72-b443-cffede18d7c7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:back_to_top_button_container:8eb66366-e95e-40d7-b98d-23635a8b7d13'
+  module:
+    - block_content
+  theme:
+    - customtheme
+id: customtheme_fontawesomecontainer
+theme: customtheme
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:8eb66366-e95e-40d7-b98d-23635a8b7d13'
+settings:
+  id: 'block_content:8eb66366-e95e-40d7-b98d-23635a8b7d13'
+  label: 'font awesome container'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

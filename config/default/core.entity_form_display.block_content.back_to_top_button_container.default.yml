@@ -1,0 +1,29 @@
+uuid: c8fba85a-c274-4f45-9578-1262af6cb8a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.back_to_top_button_container
+    - field.field.block_content.back_to_top_button_container.field_font_awesome_icon
+  module:
+    - fontawesome
+id: block_content.back_to_top_button_container.default
+targetEntityType: block_content
+bundle: back_to_top_button_container
+mode: default
+content:
+  field_font_awesome_icon:
+    type: fontawesome_icon_widget
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
