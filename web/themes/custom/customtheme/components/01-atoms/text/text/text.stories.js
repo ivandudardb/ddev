@@ -1,5 +1,5 @@
 import heading from '../headings/_heading.twig';
-import date from './02-data.twig';
+import date from '../../logo_and_date/logo_and_date.twig';
 import pre from './05-search.twig';
 import paragraph from './03-weather.twig';
 import code from './07-code.twig';

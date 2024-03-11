@@ -13,16 +13,15 @@
  */
 #}
 {% set data__base_class = data__base_class|default('data-p') %}
-
 {% set data__attributes = {
   class: bem(data__base_class, data__modifiers, data__blockname),
 } %}
 
-<div class="logo-and-date">
+<aside class="logo-and-date">
   <p class="logo">
-    <a href="#" class="logo_link">PULSES PRO</a>
+    <a href="#" class="logo_link">{{ name }}</a>
   </p>
   <p {{ add_attributes(data__attributes) }} >
-      {{ "now"|date('l, F j, Y') }}
+    {{ custom_date }}
   </p>
-</div>
+</aside>

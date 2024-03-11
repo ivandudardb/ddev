@@ -1,1 +1,8 @@
-{%include "@atoms/text/text/02-data.twig" %}
+{% set site_name = 'PULSES PRO'|t %}
+{% set custom_date = "now"|date('l, F j, Y') %}
+
+{% include 'customtheme:logo_and_date' with {
+  name: site_name,
+  custom_date: custom_date,
+}
+%}
