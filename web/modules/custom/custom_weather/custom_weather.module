@@ -3,24 +3,21 @@ function custom_weather_block_info() {
   $blocks = array();
   $blocks['custom_weather_block'] = array(
     'info' => t('Custom Weather Block'),
-    'cache' => DRUPAL_CACHE_PER_ROLE,
   );
   return $blocks;
 }
 
-function custom_weather_block_view($delta = '') {
-  $block = array();
-  switch ($delta) {
-    case 'custom_weather_block':
-      $block['subject'] = t('Weather Forecast');
-      $block['content'] = _custom_weather_block_content();
-      break;
-  }
-  return $block;
-}
+/**
+ * Implement hook_theme().
+ */
 
-
-function _custom_weather_block_content() {
-  $content = '<div class="custom-weather-block">Your weather forecast here</div>';
-  return $content;
+function custom_weather_block_theme(): array {
+  return [
+    'custom_weather_block_template' => [
+      'variables' => [
+        'content' => NULL,
+        'custom_weather_type' => NULL,
+      ],
+    ],
+  ];
 }
