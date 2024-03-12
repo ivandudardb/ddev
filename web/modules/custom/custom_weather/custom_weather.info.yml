@@ -1,0 +1,7 @@
+name: Weather
+type: module
+description: Display live weather
+core_version_requirement: ^9 || ^10
+package: custom
+dependencies:
+  - drupal:block

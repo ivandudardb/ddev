@@ -11,7 +11,7 @@ _core:
 id: customtheme_search_form_wide
 theme: customtheme
 region: header
-weight: -32
+weight: -15
 provider: null
 plugin: search_form_block
 settings:

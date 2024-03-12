@@ -1,0 +1,20 @@
+uuid: f8e3873c-7ef3-442d-8974-1fc4cdd08079
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_weather
+  theme:
+    - customtheme
+id: customtheme_customweatherblock
+theme: customtheme
+region: header
+weight: -18
+provider: null
+plugin: custom_weather_block
+settings:
+  id: custom_weather_block
+  label: 'Custom Weather block'
+  label_display: '0'
+  provider: custom_weather
+visibility: {  }

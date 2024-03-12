@@ -56,3 +56,29 @@
     display: block;
   }
 }
+
+.block-weather {
+  display: flex;
+  color: $text;
+  font-size: 14px;
+  @include gelasio500;
+
+  .weather_content {
+    margin: 0 2px;
+  }
+
+  .celsium {
+    margin-top: -5px;
+    font-size: 12px;
+  }
+
+  .weather_city {
+    margin:  0 0 0 3px;
+  }
+}
+
+@media  screen and ( max-width: 768px) {
+  .block-weather {
+    display: none;
+  }
+}
