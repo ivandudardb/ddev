@@ -3,6 +3,7 @@
 namespace Drupal\custom_weather\Plugin\Block;
 
 use Drupal\Component\Serialization\Json;
+use Drupal\Core\Block\Attribute\Block;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 use GuzzleHttp\Client;
@@ -14,8 +15,6 @@ use GuzzleHttp\Client;
   id: "custom_weather_block",
   admin_label: new TranslatableMarkup("Custom Weather block"),
 )]
-
-
 class CustomWeather extends BlockBase {
 
   /**
@@ -47,3 +46,4 @@ class CustomWeather extends BlockBase {
   }
 
 }
+

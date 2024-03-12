@@ -1,0 +1,7 @@
+test_form.admin_settings:
+  path: '/admin/config/custom_weather'
+  defaults:
+    _form: '\Drupal\custom_weather\Form\TestForm'
+    _title: 'Settings for CollectPhone form.'
+  requirements:
+    _permission: 'administer site configuration'
