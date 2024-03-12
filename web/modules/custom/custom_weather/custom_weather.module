@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Implements hook_block_info().
+ */
 function custom_weather_block_info():array {
   $blocks['custom_weather_block'] = [
     'info' => t('Custom Weather Block'),
