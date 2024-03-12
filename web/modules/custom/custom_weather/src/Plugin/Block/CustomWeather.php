@@ -1,11 +1,7 @@
 <?php
 namespace Drupal\custom_weather\Plugin\Block;
 
-use Drupal;
-use Drupal\Component\Serialization\Json;
-use Drupal\Core\Annotation\Translation;
 use Drupal\Core\Block\BlockBase;
-use GuzzleHttp\Exception\GuzzleException;
 
 #[Block(
   id: "custom_weather_block",

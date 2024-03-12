@@ -38,6 +38,9 @@
     "conflict": {
         "drupal/drupal": "*"
     },
+    "scripts": {
+        "phpcs": "phpcs --standard=Drupal --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md"
+    },
     "minimum-stability": "stable",
     "prefer-stable": true,
     "config": {
