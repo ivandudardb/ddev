@@ -32,7 +32,8 @@
         "drupal/token_filter": "^2.1",
         "drupal/twig_tweak": "^3.3",
         "drupal/webform": "^6.2",
-        "drush/drush": "^12.4"
+        "drush/drush": "^12.4",
+        "guzzlehttp/guzzle": "^7.8"
     },
     "conflict": {
         "drupal/drupal": "*"
