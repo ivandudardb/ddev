@@ -22,14 +22,14 @@ class CustomWeather extends BlockBase implements ContainerFactoryPluginInterface
   /**
    * Stores the API key used for accessing weather data.
    */
-  protected $apiKey;
+  protected string $apiKey;
   /**
    * Stores the selected city.
    */
-  protected $selectedCity;
+  protected string $selectedCity;
 
   /**
-   * Constructs a new CustomWeather object.
+   * {@inheritdoc}
    */
   public function __construct(array $configuration, $plugin_id, $plugin_definition, protected ConfigFactoryInterface $configFactory) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
@@ -38,7 +38,7 @@ class CustomWeather extends BlockBase implements ContainerFactoryPluginInterface
   }
 
   /**
-   * Factory method to create a new instance of the CustomWeather block.
+   * {@inheritdoc}
    */
   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition): static {
     return new static(

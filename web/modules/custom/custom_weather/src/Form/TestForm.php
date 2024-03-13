@@ -11,7 +11,7 @@ use Drupal\Core\Form\FormStateInterface;
 class TestForm extends ConfigFormBase {
 
   /**
-   * Defines a configuration form for managing settings.
+   * {@inheritdoc}
    */
   public function getFormId(): string {
     return 'custom_weather';
@@ -25,7 +25,7 @@ class TestForm extends ConfigFormBase {
   }
 
   /**
-   * Builds form for managing custom settings.
+   * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state): array {
     // Array of cities for the dropdown list.
