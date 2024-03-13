@@ -5,8 +5,11 @@ namespace Drupal\custom_weather\Plugin\Block;
 use Drupal\Component\Serialization\Json;
 use Drupal\Core\Block\Attribute\Block;
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 use GuzzleHttp\Client;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Provides a 'WeatherBlock' block.
@@ -15,35 +18,82 @@ use GuzzleHttp\Client;
   id: "custom_weather_block",
   admin_label: new TranslatableMarkup("Custom Weather block"),
 )]
-class CustomWeather extends BlockBase {
+class CustomWeather extends BlockBase implements ContainerFactoryPluginInterface {
+  protected $apiKey;
+  protected $selectedCity;
+
+  /**
+   * The config factory.
+   *
+   * @var \Drupal\Core\Config\ConfigFactoryInterface
+   */
+  protected ConfigFactoryInterface $configFactory;
+
+  /**
+   * Constructs a new CustomWeather object.
+   *
+   * @param array $configuration
+   *   A configuration array containing information about the plugin instance.
+   * @param string $plugin_id
+   *   The plugin_id for the plugin instance.
+   * @param mixed $plugin_definition
+   *   The plugin implementation definition.
+   * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
+   *   The configuration factory.
+   */
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, ConfigFactoryInterface $config_factory) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition);
+    $this->configFactory = $config_factory;
+    $this->apiKey = $this->configFactory->get('custom_weather.settings')->get('api_key');
+    $this->selectedCity = $this->configFactory->get('custom_weather.settings')->get('selected_city');
+  }
+
+  /**
+   * Factory method to create a new instance of the CustomWeather block.
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition): static {
+    return new static(
+      $configuration,
+      $plugin_id,
+      $plugin_definition,
+      $container->get('config.factory')
+    );
+  }
 
   /**
    * {@inheritdoc}
    */
-  public function build():array {
+  public function build() {
     $weatherData = $this->getWeatherApi();
-    $temp = $weatherData['main']['temp'];
+    if (!isset($weatherData['main']['temp']) || !isset($weatherData['weather'][0]['main'])) {
+      return [];
+    }
+    $temp = round($weatherData['main']['temp'] - 273.15, 1);
     $weather_text = $weatherData['weather'][0]['main'];
-    $temp = round($temp - 273);
+    $selected_city = $this->configFactory->get('custom_weather.settings')->get('selected_city');
 
     return [
       '#theme' => 'custom_weather_block',
       '#temp' => $temp,
       '#weather_text' => $weather_text,
+      '#selected_city' => $selected_city,
     ];
   }
 
   /**
    * Protected function for getting array with temperature.
    */
-  protected function getWeatherApi():mixed {
+  protected function getWeatherApi(): mixed {
     $client = new Client();
-    $request = $client->get(
-      'https://api.openweathermap.org/data/2.5/weather?lat=50.7593&lon=25.3424&appid=23033cae7426d33b990b8c0c4dffe352'
-    );
-    $response = $request->getBody()->getContents();
-    return Json::decode($response);
+    $url = 'https://api.openweathermap.org/data/2.5/weather?q=' . $this->selectedCity . '&appid=' . $this->apiKey;
+    try {
+      $request = $client->get($url);
+      $response = $request->getBody()->getContents();
+      return Json::decode($response);
+    }
+    catch (\Exception $e) {
+      return [];
+    }
   }
 
 }
-

@@ -27,29 +27,25 @@ class TestForm extends ConfigFormBase {
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state) {
-    // Масив міст для випадаючого списку.
+  public function buildForm(array $form, FormStateInterface $form_state): array {
+    // Array of cities for the dropdown list.
     $cities = [
-      'kyiv' => $this->t('Київ'),
-      'lviv' => $this->t('Львів'),
-      'Rivne' => $this->t('Рівне'),
-      'Lutsk' => $this->t('Луцьк'),
-      'Zhytomyr' => $this->t('Житомир'),
-      'Chernivtsi' => $this->t('Чернівці'),
-      'Ivano-Frankivsk' => $this->t('Івано-Франківськ'),
-      'Ternopil' => $this->t('Тернопіль'),
-      'Khmelnytskyi' => $this->t('Хмельницький'),
-      'Uzhhorod' => $this->t('Ужгород'),
-      'Vinnytsia' => $this->t('Вінниця'),
-      'Cherkasy' => $this->t('Черкаси'),
-      'Poltava' => $this->t('Полтава'),
-      'Chernihiv' => $this->t('Чернігів'),
-      'Sumy' => $this->t('Суми'),
-      'Kharkiv' => $this->t('Харків'),
-      'odesa' => $this->t('Одеса'),
+      'Kyiv' => $this->t('Kyiv'),
+      'Lviv' => $this->t('Lviv'),
+      'Rivne' => $this->t('Rivne'),
+      'Lutsk' => $this->t('Lutsk'),
+      'Zhytomyr' => $this->t('Zhytomyr'),
+      'Chernivtsi' => $this->t('Chernivtsi'),
+      'Ternopil' => $this->t('Ternopil'),
+      'Khmelnytskyi' => $this->t('Khmelnytskyi'),
+      'Uzhhorod' => $this->t('Uzhhorod'),
+      'Vinnytsia' => $this->t('Vinnytsia'),
+      'Cherkasy' => $this->t('Cherkasy'),
+      'Poltava' => $this->t('Poltava'),
+      'Chernihiv' => $this->t('Chernihiv'),
     ];
 
-    // Додаємо випадаючий список з містами до форми.
+    // Add the dropdown list with cities to the form.
     $form['selected_city'] = [
       '#type' => 'select',
       '#title' => $this->t('Select a city'),
@@ -57,7 +53,7 @@ class TestForm extends ConfigFormBase {
       '#default_value' => $this->config('custom_weather.settings')->get('selected_city'),
     ];
 
-    // Додаємо поле для введення API-ключа.
+    // Add a field for entering the API key.
     $form['api_key'] = [
       '#type' => 'textfield',
       '#title' => $this->t('API Key'),
@@ -70,20 +66,44 @@ class TestForm extends ConfigFormBase {
   /**
    * {@inheritdoc}
    */
-  public function submitForm(array &$form, FormStateInterface $form_state): array {
-    // Отримуємо значення обраного міста з форми.
+  public function validateForm(array &$form, FormStateInterface $form_state) {
+    // Get the API key value from the form.
+    $api_key = $form_state->getValue('api_key');
+
+    // Check if the API key is not empty and has the required length.
+    if (empty($api_key)) {
+      $form_state->setErrorByName('api_key', $this->t('API Key field is required.'));
+    }
+    elseif (strlen($api_key) !== 32) {
+      $form_state->setErrorByName('api_key', $this->t('API Key should be 32 characters long.'));
+    }
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function submitForm(array &$form, FormStateInterface $form_state) {
+    // Get the value of the selected city from the form.
     $selected_city = $form_state->getValue('selected_city');
-    // Зберігаємо його в конфігурації.
+    // Get the value of the API key from the form.
+    $api_key = $form_state->getValue('api_key');
+
+    // Check if there were validation errors.
+    if ($form_state->hasAnyErrors()) {
+      // Re-display the form to enter correct data.
+      $form_state->setRebuild(TRUE);
+      return;
+    }
+
+    // Save the values of the selected city and API key in the configuration.
     $this->config('custom_weather.settings')
       ->set('selected_city', $selected_city)
-      ->set('api_key', $form_state->getValue('api_key'))
+      ->set('api_key', $api_key)
       ->save();
 
-    // Записуємо отриману назву міста у змінну $build.
-    // Повертаємо змінну $build, яка буде передана у темплейт блоку.
-    return [
-      '#selected_city' => $selected_city,
-    ];
+    // Display a message about successful saving the next time
+    // the form is displayed.
+    $this->messenger()->addMessage($this->t('Your settings have been saved.'));
   }
 
 }
