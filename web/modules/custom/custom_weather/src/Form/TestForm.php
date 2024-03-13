@@ -6,26 +6,26 @@ use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * {@inheritdoc}
+ * Defines a configuration form for managing settings related to the module.
  */
 class TestForm extends ConfigFormBase {
 
   /**
-   * {@inheritdoc}
+   * Defines a configuration form for managing settings.
    */
-  public function getFormId() {
+  public function getFormId(): string {
     return 'custom_weather';
   }
 
   /**
    * {@inheritdoc}
    */
-  protected function getEditableConfigNames() {
+  protected function getEditableConfigNames(): array {
     return ['custom_weather.settings'];
   }
 
   /**
-   * {@inheritdoc}
+   * Builds form for managing custom settings.
    */
   public function buildForm(array $form, FormStateInterface $form_state): array {
     // Array of cities for the dropdown list.
@@ -64,13 +64,10 @@ class TestForm extends ConfigFormBase {
   }
 
   /**
-   * {@inheritdoc}
+   * Validates the form submission.
    */
-  public function validateForm(array &$form, FormStateInterface $form_state) {
-    // Get the API key value from the form.
+  public function validateForm(array &$form, FormStateInterface $form_state):void {
     $api_key = $form_state->getValue('api_key');
-
-    // Check if the API key is not empty and has the required length.
     if (empty($api_key)) {
       $form_state->setErrorByName('api_key', $this->t('API Key field is required.'));
     }
@@ -80,29 +77,17 @@ class TestForm extends ConfigFormBase {
   }
 
   /**
-   * {@inheritdoc}
+   * Handles the submission of the form and performs necessary actions.
    */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-    // Get the value of the selected city from the form.
+  public function submitForm(array &$form, FormStateInterface $form_state):void {
     $selected_city = $form_state->getValue('selected_city');
-    // Get the value of the API key from the form.
     $api_key = $form_state->getValue('api_key');
-
-    // Check if there were validation errors.
-    if ($form_state->hasAnyErrors()) {
-      // Re-display the form to enter correct data.
-      $form_state->setRebuild(TRUE);
-      return;
-    }
 
     // Save the values of the selected city and API key in the configuration.
     $this->config('custom_weather.settings')
       ->set('selected_city', $selected_city)
       ->set('api_key', $api_key)
       ->save();
-
-    // Display a message about successful saving the next time
-    // the form is displayed.
     $this->messenger()->addMessage($this->t('Your settings have been saved.'));
   }
 
