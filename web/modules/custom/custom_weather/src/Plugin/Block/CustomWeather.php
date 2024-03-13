@@ -19,10 +19,12 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
   admin_label: new TranslatableMarkup("Custom Weather block"),
 )]
 class CustomWeather extends BlockBase implements ContainerFactoryPluginInterface {
+
   /**
    * Stores the API key used for accessing weather data.
    */
   protected string $apiKey;
+
   /**
    * Stores the selected city.
    */
