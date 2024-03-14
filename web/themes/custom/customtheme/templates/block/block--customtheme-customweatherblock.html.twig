@@ -25,8 +25,6 @@
  * @see template_preprocess_block()
  */
 #}
-{% set city = content['#selected_city'] %}
-{% set temp = content['#temp'] %}
 {% set weather_text = content['#weather_text'] %}
 {% set clouds = "/themes/custom/customtheme/assets/icons/Clouds.png" %}
 {% set rain = "/themes/custom/customtheme/assets/icons/Rain.png" %}
@@ -53,11 +51,11 @@
      %}
    </div>
     <p class="weather_content">
-      {{ temp }}
+      {{ content['#temp'] }}
     </p>
     <span class="celsium">
-      c
+      ℃
     </span>
-    <span class="weather_city"> {{ city }}</span>
+    <span class="weather_city"> {{ content['#selected_city'] }}</span>
   {% endblock %}
 </div>

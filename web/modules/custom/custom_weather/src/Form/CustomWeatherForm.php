@@ -8,7 +8,7 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Defines a configuration form for managing settings related to the module.
  */
-class TestForm extends ConfigFormBase {
+class CustomWeatherForm extends ConfigFormBase {
 
   /**
    * {@inheritdoc}
@@ -58,6 +58,7 @@ class TestForm extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('API Key'),
       '#default_value' => $this->config('custom_weather.settings')->get('api_key'),
+      '#required' => TRUE,
     ];
 
     return parent::buildForm($form, $form_state);
@@ -68,10 +69,7 @@ class TestForm extends ConfigFormBase {
    */
   public function validateForm(array &$form, FormStateInterface $form_state):void {
     $api_key = $form_state->getValue('api_key');
-    if (empty($api_key)) {
-      $form_state->setErrorByName('api_key', $this->t('API Key field is required.'));
-    }
-    elseif (strlen($api_key) !== 32) {
+    if (strlen($api_key) !== 32) {
       $form_state->setErrorByName('api_key', $this->t('API Key should be 32 characters long.'));
     }
   }
