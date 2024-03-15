@@ -67,7 +67,7 @@ class CustomWeather extends BlockBase implements ContainerFactoryPluginInterface
         '#weather_text' => $weather_text,
         '#selected_city' => $selected_city,
         '#cache' => [
-          'max-age' => 1800,
+          'max-age' => 30 * 60,
         ],
       ];
     }
