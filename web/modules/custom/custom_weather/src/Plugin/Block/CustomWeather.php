@@ -6,6 +6,8 @@ use Drupal\Component\Serialization\Json;
 use Drupal\Core\Block\Attribute\Block;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\Core\Database\Database;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Http\ClientFactory;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
@@ -56,16 +58,16 @@ class CustomWeather extends BlockBase implements ContainerFactoryPluginInterface
    * {@inheritdoc}
    */
   public function build():array {
+    $city = $this->getCityFromDatabase();
     $weatherData = $this->getWeatherApi();
     if ($weatherData) {
       $temp = round($weatherData['main']['temp'] - 273.15, 1);
       $weather_text = $weatherData['weather'][0]['main'];
-      $selected_city = $this->configFactory->get('custom_weather.settings')->get('selected_city');
       return [
         '#theme' => 'custom_weather_block',
         '#temp' => $temp,
         '#weather_text' => $weather_text,
-        '#selected_city' => $selected_city,
+        '#selected_city' => $city,
       ];
     }
     else {
@@ -80,8 +82,9 @@ class CustomWeather extends BlockBase implements ContainerFactoryPluginInterface
     if (empty($this->apiKey)) {
       return FALSE;
     }
+    $city = $this->getCityFromDatabase();
     $client = $this->httpClient->fromOptions();
-    $url = 'https://api.openweathermap.org/data/2.5/weather?q=' . $this->selectedCity . '&appid=' . $this->apiKey;
+    $url = 'https://api.openweathermap.org/data/2.5/weather?q=' . $city . '&appid=' . $this->apiKey;
     try {
       $request = $client->get($url);
       $response = $request->getBody()->getContents();
@@ -90,6 +93,18 @@ class CustomWeather extends BlockBase implements ContainerFactoryPluginInterface
     catch (\Exception $e) {
       return FALSE;
     }
+  }
+
+  /**
+   *
+   */
+  public function getCityFromDatabase() {
+    $user_id = \Drupal::currentUser()->id();
+    $connection = Database::getConnection();
+    $query = $connection->select('custom_weather_data', 'cwd');
+    $query->fields('cwd', ['city']);
+    $query->condition('user_id', $user_id);
+    return $query->execute()->fetchField();
   }
 
 }
