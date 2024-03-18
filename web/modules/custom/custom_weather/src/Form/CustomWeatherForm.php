@@ -40,13 +40,25 @@ class CustomWeatherForm extends ConfigFormBase {
   }
 
   /**
-   * Validates the form submission.
+   * Validate API key.
    */
   public function validateForm(array &$form, FormStateInterface $form_state):void {
     $api_key = $form_state->getValue('api_key');
     if (strlen($api_key) !== 32) {
       $form_state->setErrorByName('api_key', $this->t('API Key should be 32 characters long.'));
     }
+  }
+
+  /**
+   * Submit API key.
+   */
+  public function submitForm(array &$form, FormStateInterface $form_state): void {
+    $api_key = $form_state->getValue('api_key');
+    $this->config('custom_weather.settings')
+      ->set('api_key', $api_key)
+      ->save();
+    $stored_api_key = $this->config('custom_weather.settings')->get('api_key');
+    $this->messenger()->addStatus($this->t('API Key saved: @api_key', ['@api_key' => $stored_api_key]));
   }
 
 }

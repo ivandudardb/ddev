@@ -5,6 +5,8 @@ namespace Drupal\custom_weather\Form;
 use Drupal\Core\Database\Database;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\custom_weather\Service\DataBaseService;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Defines a configuration form for managing settings related to the module.
@@ -14,22 +16,39 @@ class CustomWeatherUserForm extends ConfigFormBase {
   /**
    * {@inheritdoc}
    */
+  public function __construct(DataBaseService $database_service) {
+    $this->databaseService = $database_service;
+    parent::__construct($database_service);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container): CustomWeatherUserForm|ConfigFormBase|static {
+    return new static(
+      $container->get('Drupal\custom_weather\Service\DataBaseService')
+    );
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public function getFormId(): string {
-    return 'custom_weather';
+    return 'custom_weather_user';
   }
 
   /**
    * {@inheritdoc}
    */
   protected function getEditableConfigNames(): array {
-    return ['custom_weather.settings'];
+    return ['custom_weather_user.settings'];
   }
 
   /**
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state): array {
-    $city = $this->getCityFromDatabase();
+    $city = $this->databaseService->getCityFromDatabase();
     // Array of cities for the dropdown list.
     $cities = [
       'Kyiv' => $this->t('Kyiv'),
@@ -59,22 +78,19 @@ class CustomWeatherUserForm extends ConfigFormBase {
 
   /**
    * Form submission handler for your custom form.
+   *
    * @throws \Exception
    */
   public function submitForm(array &$form, FormStateInterface $form_state): void {
     $user_id = \Drupal::currentUser()->id();
     $selected_user_city = $form_state->getValue('selected_city');
-
     $connection = Database::getConnection();
-
-    // Перевірка наявності запису з вказаним user_id.
     $query = $connection->select('custom_weather_data', 'cwd');
     $query->fields('cwd', ['user_id']);
     $query->condition('user_id', $user_id);
     $result = $query->execute()->fetchField();
 
     if ($result) {
-      // Якщо запис існує, виконати оновлення міста.
       $connection->update('custom_weather_data')
         ->fields([
           'city' => $selected_user_city,
@@ -83,7 +99,6 @@ class CustomWeatherUserForm extends ConfigFormBase {
         ->execute();
     }
     else {
-      // Якщо запису немає, додати новий рядок.
       $connection->insert('custom_weather_data')
         ->fields([
           'city' => $selected_user_city,
@@ -91,24 +106,6 @@ class CustomWeatherUserForm extends ConfigFormBase {
         ])
         ->execute();
     }
-  }
-
-  /**
-   *
-   */
-  protected function getCityFromDatabase() {
-    // Отримати ID поточного користувача.
-    $user_id = \Drupal::currentUser()->id();
-
-    // Підключення до бази даних.
-    $connection = Database::getConnection();
-    $query = $connection->select('custom_weather_data', 'cwd');
-    $query->fields('cwd', ['city']);
-    $query->condition('user_id', $user_id);
-
-    // Виконати запит та отримати значення міста для поточного користувача.
-    // Повернути значення міста з бази даних або значення за замовчуванням.
-    return $query->execute()->fetchField();
   }
 
 }
