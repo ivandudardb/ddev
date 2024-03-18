@@ -9,7 +9,7 @@ use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Http\ClientFactory;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
-use Drupal\custom_weather\Service\DataBaseService;
+use Drupal\custom_weather\Service\UserCityHandler;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -29,7 +29,7 @@ class CustomWeather extends BlockBase implements ContainerFactoryPluginInterface
   /**
    * {@inheritdoc}
    */
-  public function __construct(protected ClientFactory $httpClient, array $configuration, $plugin_id, $plugin_definition, protected ConfigFactoryInterface $configFactory, protected DataBaseService $city) {
+  public function __construct(protected ClientFactory $httpClient, array $configuration, $plugin_id, $plugin_definition, protected ConfigFactoryInterface $configFactory, protected UserCityHandler $city) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->apiKey = $this->configFactory->get('custom_weather.settings')->get('api_key');
     $this->databaseService = $city;
@@ -45,7 +45,7 @@ class CustomWeather extends BlockBase implements ContainerFactoryPluginInterface
       $plugin_id,
       $plugin_definition,
       $container->get('config.factory'),
-      $container->get('Drupal\custom_weather\Service\DataBaseService'),
+      $container->get('Drupal\custom_weather\Service\UserCityHandler'),
     );
   }
 

@@ -1,4 +1,3 @@
 services:
-  Drupal\custom_weather\Service\DataBaseService:
-    class: Drupal\custom_weather\Service\DataBaseService
-    arguments: ['@config.factory']
+  Drupal\custom_weather\Service\UserCityHandler:
+    class: Drupal\custom_weather\Service\UserCityHandler

@@ -3,30 +3,26 @@
 namespace Drupal\custom_weather\Form;
 
 use Drupal\Core\Database\Database;
-use Drupal\Core\Form\ConfigFormBase;
+use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\custom_weather\Service\DataBaseService;
+use Drupal\custom_weather\Service\UserCityHandler;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Defines a configuration form for managing settings related to the module.
  */
-class CustomWeatherUserForm extends ConfigFormBase {
+class CustomWeatherUserForm extends FormBase {
 
-  /**
-   * {@inheritdoc}
-   */
-  public function __construct(DataBaseService $database_service) {
-    $this->databaseService = $database_service;
-    parent::__construct($database_service);
+  public function __construct(protected UserCityHandler $city) {
+    $this->databaseService = $city;
   }
 
   /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container): CustomWeatherUserForm|ConfigFormBase|static {
+  public static function create(ContainerInterface $container): CustomWeatherUserForm|FormBase|static {
     return new static(
-      $container->get('Drupal\custom_weather\Service\DataBaseService')
+      $container->get('Drupal\custom_weather\Service\UserCityHandler')
     );
   }
 
@@ -35,13 +31,6 @@ class CustomWeatherUserForm extends ConfigFormBase {
    */
   public function getFormId(): string {
     return 'custom_weather_user';
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  protected function getEditableConfigNames(): array {
-    return ['custom_weather_user.settings'];
   }
 
   /**
@@ -73,7 +62,13 @@ class CustomWeatherUserForm extends ConfigFormBase {
       '#options' => $cities,
       '#default_value' => $city,
     ];
-    return parent::buildForm($form, $form_state);
+
+    $form['submit'] = [
+      '#type' => 'submit',
+      '#value' => $this->t('Save'),
+    ];
+
+    return $form;
   }
 
   /**
