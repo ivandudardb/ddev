@@ -46,7 +46,7 @@ class UserCityHandler {
   /**
    * Getting array with temperature.
    */
-  public function getWeatherApi($apiKey, $city): array|false {
+  public function getWeatherApi(string $apiKey, string $city): array|false {
     if (empty($apiKey)) {
       return FALSE;
     }
@@ -67,7 +67,7 @@ class UserCityHandler {
    *
    * @throws \Exception
    */
-  public function upsertData($selected_user_city): void {
+  public function saveUserCity(string $selected_user_city): void {
     $user_id = $this->currentUser->id();
     $this->connection->merge('custom_weather_data')
       ->keys(['user_id' => $user_id])

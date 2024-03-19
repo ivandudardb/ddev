@@ -93,7 +93,7 @@ class CustomWeatherUserForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state): void {
     $selected_user_city = $form_state->getValue('selected_city');
-    $this->userCityHandler->upsertData($selected_user_city);
+    $this->userCityHandler->saveUserCity($selected_user_city);
   }
 
 }

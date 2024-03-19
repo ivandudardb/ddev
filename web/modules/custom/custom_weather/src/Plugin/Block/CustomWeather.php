@@ -20,11 +20,6 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 class CustomWeather extends BlockBase implements ContainerFactoryPluginInterface {
 
   /**
-   * Stores the API key used for accessing weather data.
-   */
-  protected string $apiKey;
-
-  /**
    * {@inheritdoc}
    */
   public function __construct(array $configuration, $plugin_id, $plugin_definition, protected ConfigFactoryInterface $configFactory, protected UserCityHandler $userCityHandler) {
