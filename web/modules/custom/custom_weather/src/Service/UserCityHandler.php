@@ -7,32 +7,29 @@ use Drupal\Core\Database\Connection;
 use Drupal\Core\Session\AccountProxyInterface;
 
 /**
- * Determines the city for displaying weather.
+ * Saves the city for displaying weather.
  */
 class UserCityHandler {
 
   /**
-   * Stores DB connection.
+   * Constructor of the class.
+   *
+   * @param \Drupal\Core\Database\Connection $connection
+   *   The database connection.
+   * @param \Drupal\Core\Session\AccountProxyInterface $currentUser
+   *   The current user.
    */
-
-  protected mixed $connection;
-
-  /**
-   * Stores current user id.
-   */
-  protected int $currentUser;
-
-  public function __construct(Connection $connection, AccountProxyInterface $currentUser) {
-    $this->connection = $connection;
-    $this->currentUser = $currentUser->id();
+  public function __construct(
+    protected Connection $connection,
+    protected AccountProxyInterface $currentUser
+  ) {
   }
 
   /**
    * Update city name in Database if it exists.
    */
   public function updateWeatherData($selected_user_city, $user_id): void {
-    $connection = $this->connection;
-    $connection->update('custom_weather_data')
+    $this->connection->update('custom_weather_data')
       ->fields([
         'city' => $selected_user_city,
       ])
@@ -46,8 +43,7 @@ class UserCityHandler {
    * @throws \Exception
    */
   public function setWeatherData($selected_user_city, $user_id): void {
-    $connection = $this->connection;
-    $connection->insert('custom_weather_data')
+    $this->connection->insert('custom_weather_data')
       ->fields([
         'city' => $selected_user_city,
         'user_id' => $user_id,
@@ -56,12 +52,11 @@ class UserCityHandler {
   }
 
   /**
-   * Returns the city from the database or sets a default value.
+   * Return city name from the database or return a default value.
    */
   public function getCurrentCity() {
-    $user_id = $this->currentUser;
-    $connection = $this->connection;
-    $query = $connection->select('custom_weather_data', 'cwd');
+    $user_id = $this->currentUser->id();
+    $query = $this->connection->select('custom_weather_data', 'cwd');
     $query->addField('cwd', 'city');
     $query->condition('user_id', $user_id);
     $city = $query->execute()->fetchField();
@@ -88,6 +83,25 @@ class UserCityHandler {
     }
     catch (\Exception $e) {
       return FALSE;
+    }
+  }
+
+  /**
+   * Set or update user city in database.
+   *
+   * @throws \Exception
+   */
+  public function newUserCity($selected_user_city): void {
+    $user_id = $this->currentUser->id();
+    $query = $this->connection->select('custom_weather_data', 'cwd');
+    $query->fields('cwd', ['user_id']);
+    $query->condition('user_id', $user_id);
+    $result = $query->execute()->fetchField();
+    if ($result) {
+      $this->updateWeatherData($selected_user_city, $user_id);
+    }
+    else {
+      $this->setWeatherData($selected_user_city, $user_id);
     }
   }
 

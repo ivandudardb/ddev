@@ -6,7 +6,7 @@ use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Defines a configuration form for managing settings related to the module.
+ * Defines admin form. Validate and save API key.
  */
 class CustomWeatherForm extends ConfigFormBase {
 
@@ -50,15 +50,14 @@ class CustomWeatherForm extends ConfigFormBase {
   }
 
   /**
-   * Submit API key.
+   * Saves the API key value to config.
    */
   public function submitForm(array &$form, FormStateInterface $form_state): void {
     $api_key = $form_state->getValue('api_key');
     $this->config('custom_weather.settings')
       ->set('api_key', $api_key)
       ->save();
-    $stored_api_key = $this->config('custom_weather.settings')->get('api_key');
-    $this->messenger()->addStatus($stored_api_key);
+    $this->messenger()->addStatus($this->t('API key saved successfully'));
   }
 
 }

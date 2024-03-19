@@ -10,30 +10,25 @@ use Drupal\custom_weather\Service\UserCityHandler;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Defines a configuration form for managing settings related to the module.
+ * Defines user form. Saves user city to the database.
  */
 class CustomWeatherUserForm extends FormBase {
 
   /**
-   * Stores current user city.
+   * Constructs a new instance of the class.
+   *
+   * @param \Drupal\custom_weather\Service\UserCityHandler $userCityHandler
+   *   The service for handling user city data.
+   * @param \Drupal\Core\Session\AccountProxyInterface $currentUser
+   *   The current user account.
+   * @param \Drupal\Core\Database\Connection $connection
+   *   The database connection.
    */
-
-  protected mixed $city;
-
-  /**
-   * Stores current user id.
-   */
-  protected int $currentUser;
-
-  /**
-   * Stores DB connection.
-   */
-  protected mixed $connection;
-
-  public function __construct(protected UserCityHandler $userCityHandler, AccountProxyInterface $currentUser, Connection $connection) {
-    $this->city = $this->userCityHandler->getCurrentCity();
-    $this->currentUser = $currentUser->id();
-    $this->connection = $connection;
+  public function __construct(
+    protected UserCityHandler $userCityHandler,
+    protected AccountProxyInterface $currentUser,
+    protected Connection $connection
+  ) {
   }
 
   /**
@@ -80,7 +75,7 @@ class CustomWeatherUserForm extends FormBase {
       '#type' => 'select',
       '#title' => $this->t('Select a city'),
       '#options' => $cities,
-      '#default_value' => $this->city,
+      '#default_value' => $this->userCityHandler->getCurrentCity(),
     ];
 
     $form['submit'] = [
@@ -92,25 +87,13 @@ class CustomWeatherUserForm extends FormBase {
   }
 
   /**
-   * Form submission handler for your custom form.
+   * {@inheritdoc}
    *
    * @throws \Exception
    */
   public function submitForm(array &$form, FormStateInterface $form_state): void {
-    $user_id = $this->currentUser;
     $selected_user_city = $form_state->getValue('selected_city');
-    $connection = $this->connection;
-    $query = $connection->select('custom_weather_data', 'cwd');
-    $query->fields('cwd', ['user_id']);
-    $query->condition('user_id', $user_id);
-    $result = $query->execute()->fetchField();
-
-    if ($result) {
-      $this->userCityHandler->updateWeatherData($selected_user_city, $user_id);
-    }
-    else {
-      $this->userCityHandler->setWeatherData($selected_user_city, $user_id);
-    }
+    $this->userCityHandler->newUserCity($selected_user_city);
   }
 
 }

@@ -26,19 +26,10 @@ class CustomWeather extends BlockBase implements ContainerFactoryPluginInterface
   protected string $apiKey;
 
   /**
-   * Stores current user city.
-   *
-   * @var mixed|string
-   */
-  protected mixed $city;
-
-  /**
    * {@inheritdoc}
    */
   public function __construct(array $configuration, $plugin_id, $plugin_definition, protected ClientFactory $httpClient, protected ConfigFactoryInterface $configFactory, protected UserCityHandler $userCityHandler) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
-    $this->apiKey = $this->configFactory->get('custom_weather.settings')->get('api_key');
-    $this->city = $this->userCityHandler->getCurrentCity();
   }
 
   /**
@@ -59,8 +50,8 @@ class CustomWeather extends BlockBase implements ContainerFactoryPluginInterface
    * {@inheritdoc}
    */
   public function build():array {
-    $apiKey = $this->apiKey;
-    $city = $this->city;
+    $apiKey = $this->configFactory->get('custom_weather.settings')->get('api_key');
+    $city = $this->userCityHandler->getCurrentCity();
     $httpClient = $this->httpClient;
     $weatherData = $this->userCityHandler->getWeatherApi($apiKey, $city, $httpClient);
     if ($weatherData) {
@@ -70,7 +61,7 @@ class CustomWeather extends BlockBase implements ContainerFactoryPluginInterface
         '#theme' => 'custom_weather_block',
         '#temp' => $temp,
         '#weather_text' => $weather_text,
-        '#selected_city' => $this->city,
+        '#selected_city' => $city,
         '#cache' => [
           'contexts' => ['user'],
           'max-age' => 30 * 60,
