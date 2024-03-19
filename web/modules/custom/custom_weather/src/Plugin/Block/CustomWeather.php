@@ -28,7 +28,7 @@ class CustomWeather extends BlockBase implements ContainerFactoryPluginInterface
   /**
    * Stores the selected city.
    */
-  protected string $selectedCity;
+  protected mixed $selectedCity;
 
   /**
    * {@inheritdoc}

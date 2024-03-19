@@ -1,0 +1,5 @@
+name: Custom Registration
+type: module
+description: Customizes the user registration form.
+core_version_requirement: ^9 || ^10
+package: custom
