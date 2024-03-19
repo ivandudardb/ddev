@@ -4,6 +4,7 @@ namespace Drupal\custom_weather\Service;
 
 use Drupal\Component\Serialization\Json;
 use Drupal\Core\Database\Connection;
+use Drupal\Core\Http\ClientFactory;
 use Drupal\Core\Session\AccountProxyInterface;
 
 /**
@@ -21,34 +22,9 @@ class UserCityHandler {
    */
   public function __construct(
     protected Connection $connection,
-    protected AccountProxyInterface $currentUser
+    protected AccountProxyInterface $currentUser,
+    protected ClientFactory $httpClient,
   ) {
-  }
-
-  /**
-   * Update city name in Database if it exists.
-   */
-  public function updateWeatherData($selected_user_city, $user_id): void {
-    $this->connection->update('custom_weather_data')
-      ->fields([
-        'city' => $selected_user_city,
-      ])
-      ->condition('user_id', $user_id)
-      ->execute();
-  }
-
-  /**
-   * Set city name to Database.
-   *
-   * @throws \Exception
-   */
-  public function setWeatherData($selected_user_city, $user_id): void {
-    $this->connection->insert('custom_weather_data')
-      ->fields([
-        'city' => $selected_user_city,
-        'user_id' => $user_id,
-      ])
-      ->execute();
   }
 
   /**
@@ -70,11 +46,11 @@ class UserCityHandler {
   /**
    * Getting array with temperature.
    */
-  public function getWeatherApi($apiKey, $city, $httpClient): array|false {
+  public function getWeatherApi(string $apiKey, string $city): array|false {
     if (empty($apiKey)) {
       return FALSE;
     }
-    $client = $httpClient->fromOptions();
+    $client = $this->httpClient->fromOptions();
     $url = 'https://api.openweathermap.org/data/2.5/weather?q=' . $city . '&appid=' . $apiKey;
     try {
       $request = $client->get($url);
@@ -91,18 +67,15 @@ class UserCityHandler {
    *
    * @throws \Exception
    */
-  public function newUserCity($selected_user_city): void {
+  public function saveUserCity(string $selected_user_city): void {
     $user_id = $this->currentUser->id();
-    $query = $this->connection->select('custom_weather_data', 'cwd');
-    $query->fields('cwd', ['user_id']);
-    $query->condition('user_id', $user_id);
-    $result = $query->execute()->fetchField();
-    if ($result) {
-      $this->updateWeatherData($selected_user_city, $user_id);
-    }
-    else {
-      $this->setWeatherData($selected_user_city, $user_id);
-    }
+    $this->connection->merge('custom_weather_data')
+      ->keys(['user_id' => $user_id])
+      ->fields([
+        'city' => $selected_user_city,
+        'user_id' => $user_id,
+      ])
+      ->execute();
   }
 
 }
