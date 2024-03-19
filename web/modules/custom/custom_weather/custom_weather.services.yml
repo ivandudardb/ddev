@@ -1,3 +1,4 @@
 services:
-  Drupal\custom_weather\Service\UserCityHandler:
+  custom_weather.user_city_handler:
     class: Drupal\custom_weather\Service\UserCityHandler
+    arguments: ['@database', '@current_user']

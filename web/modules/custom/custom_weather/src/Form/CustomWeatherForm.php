@@ -58,7 +58,7 @@ class CustomWeatherForm extends ConfigFormBase {
       ->set('api_key', $api_key)
       ->save();
     $stored_api_key = $this->config('custom_weather.settings')->get('api_key');
-    $this->messenger()->addStatus($this->t('API Key saved: @api_key', ['@api_key' => $stored_api_key]));
+    $this->messenger()->addStatus($stored_api_key);
   }
 
 }

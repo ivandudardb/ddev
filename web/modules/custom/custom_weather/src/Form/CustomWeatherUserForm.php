@@ -2,9 +2,10 @@
 
 namespace Drupal\custom_weather\Form;
 
-use Drupal\Core\Database\Database;
+use Drupal\Core\Database\Connection;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\custom_weather\Service\UserCityHandler;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -13,8 +14,26 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  */
 class CustomWeatherUserForm extends FormBase {
 
-  public function __construct(protected UserCityHandler $city) {
-    $this->databaseService = $city;
+  /**
+   * Stores current user city.
+   */
+
+  protected mixed $city;
+
+  /**
+   * Stores current user id.
+   */
+  protected int $currentUser;
+
+  /**
+   * Stores DB connection.
+   */
+  protected mixed $connection;
+
+  public function __construct(protected UserCityHandler $userCityHandler, AccountProxyInterface $currentUser, Connection $connection) {
+    $this->city = $this->userCityHandler->getCurrentCity();
+    $this->currentUser = $currentUser->id();
+    $this->connection = $connection;
   }
 
   /**
@@ -22,7 +41,9 @@ class CustomWeatherUserForm extends FormBase {
    */
   public static function create(ContainerInterface $container): CustomWeatherUserForm|FormBase|static {
     return new static(
-      $container->get('Drupal\custom_weather\Service\UserCityHandler')
+      $container->get('custom_weather.user_city_handler'),
+      $container->get('current_user'),
+      $container->get('database')
     );
   }
 
@@ -37,7 +58,6 @@ class CustomWeatherUserForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state): array {
-    $city = $this->databaseService->getCityFromDatabase();
     // Array of cities for the dropdown list.
     $cities = [
       'Kyiv' => $this->t('Kyiv'),
@@ -60,7 +80,7 @@ class CustomWeatherUserForm extends FormBase {
       '#type' => 'select',
       '#title' => $this->t('Select a city'),
       '#options' => $cities,
-      '#default_value' => $city,
+      '#default_value' => $this->city,
     ];
 
     $form['submit'] = [
@@ -77,29 +97,19 @@ class CustomWeatherUserForm extends FormBase {
    * @throws \Exception
    */
   public function submitForm(array &$form, FormStateInterface $form_state): void {
-    $user_id = \Drupal::currentUser()->id();
+    $user_id = $this->currentUser;
     $selected_user_city = $form_state->getValue('selected_city');
-    $connection = Database::getConnection();
+    $connection = $this->connection;
     $query = $connection->select('custom_weather_data', 'cwd');
     $query->fields('cwd', ['user_id']);
     $query->condition('user_id', $user_id);
     $result = $query->execute()->fetchField();
 
     if ($result) {
-      $connection->update('custom_weather_data')
-        ->fields([
-          'city' => $selected_user_city,
-        ])
-        ->condition('user_id', $user_id)
-        ->execute();
+      $this->userCityHandler->updateWeatherData($selected_user_city, $user_id);
     }
     else {
-      $connection->insert('custom_weather_data')
-        ->fields([
-          'city' => $selected_user_city,
-          'user_id' => $user_id,
-        ])
-        ->execute();
+      $this->userCityHandler->setWeatherData($selected_user_city, $user_id);
     }
   }
 

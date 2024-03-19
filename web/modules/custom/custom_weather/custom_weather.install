@@ -45,10 +45,10 @@ function custom_weather_update_10001(): void {
   $table = $schema['custom_weather_data'];
 
   // Check if the table already exists.
-  if (Database::getConnection()->schema()->tableExists('custom_weather_data')) {
+  if (\Drupal::database()->schema()->tableExists('custom_weather_data')) {
     return;
   }
 
   // Create the table if it doesn't exist.
-  Database::getConnection()->schema()->createTable('custom_weather_data', $table);
+  Drupal::database()->schema()->createTable('custom_weather_data', $table);
 }

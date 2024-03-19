@@ -2,7 +2,6 @@
 
 namespace Drupal\custom_weather\Plugin\Block;
 
-use Drupal\Component\Serialization\Json;
 use Drupal\Core\Block\Attribute\Block;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Config\ConfigFactoryInterface;
@@ -27,12 +26,19 @@ class CustomWeather extends BlockBase implements ContainerFactoryPluginInterface
   protected string $apiKey;
 
   /**
+   * Stores current user city.
+   *
+   * @var mixed|string
+   */
+  protected mixed $city;
+
+  /**
    * {@inheritdoc}
    */
-  public function __construct(protected ClientFactory $httpClient, array $configuration, $plugin_id, $plugin_definition, protected ConfigFactoryInterface $configFactory, protected UserCityHandler $city) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, protected ClientFactory $httpClient, protected ConfigFactoryInterface $configFactory, protected UserCityHandler $userCityHandler) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->apiKey = $this->configFactory->get('custom_weather.settings')->get('api_key');
-    $this->databaseService = $city;
+    $this->city = $this->userCityHandler->getCurrentCity();
   }
 
   /**
@@ -40,12 +46,12 @@ class CustomWeather extends BlockBase implements ContainerFactoryPluginInterface
    */
   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition): static {
     return new static(
-      $container->get('http_client_factory'),
       $configuration,
       $plugin_id,
       $plugin_definition,
+      $container->get('http_client_factory'),
       $container->get('config.factory'),
-      $container->get('Drupal\custom_weather\Service\UserCityHandler'),
+      $container->get('custom_weather.user_city_handler'),
     );
   }
 
@@ -53,8 +59,10 @@ class CustomWeather extends BlockBase implements ContainerFactoryPluginInterface
    * {@inheritdoc}
    */
   public function build():array {
-    $city = $this->databaseService->getCityFromDatabase();
-    $weatherData = $this->getWeatherApi();
+    $apiKey = $this->apiKey;
+    $city = $this->city;
+    $httpClient = $this->httpClient;
+    $weatherData = $this->userCityHandler->getWeatherApi($apiKey, $city, $httpClient);
     if ($weatherData) {
       $temp = round($weatherData['main']['temp'] - 273.15, 1);
       $weather_text = $weatherData['weather'][0]['main'];
@@ -62,34 +70,15 @@ class CustomWeather extends BlockBase implements ContainerFactoryPluginInterface
         '#theme' => 'custom_weather_block',
         '#temp' => $temp,
         '#weather_text' => $weather_text,
-        '#selected_city' => $city,
+        '#selected_city' => $this->city,
         '#cache' => [
+          'contexts' => ['user'],
           'max-age' => 30 * 60,
         ],
       ];
     }
     else {
       return [];
-    }
-  }
-
-  /**
-   * Protected function for getting array with temperature.
-   */
-  protected function getWeatherApi(): array|false {
-    if (empty($this->apiKey)) {
-      return FALSE;
-    }
-    $city = $this->databaseService->getCityFromDatabase();
-    $client = $this->httpClient->fromOptions();
-    $url = 'https://api.openweathermap.org/data/2.5/weather?q=' . $city . '&appid=' . $this->apiKey;
-    try {
-      $request = $client->get($url);
-      $response = $request->getBody()->getContents();
-      return Json::decode($response);
-    }
-    catch (\Exception $e) {
-      return FALSE;
     }
   }
 
