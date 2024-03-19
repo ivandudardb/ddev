@@ -1,0 +1,8 @@
+uuid: c5f516e0-f4bb-4033-af37-daf3adb781d1
+langcode: en
+status: true
+dependencies: {  }
+id: weather_user_button
+label: 'Weather user button'
+revision: 0
+description: ''

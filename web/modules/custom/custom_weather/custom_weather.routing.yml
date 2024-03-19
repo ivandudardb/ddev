@@ -1,7 +1,15 @@
 custom_weather.admin_settings:
-  path: '/admin/config/custom_weather'
+  path: '/admin/modules/custom_weather'
   defaults:
     _form: '\Drupal\custom_weather\Form\CustomWeatherForm'
-    _title: 'Settings for CollectPhone form.'
+    _title: 'Settings for admin weather form.'
   requirements:
     _permission: 'administer site configuration'
+
+custom_weather.settings:
+  path: '/user/weather'
+  defaults:
+    _form: '\Drupal\custom_weather\Form\CustomWeatherUserForm'
+    _title: 'Settings for user weather form.'
+  requirements:
+    _permission: 'access content'

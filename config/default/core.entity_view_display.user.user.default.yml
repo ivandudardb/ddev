@@ -15,6 +15,7 @@ dependencies:
     - views.view.latest_news
   content:
     - 'block_content:advertisement_normal:4ccbcfd8-96b5-4e08-8571-90ff2ae74d37'
+    - 'block_content:weather_user_button:14fee835-545e-475c-ba8e-a9ced2c45467'
   module:
     - block_content
     - layout_builder
@@ -44,7 +45,7 @@ third_party_settings:
               context_mapping: {  }
               views_label: '- Advertisement -'
               items_per_page: none
-            weight: 0
+            weight: 1
             additional: {  }
           053e8407-d0aa-4fde-8461-e63d61f8ca91:
             uuid: 053e8407-d0aa-4fde-8461-e63d61f8ca91
@@ -57,7 +58,7 @@ third_party_settings:
               context_mapping: {  }
               views_label: ''
               items_per_page: none
-            weight: 1
+            weight: 2
             additional: {  }
           e58d877a-247e-467c-a36b-587f4feb29fb:
             uuid: e58d877a-247e-467c-a36b-587f4feb29fb
@@ -81,7 +82,7 @@ third_party_settings:
                     target: '<none>'
                     rel: '<none>'
                 third_party_settings: {  }
-            weight: 2
+            weight: 3
             additional: {  }
           81dab764-990e-414f-87bc-30efcb769bcf:
             uuid: 81dab764-990e-414f-87bc-30efcb769bcf
@@ -101,7 +102,21 @@ third_party_settings:
                   rel: ''
                   target: ''
                 third_party_settings: {  }
-            weight: 3
+            weight: 4
+            additional: {  }
+          df81e804-5472-4d31-b758-861e3ce8be4d:
+            uuid: df81e804-5472-4d31-b758-861e3ce8be4d
+            region: content
+            configuration:
+              id: 'block_content:14fee835-545e-475c-ba8e-a9ced2c45467'
+              label: weather
+              label_display: '0'
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
             additional: {  }
         third_party_settings: {  }
       -
