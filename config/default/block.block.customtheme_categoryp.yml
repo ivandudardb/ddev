@@ -12,7 +12,7 @@ dependencies:
 id: customtheme_categoryp
 theme: customtheme
 region: content
-weight: -11
+weight: -12
 provider: null
 plugin: 'block_content:019c452b-2963-441a-b4ec-e7175e2d7f7a'
 settings:

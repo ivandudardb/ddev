@@ -1,0 +1,27 @@
+uuid: 2e33e3ba-046a-42e2-b482-07ba63916060
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.weather_user_button
+    - field.field.block_content.weather_user_button.field_user_weather_link
+  module:
+    - link
+id: block_content.weather_user_button.default
+targetEntityType: block_content
+bundle: weather_user_button
+mode: default
+content:
+  field_user_weather_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

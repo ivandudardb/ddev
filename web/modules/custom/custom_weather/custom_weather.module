@@ -4,12 +4,13 @@
 /**
  * Implement hook_theme().
  */
-function custom_weather_block_theme(): array {
+function custom_weather_theme(): array {
   return [
-    'custom_weather_block_template' => [
+    'custom_weather_block' => [
       'variables' => [
-        'content' => NULL,
-        'custom_weather_type' => NULL,
+        'temp' => NULL,
+        'weather_text' => NULL,
+        'selected_city' => NULL,
       ],
     ],
   ];
