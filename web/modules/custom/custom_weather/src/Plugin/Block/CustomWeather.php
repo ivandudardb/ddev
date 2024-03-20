@@ -23,7 +23,7 @@ class CustomWeather extends BlockBase implements ContainerFactoryPluginInterface
   /**
    * Stores the API key used for accessing weather data.
    */
-  protected string $apiKey;
+  protected mixed $apiKey;
 
   /**
    * Stores the selected city.
