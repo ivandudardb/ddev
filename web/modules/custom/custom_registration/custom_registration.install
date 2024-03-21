@@ -1,0 +1,56 @@
+<?php
+
+use Drupal\Core\Database\Database;
+
+/**
+ * Implements hook_schema().
+ */
+function custom_registration_schema(): array {
+  $schema = [];
+
+  $schema['custom_registration_data'] = [
+    'description' => 'Stores user data after registration.',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'description' => 'Primary key for the custom registration data table.',
+      ],
+      'uid' => [
+        'type' => 'int',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'uid',
+      ],
+      'country' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Country name.',
+      ],
+      'interested_in' => [
+        'type' => 'int',
+        'size' => 'tiny',
+        'not null' => TRUE,
+        'description' => 'ID of the interested taxonomy term.',
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+  return $schema;
+}
+
+/**
+ * Implements hook_update_N() for creating table if it does not exist.
+ */
+function custom_registration_update_10001(): void {
+  $schema = custom_registration_schema();
+  $table = $schema['custom_registration_data'];
+
+  if (\Drupal::database()->schema()->tableExists('custom_registration_data')) {
+    return;
+  }
+
+  Drupal::database()->schema()->createTable('custom_registration_data', $table);
+}

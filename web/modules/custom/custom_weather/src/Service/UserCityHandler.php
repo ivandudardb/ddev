@@ -6,11 +6,13 @@ use Drupal\Component\Serialization\Json;
 use Drupal\Core\Database\Connection;
 use Drupal\Core\Http\ClientFactory;
 use Drupal\Core\Session\AccountProxyInterface;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 
 /**
  * Saves the city for displaying weather.
  */
 class UserCityHandler {
+  use StringTranslationTrait;
 
   /**
    * Constructor of the class.
@@ -76,6 +78,29 @@ class UserCityHandler {
         'user_id' => $user_id,
       ])
       ->execute();
+  }
+
+  /**
+   * Return array with cities.
+   */
+  public function cities(): array {
+    $cities = [
+      'Kyiv' => $this->t('Kyiv'),
+      'Lviv' => $this->t('Lviv'),
+      'Rivne' => $this->t('Rivne'),
+      'Lutsk' => $this->t('Lutsk'),
+      'Zhytomyr' => $this->t('Zhytomyr'),
+      'Chernivtsi' => $this->t('Chernivtsi'),
+      'Ternopil' => $this->t('Ternopil'),
+      'Khmelnytskyi' => $this->t('Khmelnytskyi'),
+      'Uzhhorod' => $this->t('Uzhhorod'),
+      'Vinnytsia' => $this->t('Vinnytsia'),
+      'Cherkasy' => $this->t('Cherkasy'),
+      'Poltava' => $this->t('Poltava'),
+      'Chernihiv' => $this->t('Chernihiv'),
+    ];
+
+    return $cities;
   }
 
 }
