@@ -85,7 +85,7 @@ class CustomRegistrationForm extends RegisterForm {
 
     $form['interested_in'] = [
       '#type' => 'select',
-      '#title' => t('Interested In'),
+      '#title' => $this->t('Interested In'),
       '#options' => $options,
       '#required' => TRUE,
     ];
