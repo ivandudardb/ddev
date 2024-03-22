@@ -53,24 +53,7 @@ class CustomWeatherUserForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state): array {
-    // Array of cities for the dropdown list.
-    $cities = [
-      'Kyiv' => $this->t('Kyiv'),
-      'Lviv' => $this->t('Lviv'),
-      'Rivne' => $this->t('Rivne'),
-      'Lutsk' => $this->t('Lutsk'),
-      'Zhytomyr' => $this->t('Zhytomyr'),
-      'Chernivtsi' => $this->t('Chernivtsi'),
-      'Ternopil' => $this->t('Ternopil'),
-      'Khmelnytskyi' => $this->t('Khmelnytskyi'),
-      'Uzhhorod' => $this->t('Uzhhorod'),
-      'Vinnytsia' => $this->t('Vinnytsia'),
-      'Cherkasy' => $this->t('Cherkasy'),
-      'Poltava' => $this->t('Poltava'),
-      'Chernihiv' => $this->t('Chernihiv'),
-    ];
-
-    // Add the dropdown list with cities to the form.
+    $cities = $this->userCityHandler->cities();
     $form['selected_city'] = [
       '#type' => 'select',
       '#title' => $this->t('Select a city'),
@@ -82,7 +65,6 @@ class CustomWeatherUserForm extends FormBase {
       '#type' => 'submit',
       '#value' => $this->t('Save'),
     ];
-
     return $form;
   }
 

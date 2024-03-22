@@ -1,4 +1,4 @@
 services:
   custom_weather.user_city_handler:
     class: Drupal\custom_weather\Service\UserCityHandler
-    arguments: ['@database', '@current_user', '@http_client_factory']
+    arguments: ['@database', '@current_user', '@http_client_factory', '@string_translation']

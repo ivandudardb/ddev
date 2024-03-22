@@ -1,0 +1,4 @@
+services:
+  custom_registration.data_base_service:
+    class: Drupal\custom_registration\Service\UserDataHandler
+    arguments: ['@database']

@@ -1,0 +1,7 @@
+custom_registration.register:
+  path: '/user/register'
+  defaults:
+    _entity_form: 'user.register'
+    _title: 'User registration'
+  requirements:
+    _permission: 'access content'
