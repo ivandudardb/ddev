@@ -6,7 +6,7 @@ use Drupal\Component\Serialization\Json;
 use Drupal\Core\Block\Attribute\Block;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
-use Drupal\Core\Session\AccountProxyInterface;
+use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\Core\Url;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -28,7 +28,7 @@ class CustomRegistration extends BlockBase implements ContainerFactoryPluginInte
     array $configuration,
     $plugin_id,
     $plugin_definition,
-    protected AccountProxyInterface $accountProxy,
+    protected AccountInterface $account,
   ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
   }
@@ -49,8 +49,7 @@ class CustomRegistration extends BlockBase implements ContainerFactoryPluginInte
    * {@inheritdoc}
    */
   public function build(): array {
-    $uid = $this->accountProxy->id();
-    if ($uid == 0) {
+    if ($this->account->isAnonymous()) {
       return [
         '#type' => 'link',
         '#title' => $this->t('Register'),

@@ -23,16 +23,22 @@ function custom_registration_schema(): array {
         'not null' => TRUE,
         'description' => 'uid',
       ],
-      'country' => [
+      'city' => [
         'type' => 'varchar',
         'length' => 255,
         'not null' => TRUE,
+        'description' => 'city name.',
+      ],
+      'country' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
         'description' => 'Country name.',
       ],
       'interested_in' => [
         'type' => 'int',
         'size' => 'tiny',
-        'not null' => TRUE,
+        'not null' => FALSE,
         'description' => 'ID of the interested taxonomy term.',
       ],
     ],
@@ -42,15 +48,42 @@ function custom_registration_schema(): array {
 }
 
 /**
- * Implements hook_update_N() for creating table if it does not exist.
+ * Implements hook_install().
  */
-function custom_registration_update_10001(): void {
-  $schema = custom_registration_schema();
-  $table = $schema['custom_registration_data'];
+function custom_registration_install(): void {
+  // Create the custom_registration_data table.
+  if (!\Drupal::database()->schema()->tableExists('custom_registration_data')) {
+    $schema = custom_registration_schema();
+    $table = $schema['custom_registration_data'];
+    Database::getConnection()->schema()->createTable('custom_registration_data', $table);
+  }
+}
 
-  if (\Drupal::database()->schema()->tableExists('custom_registration_data')) {
-    return;
+/**
+ * Implements hook_update_N().
+ *
+ * Transfer data from custom_weather_data to custom_registration_data.
+ */
+function custom_registration_update_9006(): void {
+
+  $values_to_insert = [];
+  $result = Database::getConnection()->select('custom_weather_data', 'cwd')
+    ->fields('cwd', ['user_id', 'city'])
+    ->execute();
+
+  // Fetch the results and build an array of values to insert.
+  foreach ($result as $row) {
+    $values_to_insert[] = [
+      'uid' => $row->user_id,
+      'city' => $row->city,
+      // Add other fields as needed.
+    ];
   }
 
-  Drupal::database()->schema()->createTable('custom_registration_data', $table);
+  // Insert the values into the custom_registration_data table.
+  foreach ($values_to_insert as $values) {
+    $query = Database::getConnection()->insert('custom_registration_data')
+      ->fields($values)
+      ->execute();
+  }
 }

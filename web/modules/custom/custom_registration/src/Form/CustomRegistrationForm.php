@@ -8,7 +8,7 @@ use Drupal\Core\Entity\EntityTypeBundleInfoInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Language\LanguageManagerInterface;
 use Drupal\Core\Locale\CountryManager;
-use Drupal\custom_registration\Service\DataBaseService;
+use Drupal\custom_registration\Service\UserDataHandler;
 use Drupal\custom_weather\Service\UserCityHandler;
 use Drupal\user\RegisterForm;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -22,14 +22,14 @@ class CustomRegistrationForm extends RegisterForm {
    * {@inheritdoc}
    */
   public function __construct(
-    EntityRepositoryInterface $entity_repository,
-    LanguageManagerInterface $language_manager,
-    protected DataBaseService $dataBaseService,
-    protected UserCityHandler $userCityHandler,
-    protected $entityTypeManager,
-    protected CountryManager $countryManager,
+    EntityRepositoryInterface     $entity_repository,
+    LanguageManagerInterface      $language_manager,
+    protected UserDataHandler     $dataBaseService,
+    protected UserCityHandler     $userCityHandler,
+    protected                     $entityTypeManager,
+    protected CountryManager      $countryManager,
     EntityTypeBundleInfoInterface $entity_type_bundle_info = NULL,
-    TimeInterface $time = NULL,
+    TimeInterface                 $time = NULL,
   ) {
     parent::__construct($entity_repository, $language_manager, $entity_type_bundle_info, $time);
   }
@@ -53,27 +53,25 @@ class CustomRegistrationForm extends RegisterForm {
   /**
    * Return array with countries.
    */
-  public function getCountry(): array {
-    return $countries[] = $this->countryManager->getStandardList();
+  public function getCountries(): array {
+    return $this->countryManager->getStandardList();
   }
 
   /**
    * {@inheritdoc}
    */
   public function form(array $form, FormStateInterface $form_state): array {
-    $countries = $this->getCountry();
-    $vocabularyId = 'news';
-    $terms = $this->entityTypeManager->getStorage('taxonomy_term')->loadTree($vocabularyId);
+    $form = parent::form($form, $form_state);
+    $terms = $this->entityTypeManager->getStorage('taxonomy_term')->loadTree('news');
     $options = [];
     foreach ($terms as $term) {
       $options[$term->tid] = $term->name;
     }
-    $form = parent::form($form, $form_state);
     $form['country'] = [
       '#type' => 'select',
       '#title' => $this->t('Country'),
       '#required' => TRUE,
-      '#options' => $countries,
+      '#options' => $this->getCountries(),
     ];
 
     $form['city'] = [

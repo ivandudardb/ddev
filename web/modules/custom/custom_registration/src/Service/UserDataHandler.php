@@ -7,10 +7,10 @@ use Drupal\Core\Database\Connection;
 /**
  * Saves data from custom registration fields into the database.
  */
-class DataBaseService {
+class UserDataHandler {
 
   /**
-   * Constructs a new DataBaseService object.
+   * Constructs a new UserDataHandler service.
    *
    * @param \Drupal\Core\Database\Connection $connection
    *   The database connection service.
@@ -42,14 +42,7 @@ class DataBaseService {
         'uid' => $user_id,
         'country' => $country_value,
         'interested_in' => $interested_in_value,
-      ])
-      ->execute();
-
-    $this->connection->merge('custom_weather_data')
-      ->keys(['user_id' => $user_id])
-      ->fields([
         'city' => $city_value,
-        'user_id' => $user_id,
       ])
       ->execute();
   }

@@ -3,5 +3,3 @@ type: module
 description: Customizes the user registration form.
 core_version_requirement: ^9 || ^10
 package: custom
-dependencies:
-  - drupal:custom_weather

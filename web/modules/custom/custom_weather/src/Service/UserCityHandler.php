@@ -26,6 +26,7 @@ class UserCityHandler {
     protected Connection $connection,
     protected AccountProxyInterface $currentUser,
     protected ClientFactory $httpClient,
+    protected $stringTranslation,
   ) {
   }
 
@@ -34,9 +35,9 @@ class UserCityHandler {
    */
   public function getCurrentCity() {
     $user_id = $this->currentUser->id();
-    $query = $this->connection->select('custom_weather_data', 'cwd');
-    $query->addField('cwd', 'city');
-    $query->condition('user_id', $user_id);
+    $query = $this->connection->select('custom_registration_data', 'crd');
+    $query->addField('crd', 'city');
+    $query->condition('uid', $user_id);
     $city = $query->execute()->fetchField();
     if (empty($city)) {
       $city = 'Kyiv';
@@ -71,11 +72,11 @@ class UserCityHandler {
    */
   public function saveUserCity(string $selected_user_city): void {
     $user_id = $this->currentUser->id();
-    $this->connection->merge('custom_weather_data')
-      ->keys(['user_id' => $user_id])
+    $this->connection->merge('custom_registration_data')
+      ->keys(['uid' => $user_id])
       ->fields([
         'city' => $selected_user_city,
-        'user_id' => $user_id,
+        'uid' => $user_id,
       ])
       ->execute();
   }
