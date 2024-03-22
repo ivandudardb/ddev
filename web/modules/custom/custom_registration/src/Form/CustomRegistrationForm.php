@@ -22,14 +22,14 @@ class CustomRegistrationForm extends RegisterForm {
    * {@inheritdoc}
    */
   public function __construct(
-    EntityRepositoryInterface     $entity_repository,
-    LanguageManagerInterface      $language_manager,
-    protected UserDataHandler     $dataBaseService,
-    protected UserCityHandler     $userCityHandler,
-    protected                     $entityTypeManager,
-    protected CountryManager      $countryManager,
+    EntityRepositoryInterface $entity_repository,
+    LanguageManagerInterface $language_manager,
+    protected UserDataHandler $dataBaseService,
+    protected UserCityHandler $userCityHandler,
+    protected $entityTypeManager,
+    protected CountryManager $countryManager,
     EntityTypeBundleInfoInterface $entity_type_bundle_info = NULL,
-    TimeInterface                 $time = NULL,
+    TimeInterface $time = NULL,
   ) {
     parent::__construct($entity_repository, $language_manager, $entity_type_bundle_info, $time);
   }

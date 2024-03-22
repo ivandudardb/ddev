@@ -6,13 +6,11 @@ use Drupal\Component\Serialization\Json;
 use Drupal\Core\Database\Connection;
 use Drupal\Core\Http\ClientFactory;
 use Drupal\Core\Session\AccountProxyInterface;
-use Drupal\Core\StringTranslation\StringTranslationTrait;
 
 /**
  * Saves the city for displaying weather.
  */
 class UserCityHandler {
-  use StringTranslationTrait;
 
   /**
    * Constructor of the class.
@@ -26,7 +24,6 @@ class UserCityHandler {
     protected Connection $connection,
     protected AccountProxyInterface $currentUser,
     protected ClientFactory $httpClient,
-    protected $stringTranslation,
   ) {
   }
 
@@ -86,19 +83,19 @@ class UserCityHandler {
    */
   public function cities(): array {
     $cities = [
-      'Kyiv' => $this->t('Kyiv'),
-      'Lviv' => $this->t('Lviv'),
-      'Rivne' => $this->t('Rivne'),
-      'Lutsk' => $this->t('Lutsk'),
-      'Zhytomyr' => $this->t('Zhytomyr'),
-      'Chernivtsi' => $this->t('Chernivtsi'),
-      'Ternopil' => $this->t('Ternopil'),
-      'Khmelnytskyi' => $this->t('Khmelnytskyi'),
-      'Uzhhorod' => $this->t('Uzhhorod'),
-      'Vinnytsia' => $this->t('Vinnytsia'),
-      'Cherkasy' => $this->t('Cherkasy'),
-      'Poltava' => $this->t('Poltava'),
-      'Chernihiv' => $this->t('Chernihiv'),
+      'Kyiv' => t('Kyiv'),
+      'Lviv' => t('Lviv'),
+      'Rivne' => t('Rivne'),
+      'Lutsk' => t('Lutsk'),
+      'Zhytomyr' => t('Zhytomyr'),
+      'Chernivtsi' => t('Chernivtsi'),
+      'Ternopil' => t('Ternopil'),
+      'Khmelnytskyi' => t('Khmelnytskyi'),
+      'Uzhhorod' => t('Uzhhorod'),
+      'Vinnytsia' => t('Vinnytsia'),
+      'Cherkasy' => t('Cherkasy'),
+      'Poltava' => t('Poltava'),
+      'Chernihiv' => t('Chernihiv'),
     ];
 
     return $cities;
