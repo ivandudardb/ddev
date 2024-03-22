@@ -63,9 +63,9 @@ class CustomRegistrationForm extends RegisterForm {
   public function form(array $form, FormStateInterface $form_state): array {
     $form = parent::form($form, $form_state);
     $terms = $this->entityTypeManager->getStorage('taxonomy_term')->loadTree('news');
-    $options = [];
+    $interests = [];
     foreach ($terms as $term) {
-      $options[$term->tid] = $term->name;
+      $interests[$term->tid] = $term->name;
     }
     $form['country'] = [
       '#type' => 'select',
@@ -84,7 +84,7 @@ class CustomRegistrationForm extends RegisterForm {
     $form['interested_in'] = [
       '#type' => 'select',
       '#title' => $this->t('Interested In'),
-      '#options' => $options,
+      '#options' => $interests,
       '#required' => TRUE,
     ];
     return $form;
