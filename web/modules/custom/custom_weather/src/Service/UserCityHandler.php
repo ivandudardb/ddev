@@ -6,11 +6,14 @@ use Drupal\Component\Serialization\Json;
 use Drupal\Core\Database\Connection;
 use Drupal\Core\Http\ClientFactory;
 use Drupal\Core\Session\AccountProxyInterface;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
+use Drupal\Core\StringTranslation\TranslationInterface;
 
 /**
  * Saves the city for displaying weather.
  */
 class UserCityHandler {
+  use StringTranslationTrait;
 
   /**
    * Constructor of the class.
@@ -19,12 +22,18 @@ class UserCityHandler {
    *   The database connection.
    * @param \Drupal\Core\Session\AccountProxyInterface $currentUser
    *   The current user.
+   * @param \Drupal\Core\Http\ClientFactory $httpClient
+   *   The HTTP client factory.
+   * @param \Drupal\Core\StringTranslation\TranslationInterface $translation
+   *   The translation service.
    */
   public function __construct(
     protected Connection $connection,
     protected AccountProxyInterface $currentUser,
     protected ClientFactory $httpClient,
+    protected TranslationInterface $translation,
   ) {
+    $this->stringTranslation = $translation;
   }
 
   /**
@@ -83,19 +92,19 @@ class UserCityHandler {
    */
   public function cities(): array {
     $cities = [
-      'Kyiv' => t('Kyiv'),
-      'Lviv' => t('Lviv'),
-      'Rivne' => t('Rivne'),
-      'Lutsk' => t('Lutsk'),
-      'Zhytomyr' => t('Zhytomyr'),
-      'Chernivtsi' => t('Chernivtsi'),
-      'Ternopil' => t('Ternopil'),
-      'Khmelnytskyi' => t('Khmelnytskyi'),
-      'Uzhhorod' => t('Uzhhorod'),
-      'Vinnytsia' => t('Vinnytsia'),
-      'Cherkasy' => t('Cherkasy'),
-      'Poltava' => t('Poltava'),
-      'Chernihiv' => t('Chernihiv'),
+      'Kyiv' => $this->t('Kyiv'),
+      'Lviv' => $this->t('Lviv'),
+      'Rivne' => $this->t('Rivne'),
+      'Lutsk' => $this->t('Lutsk'),
+      'Zhytomyr' => $this->t('Zhytomyr'),
+      'Chernivtsi' => $this->t('Chernivtsi'),
+      'Ternopil' => $this->t('Ternopil'),
+      'Khmelnytskyi' => $this->t('Khmelnytskyi'),
+      'Uzhhorod' => $this->t('Uzhhorod'),
+      'Vinnytsia' => $this->t('Vinnytsia'),
+      'Cherkasy' => $this->t('Cherkasy'),
+      'Poltava' => $this->t('Poltava'),
+      'Chernihiv' => $this->t('Chernihiv'),
     ];
 
     return $cities;
