@@ -7,7 +7,6 @@ use Drupal\Core\Database\Connection;
 use Drupal\Core\Http\ClientFactory;
 use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
-use Drupal\Core\StringTranslation\TranslationInterface;
 
 /**
  * Saves the city for displaying weather.
@@ -31,9 +30,8 @@ class UserCityHandler {
     protected Connection $connection,
     protected AccountProxyInterface $currentUser,
     protected ClientFactory $httpClient,
-    protected TranslationInterface $translation,
+    protected $stringTranslation,
   ) {
-    $this->stringTranslation = $translation;
   }
 
   /**
