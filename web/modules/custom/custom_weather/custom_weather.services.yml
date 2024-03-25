@@ -2,3 +2,9 @@ services:
   custom_weather.user_city_handler:
     class: Drupal\custom_weather\Service\UserCityHandler
     arguments: ['@database', '@current_user', '@http_client_factory', '@string_translation']
+  cache_context.weather_city_context:
+    class: Drupal\custom_weather\Cache\CustomWeatherContext
+    tags:
+      - { name: cache.context }
+    arguments:
+      ['@current_user', '@database', '@custom_weather.user_city_handler']
