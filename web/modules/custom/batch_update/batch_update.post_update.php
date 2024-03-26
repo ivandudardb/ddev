@@ -2,26 +2,23 @@
 
 /**
  * @file
- * Implements hook_post_update_NAME.
+ * Install, update and uninstall functions for the batch_api module.
  */
 
 /**
- * Get paragraph and call function for update text format.
+ * Implements hook_post_update_NAME().
  */
-function batch_update_post_update_formatter(&$context): void {
-  if (empty($context['sandbox']['progress'])) {
-    $context['sandbox']['progress'] = 0;
-  }
+function batch_update_post_update_formatter(&$sandbox): void {
   $limit = 20;
   $format = 'limited_html';
   $query = \Drupal::entityTypeManager()->getStorage('paragraph')
     ->getQuery()
     ->accessCheck(FALSE)
     ->condition('field_regular_text.format', $format, '<>')
-    ->range($context['sandbox']['progress'], $context['sandbox']['progress'] + $limit);
+    ->range(0, $limit);
   $paragraphs = $query->execute();
   if (empty($paragraphs)) {
-    $context['#finished'] = 1;
+    $sandbox['#finished'] = 1;
     return;
   }
   $multipleParagraphs = \Drupal::entityTypeManager()
@@ -29,9 +26,8 @@ function batch_update_post_update_formatter(&$context): void {
     ->loadMultiple($paragraphs);
   foreach ($multipleParagraphs as $paragraph) {
     format_change($paragraph, $format);
-    $context['sandbox']['progress']++;
   }
-  $context['#finished'] = 0;
+  $sandbox['#finished'] = 0;
 }
 
 /**

@@ -61,7 +61,7 @@ class BatchFormatUpdate extends DrushCommands {
   /**
    * Update the text format of a paragraph.
    */
-  public function formatUpdate($paragraph, &$format):void {
+  public function formatUpdate($paragraph, $format):void {
     $paragraph->get('field_regular_text')->format = $format;
     $paragraph->save();
   }
