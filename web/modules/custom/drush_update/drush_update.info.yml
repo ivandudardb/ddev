@@ -1,0 +1,5 @@
+name: Drush Update
+type: module
+description: Updates text format via drush
+core_version_requirement: ^9 || ^10
+package: custom

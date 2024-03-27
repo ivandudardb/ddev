@@ -1,0 +1,7 @@
+services:
+  custom.commands:
+    class: Drupal\drush_update\Commands\BatchFormatUpdate
+    tags:
+      - { name: drush.command }
+    arguments:
+      [ '@entity_type.manager' ]
