@@ -1,0 +1,20 @@
+uuid: a440420f-55fb-4cb2-a7a7-a97fe0447d94
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_registration
+  theme:
+    - customtheme
+id: customtheme_customregistrationblock
+theme: customtheme
+region: header
+weight: 0
+provider: null
+plugin: custom_registration_block
+settings:
+  id: custom_registration_block
+  label: 'Custom registration block'
+  label_display: visible
+  provider: custom_registration
+visibility: {  }
