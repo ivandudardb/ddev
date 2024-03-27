@@ -1,0 +1,29 @@
+uuid: 3f873944-524d-4871-bdce-cfbf129c4392
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.category
+  module:
+    - facets
+    - system
+  theme:
+    - customtheme
+id: customtheme_category
+theme: customtheme
+region: sidebar
+weight: -18
+provider: null
+plugin: 'facet_block:category'
+settings:
+  id: 'facet_block:category'
+  label: category
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: customtheme_category
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /solr-view

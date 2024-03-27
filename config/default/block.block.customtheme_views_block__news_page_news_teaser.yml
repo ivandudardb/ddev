@@ -12,7 +12,7 @@ dependencies:
 id: customtheme_views_block__news_page_news_teaser
 theme: customtheme
 region: content
-weight: 2
+weight: 1
 provider: null
 plugin: 'views_block:news_page-news_teaser'
 settings:
