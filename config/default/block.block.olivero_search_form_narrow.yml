@@ -1,4 +1,4 @@
-uuid: 89f8ee84-f9e9-48dc-83ec-b0b3e5f1e871
+uuid: 14c54815-ead2-4800-b62b-2563a4c008b7
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: olivero_search_form_narrow
 theme: olivero
 region: primary_menu
-weight: -8
+weight: -4
 provider: null
 plugin: search_form_block
 settings:

@@ -20,5 +20,8 @@ content:
     weight: 100
     region: content
 hidden:
+  addtoany: true
   field_advertisement_link: true
   field_dvertisement_photo: true
+  langcode: true
+  search_api_excerpt: true

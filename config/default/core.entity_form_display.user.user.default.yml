@@ -82,3 +82,4 @@ content:
     third_party_settings: {  }
 hidden:
   field_author_social: true
+  langcode: true
