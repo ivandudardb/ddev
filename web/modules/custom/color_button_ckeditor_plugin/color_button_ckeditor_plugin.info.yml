@@ -1,0 +1,7 @@
+name: Color Button Plugin
+type: module
+description: "CKEditor color button plugin"
+package: CKEditor 5
+core_version_requirement: ^9 || ^10
+dependencies:
+  - drupal:ckeditor5
