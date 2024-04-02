@@ -1,17 +1,17 @@
-uuid: 4c76280b-a67e-471e-94fb-894657a04f71
+uuid: a2df7801-415f-450d-80fd-a580a6b4ba79
 langcode: en
 status: true
 dependencies:
   module:
     - search
   theme:
-    - olivero
+    - customtheme
 _core:
   default_config_hash: imMyHD6LYci0gtXq56qr9ZKGHzbEG9uFydrN5EhKtSU
-id: olivero_search_form_wide
-theme: olivero
-region: secondary_menu
-weight: -12
+id: customtheme_search_form_wide
+theme: customtheme
+region: header
+weight: -15
 provider: null
 plugin: search_form_block
 settings:
