@@ -12,11 +12,5 @@ color_button_ckeditor_plugin_link:
         label: Styled link
         class: style-link
     elements:
-      - <h2>
-      - <h2 class="simple-box-title">
       - <a>
       - <span>
-      - <div>
-      - <div class="simple-box-description">
-      - <section>
-      - <section class="simple-box">
