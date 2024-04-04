@@ -9,7 +9,6 @@ dependencies:
     - comment
     - contact
     - filter
-    - search
     - statistics
     - system
 _core:
@@ -23,7 +22,6 @@ permissions:
   - 'access content'
   - 'access site-wide contact form'
   - 'post comments'
-  - 'search content'
   - 'use text format limited_html'
   - 'use text format restricted_html'
   - 'view post access counter'

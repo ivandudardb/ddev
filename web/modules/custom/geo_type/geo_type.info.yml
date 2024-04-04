@@ -1,0 +1,5 @@
+name: Geo Type
+type: module
+description: Geo type for solr
+core_version_requirement: ^9 || ^10
+package: custom

@@ -26,3 +26,5 @@ content:
     region: content
 hidden:
   field_advertisement_link: true
+  langcode: true
+  search_api_excerpt: true
