@@ -11,7 +11,7 @@ _core:
 id: customtheme_powered
 theme: customtheme
 region: content
-weight: 3
+weight: 4
 provider: null
 plugin: system_powered_by_block
 settings:

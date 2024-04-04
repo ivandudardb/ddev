@@ -54,6 +54,4 @@ hidden:
   field_slogan: true
   field_teaser_text: true
   field_text_and_image: true
-  langcode: true
   links: true
-  search_api_excerpt: true

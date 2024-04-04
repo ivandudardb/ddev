@@ -12,7 +12,7 @@ dependencies:
 id: customtheme_views_block__latest_article_block_1
 theme: customtheme
 region: sidebar
-weight: -17
+weight: 0
 provider: null
 plugin: 'views_block:latest_article-block_1'
 settings:
@@ -26,4 +26,4 @@ visibility:
   request_path:
     id: request_path
     negate: true
-    pages: "/user/*\r\n/category/*\r\n<front>\r\n/solr-view"
+    pages: "/user/*\r\n/category/*\r\n<front>\r\n"

@@ -1,0 +1,16 @@
+color_button_ckeditor_plugin_link:
+  ckeditor5:
+    plugins:
+      - demoPlugin.LinkPlugin
+  drupal:
+    label: Styled link
+    library: color_button_ckeditor_plugin/demobox
+    admin_library: color_button_ckeditor_plugin/admin.demobox
+    class: Drupal\color_button_ckeditor_plugin\Plugin\CKEditor5Plugin\LinkPlugin
+    toolbar_items:
+      linkPlugin:
+        label: Styled link
+        class: style-link
+    elements:
+      - <a>
+      - <span>

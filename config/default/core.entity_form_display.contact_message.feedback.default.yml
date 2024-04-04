@@ -9,13 +9,6 @@ targetEntityType: contact_message
 bundle: feedback
 mode: default
 content:
-  langcode:
-    type: language_select
-    weight: 2
-    region: content
-    settings:
-      include_locked: true
-    third_party_settings: {  }
   mail:
     weight: 1
     region: content
