@@ -23,10 +23,13 @@ class Copyright extends BlockBase {
     $config_page_machine_name = 'global_configurations';
     $storage = \Drupal::entityTypeManager()->getStorage('config_pages');
     $entity = $storage->load($config_page_machine_name);
-    $value = $entity->get('field_copyright')->getValue();
-    $text_value = $value[0]['value'];
+    $copyrightValue = $entity->get('field_copyright')->getValue();
+    $copyrightTextValue = $copyrightValue[0]['value'];
+    $socialValue = $entity->get('field_social_title')->getValue();
+    $socialTextValue = $socialValue[0]['value'];
     return [
-      '#markup' => $text_value,
+      '#field_social_title' => $socialTextValue,
+      '#markup' => $copyrightTextValue,
       '#cache' => [
         [
           'tags' => ['global_configurations'],
@@ -40,7 +43,7 @@ class Copyright extends BlockBase {
    */
   public function blockForm($form, FormStateInterface $form_state) {
     $form['url'] = [
-      '#markup' => 'Copyrights text can be edited <a href="https://drupalddev.ddev.site/admin/copyright">here</a>',
+      '#markup' => 'Copyrights text can be edited <a href="/admin/copyright">here</a>',
     ];
 
     return $form;
