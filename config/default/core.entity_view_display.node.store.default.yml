@@ -1,0 +1,32 @@
+uuid: c4055094-1577-4c57-a6f9-1d1a96a3bd15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.store.field_location
+    - node.type.store
+  module:
+    - geofield
+    - user
+id: node.store.default
+targetEntityType: node
+bundle: store
+mode: default
+content:
+  field_location:
+    type: geofield_latlon
+    label: hidden
+    settings:
+      output_format: wkt
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  langcode: true
+  search_api_excerpt: true

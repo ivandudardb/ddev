@@ -191,5 +191,7 @@ hidden:
   field_author_social: true
   field_author_website: true
   field_social: true
+  langcode: true
   member_for: true
+  search_api_excerpt: true
   user_picture: true

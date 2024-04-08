@@ -232,7 +232,7 @@
     <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords_und.txt"/>
     <filter class="solr.WordDelimiterGraphFilterFactory" catenateNumbers="1" generateNumberParts="1" protected="protwords_und.txt" splitOnCaseChange="0" generateWordParts="1" preserveOriginal="1" catenateAll="0" catenateWords="1"/>
     <filter class="solr.FlattenGraphFilterFactory"/>
-    <filter class="solr.LengthFilterFactory" min="2" max="100"/>
+    <filter class="solr.LengthFilterFactory" min="5" max="100"/>
     <filter class="solr.LowerCaseFilterFactory"/>
     <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
     <filter class="solr.NGramFilterFactory" minGramSize="2" maxGramSize="25"/>
@@ -240,7 +240,7 @@
   <analyzer type="query">
     <charFilter class="solr.MappingCharFilterFactory" mapping="accents_und.txt"/>
     <tokenizer class="solr.StandardTokenizerFactory"/>
-    <filter class="solr.LengthFilterFactory" min="2" max="100"/>
+    <filter class="solr.LengthFilterFactory" min="5" max="100"/>
     <filter class="solr.LowerCaseFilterFactory"/>
     <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
   </analyzer>
