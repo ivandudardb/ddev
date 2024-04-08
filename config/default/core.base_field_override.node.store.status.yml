@@ -1,0 +1,22 @@
+uuid: 28d1b78f-5691-4afc-8833-00bc931a892a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.store
+id: node.store.status
+field_name: status
+entity_type: node
+bundle: store
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

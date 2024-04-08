@@ -1,0 +1,20 @@
+uuid: 9b626e37-ec6b-4832-bbf4-8587e86e3055
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_pages
+    - text
+id: config_pages.field_copyright
+field_name: field_copyright
+entity_type: config_pages
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

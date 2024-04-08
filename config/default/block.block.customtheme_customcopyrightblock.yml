@@ -1,0 +1,20 @@
+uuid: adb19b73-c476-480f-b1c3-f4c0fd4565db
+langcode: en
+status: true
+dependencies:
+  module:
+    - copyright
+  theme:
+    - customtheme
+id: customtheme_customcopyrightblock
+theme: customtheme
+region: footer
+weight: -19
+provider: null
+plugin: copyright_block
+settings:
+  id: copyright_block
+  label: 'Custom Copyright block'
+  label_display: '0'
+  provider: copyright
+visibility: {  }

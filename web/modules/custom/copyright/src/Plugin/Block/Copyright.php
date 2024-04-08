@@ -42,16 +42,11 @@ class Copyright extends BlockBase implements ContainerFactoryPluginInterface {
    */
   public function build() {
     $config_page_machine_name = 'global_configurations';
-    $storage = $this->entityTypeManager->getStorage('config_pages');
-    $entity = $storage->load($config_page_machine_name);
-    $copyrightValue = $entity->get('field_copyright')->getValue();
-    $copyrightTextValue = $copyrightValue[0]['value'];
-    return [
-      '#cache' => [
-        'tags' => ['config_pages:1'],
-      ],
-      '#markup' => $copyrightTextValue,
-    ];
+    $storage = $this->configPagesLoaderService->load($config_page_machine_name);
+    $copyrightField = $storage->get('field_copyright')->view('default');
+    $copyrightField['#title'] = '';
+    $copyrightField['#cache']['tags'][] = 'config_pages:1';
+    return $copyrightField;
   }
 
   /**
@@ -61,7 +56,6 @@ class Copyright extends BlockBase implements ContainerFactoryPluginInterface {
     $form['url'] = [
       '#markup' => 'Copyrights text can be edited <a href="/admin/copyright">here</a>',
     ];
-
     return $form;
   }
 

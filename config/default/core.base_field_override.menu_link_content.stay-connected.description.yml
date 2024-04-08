@@ -1,0 +1,18 @@
+uuid: 8b4d5012-e781-49ca-8ae0-7c33c37b525f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.stay-connected
+id: menu_link_content.stay-connected.description
+field_name: description
+entity_type: menu_link_content
+bundle: stay-connected
+label: Description
+description: 'Shown when hovering over the menu link.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

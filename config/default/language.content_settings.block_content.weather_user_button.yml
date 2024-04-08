@@ -1,0 +1,18 @@
+uuid: 261db2d4-9910-45d6-a34d-1a179976c87a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.weather_user_button
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: block_content.weather_user_button
+target_entity_type_id: block_content
+target_bundle: weather_user_button
+default_langcode: site_default
+language_alterable: false
