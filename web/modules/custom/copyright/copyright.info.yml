@@ -1,4 +1,4 @@
-name: 'copyright'
+name: 'Copyright'
 type: module
 description: 'Provides copyright block to your website'
 package: custom

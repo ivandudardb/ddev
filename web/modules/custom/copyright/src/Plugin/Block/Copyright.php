@@ -2,39 +2,55 @@
 
 namespace Drupal\copyright\Plugin\Block;
 
+use Drupal\config_pages\ConfigPagesLoaderService;
 use Drupal\Core\Block\Attribute\Block;
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Entity\EntityTypeManager;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Provides a 'WeatherBlock' block.
+ * Provides a 'CopyrightBlock' block.
  */
 #[Block(
   id: "copyright_block",
   admin_label: new TranslatableMarkup("Custom Copyright block"),
 )]
-class Copyright extends BlockBase {
+class Copyright extends BlockBase implements ContainerFactoryPluginInterface {
+
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, protected ConfigPagesLoaderService $configPagesLoaderService, protected EntityTypeManager $entityTypeManager) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition);
+  }
 
   /**
-   *
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    return new static(
+      $configuration,
+      $plugin_id,
+      $plugin_definition,
+      $container->get('config_pages.loader'),
+      $container->get('entity_type.manager'),
+    );
+  }
+
+  /**
+   * {@inheritdoc}
    */
   public function build() {
     $config_page_machine_name = 'global_configurations';
-    $storage = \Drupal::entityTypeManager()->getStorage('config_pages');
+    $storage = $this->entityTypeManager->getStorage('config_pages');
     $entity = $storage->load($config_page_machine_name);
     $copyrightValue = $entity->get('field_copyright')->getValue();
     $copyrightTextValue = $copyrightValue[0]['value'];
-    $socialValue = $entity->get('field_social_title')->getValue();
-    $socialTextValue = $socialValue[0]['value'];
     return [
-      '#field_social_title' => $socialTextValue,
-      '#markup' => $copyrightTextValue,
       '#cache' => [
-        [
-          'tags' => ['global_configurations'],
-        ],
+        'tags' => ['config_pages:1'],
       ],
+      '#markup' => $copyrightTextValue,
     ];
   }
 
