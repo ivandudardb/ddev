@@ -20,14 +20,28 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 )]
 class Copyright extends BlockBase implements ContainerFactoryPluginInterface {
 
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, protected ConfigPagesLoaderService $configPagesLoaderService, protected EntityTypeManager $entityTypeManager) {
+  /**
+   * Constructs a new Copyright.
+   */
+  public function __construct(
+    array $configuration,
+    $plugin_id,
+    $plugin_definition,
+    protected ConfigPagesLoaderService $configPagesLoaderService,
+    protected EntityTypeManager $entityTypeManager,
+  ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
   }
 
   /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+  public static function create(
+    ContainerInterface $container,
+    array $configuration,
+    $plugin_id,
+    $plugin_definition,
+  ) {
     return new static(
       $configuration,
       $plugin_id,
@@ -41,8 +55,7 @@ class Copyright extends BlockBase implements ContainerFactoryPluginInterface {
    * {@inheritdoc}
    */
   public function build() {
-    $config_page_machine_name = 'global_configurations';
-    $storage = $this->configPagesLoaderService->load($config_page_machine_name);
+    $storage = $this->configPagesLoaderService->load('global_configurations');
     $copyrightField = $storage->get('field_copyright')->view('default');
     $copyrightField['#title'] = '';
     $copyrightField['#cache']['tags'][] = 'config_pages:1';
