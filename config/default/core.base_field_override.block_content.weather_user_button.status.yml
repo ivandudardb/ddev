@@ -1,0 +1,22 @@
+uuid: 7c834c8b-105e-4fd4-93f8-8f4e3aa1766e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.weather_user_button
+id: block_content.weather_user_button.status
+field_name: status
+entity_type: block_content
+bundle: weather_user_button
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

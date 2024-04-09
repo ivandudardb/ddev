@@ -1,0 +1,18 @@
+uuid: 82cf1984-2f3f-4ec7-9afd-fd1172e6874b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.social-links-footer
+id: menu_link_content.social-links-footer.changed
+field_name: changed
+entity_type: menu_link_content
+bundle: social-links-footer
+label: Changed
+description: 'The time that the menu link was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

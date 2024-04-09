@@ -1,0 +1,18 @@
+uuid: 4c52ac7d-52c1-40d1-a5e8-241b75673cd4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.weather_user_button
+id: block_content.weather_user_button.changed
+field_name: changed
+entity_type: block_content
+bundle: weather_user_button
+label: Changed
+description: 'The time that the content block was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

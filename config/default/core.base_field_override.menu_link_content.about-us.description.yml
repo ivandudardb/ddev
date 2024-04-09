@@ -1,0 +1,18 @@
+uuid: 83d3509d-f2ba-45da-b067-b037ad12442b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.about-us
+id: menu_link_content.about-us.description
+field_name: description
+entity_type: menu_link_content
+bundle: about-us
+label: Description
+description: 'Shown when hovering over the menu link.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

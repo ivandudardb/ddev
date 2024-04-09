@@ -1,0 +1,22 @@
+uuid: c5c672b5-96f3-4a91-a907-bc6d9f414f5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.middle_photo
+id: paragraph.middle_photo.status
+field_name: status
+entity_type: paragraph
+bundle: middle_photo
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

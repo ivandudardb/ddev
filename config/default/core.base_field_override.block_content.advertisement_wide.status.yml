@@ -1,0 +1,22 @@
+uuid: df5b4b9f-a065-4634-b445-c2fe65296ba0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.advertisement_wide
+id: block_content.advertisement_wide.status
+field_name: status
+entity_type: block_content
+bundle: advertisement_wide
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

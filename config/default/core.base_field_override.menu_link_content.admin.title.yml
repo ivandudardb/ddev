@@ -1,0 +1,18 @@
+uuid: 6335e06a-0b0d-4986-88e6-60899cce69f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.admin
+id: menu_link_content.admin.title
+field_name: title
+entity_type: menu_link_content
+bundle: admin
+label: 'Menu link title'
+description: 'The text to be used for this link in the menu.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

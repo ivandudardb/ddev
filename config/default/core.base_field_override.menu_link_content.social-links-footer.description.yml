@@ -1,0 +1,18 @@
+uuid: 0474b883-86c6-45dd-acfb-29ba85b0eab6
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.social-links-footer
+id: menu_link_content.social-links-footer.description
+field_name: description
+entity_type: menu_link_content
+bundle: social-links-footer
+label: Description
+description: 'Shown when hovering over the menu link.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

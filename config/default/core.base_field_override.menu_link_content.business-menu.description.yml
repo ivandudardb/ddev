@@ -1,0 +1,18 @@
+uuid: 72ba9e3a-bfde-4fe4-868c-7f9f8ddc51d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.business-menu
+id: menu_link_content.business-menu.description
+field_name: description
+entity_type: menu_link_content
+bundle: business-menu
+label: Description
+description: 'Shown when hovering over the menu link.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
