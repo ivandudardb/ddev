@@ -57,8 +57,6 @@ class Copyright extends BlockBase implements ContainerFactoryPluginInterface {
   public function build() {
     $storage = $this->configPagesLoaderService->load('global_configurations');
     $copyrightField = $storage->get('field_copyright')->view('default');
-    $copyrightField['#title'] = '';
-    $copyrightField['#cache']['tags'][] = 'config_pages:1';
     return $copyrightField;
   }
 
