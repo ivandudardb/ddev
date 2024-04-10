@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.store.field_location
+    - field.field.node.store.field_geo
     - node.type.store
   module:
     - geofield
@@ -13,13 +13,14 @@ targetEntityType: node
 bundle: store
 mode: default
 content:
-  field_location:
-    type: geofield_latlon
-    label: hidden
+  field_geo:
+    type: geofield_default
+    label: above
     settings:
       output_format: wkt
+      output_escape: true
     third_party_settings: {  }
-    weight: 102
+    weight: 103
     region: content
   links:
     settings: {  }

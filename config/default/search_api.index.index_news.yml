@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_category
-    - field.storage.node.field_location
     - field.storage.node.field_teaser_text
     - search_api.server.solr_server
   module:
@@ -87,14 +86,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_category
-  field_location:
-    label: Location
-    datasource_id: 'entity:node'
-    property_path: field_location
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.field_location
   field_teaser_text:
     label: 'teaser text'
     datasource_id: 'entity:node'

@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.store.field_location
+    - field.field.node.store.field_geo
     - node.type.store
   module:
     - geofield
@@ -19,12 +19,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_location:
-    type: geofield_default
-    weight: 122
+  field_geo:
+    type: geofield_latlon
+    weight: 123
     region: content
     settings:
-      geometry_validation: false
+      html5_geolocation: false
     third_party_settings: {  }
   langcode:
     type: language_select
