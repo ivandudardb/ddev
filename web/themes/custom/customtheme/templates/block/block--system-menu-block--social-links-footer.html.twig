@@ -35,7 +35,9 @@
 {% set config = config_pages_field('global_configurations', 'field_social_title', 'default') %}
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
 <nav role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes|without('role', 'aria-labelledby') }} class="footer-links">
-  <h2{{ title_attributes.addClass('social-title') }}>{{ config[0] }}</h2>
+  {% if config[0] is defined %}
+    <div{{ title_attributes.addClass('social-title') }}>{{ config[0] }}</div>
+  {% endif %}
   {# Menu. #}
   {% block content %}
     {{ content }}
