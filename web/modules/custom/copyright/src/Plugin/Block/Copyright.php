@@ -60,7 +60,7 @@ class Copyright extends BlockBase implements ContainerFactoryPluginInterface {
       $copyrightField = $storage->get('field_copyright')->view('default');
     }
     else {
-      $entityTypeManager = \Drupal::service('entity_type.manager');
+      $entityTypeManager = $this->entityTypeManager;
       $definition = $entityTypeManager->getDefinition('config_pages');
       $cacheTag = $definition->getListCacheTags();
       $copyrightField = [
