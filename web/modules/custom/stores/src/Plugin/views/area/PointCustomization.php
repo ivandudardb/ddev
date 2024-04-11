@@ -19,11 +19,9 @@ class PointCustomization extends AreaPluginBase {
    */
   protected function defineOptions() {
     $options = parent::defineOptions();
-
     $options['color'] = ['default' => '#00000'];
     $options['size'] = ['default' => '10'];
     $options['zoom'] = ['default' => '13'];
-
     return $options;
   }
 
@@ -57,45 +55,39 @@ class PointCustomization extends AreaPluginBase {
   }
 
   /**
+   * Validation for number fields.
+   */
+  public function validateNumberField($element, FormStateInterface $form_state) {
+    $value = $element['#value'];
+    if (!is_numeric($value) || $value <= 0) {
+      $form_state->setError($element, $this->t('Please enter a valid positive number.'));
+    }
+  }
+
+  /**
    * {@inheritdoc}
    */
   public function render($empty = FALSE) {
-    if (!$empty || !empty($this->options['empty'])) {
-      $id = $this->view->id() . '_' . $this->view->current_display;
-      $test = $this->view;
-      foreach ($this->view->result as $item) {
-        $field_location_value = $item->_entity->get('field_geo')->getValue();
-        $field_location_values[] = $field_location_value;
-      }
-      $output['#attached']['drupalSettings'][$id] = [
-        'stores' => [
-          'color' => $this->options['color'],
-          'size' => $this->options['size'],
-          'zoom' => $this->options['zoom'],
-          'locations' => $field_location_values,
-        ],
-      ];
-      $output = [];
-      $output['#attached'] = [
-        'library' => [
-          'stores/map',
-          'stores/leaflet',
-        ],
-      ];
-
-      $output['map_container'] = [
-        '#type' => 'container',
-        '#attributes' => [
-          'id' => 'map',
-          'class' => 'leaflet__map',
-          'data-view-id' => $id,
-          'style' => 'width: 100%; height: 500px;',
-        ],
-      ];
-      return $output;
+    $id = $this->view->id() . '_' . $this->view->current_display;
+    foreach ($this->view->result as $item) {
+      $field_location_value = $item->_entity->get('field_location')->getValue();
+      $field_location_values[] = $field_location_value;
     }
 
-    return [];
+    $build['#attached']['library'] = [
+      'stores/leaflet',
+      'stores/map',
+    ];
+    $build['#attached']['drupalSettings'][$id] = [
+      'stores' => [
+        'color' => $this->options['color'],
+        'size' => $this->options['size'],
+        'zoom' => $this->options['zoom'],
+        'locations' => $field_location_values,
+      ],
+    ];
+    $build['#markup'] = ' <div class="leaflet__map" data-view-id = ' . $id . '></div>';
+    return $build;
   }
 
 }
