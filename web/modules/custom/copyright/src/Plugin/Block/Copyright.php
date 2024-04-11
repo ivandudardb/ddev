@@ -10,6 +10,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 
 /**
  * Provides a 'CopyrightBlock' block.
@@ -19,6 +20,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
   admin_label: new TranslatableMarkup("Custom Copyright block"),
 )]
 class Copyright extends BlockBase implements ContainerFactoryPluginInterface {
+  use StringTranslationTrait;
 
   /**
    * Constructs a new Copyright.
@@ -56,21 +58,21 @@ class Copyright extends BlockBase implements ContainerFactoryPluginInterface {
    */
   public function build() {
     $loader = $this->configPagesLoaderService;
-    if ($storage = $loader->load('global_configurations')) {
-      $copyrightField = $storage->get('field_copyright')->view('default');
+    if ($entity = $loader->load('global_configurations')) {
+      $copyright_array = $entity->get('field_copyright')->view('default');
     }
     else {
       $entityTypeManager = $this->entityTypeManager;
       $definition = $entityTypeManager->getDefinition('config_pages');
-      $cacheTag = $definition->getListCacheTags();
-      $copyrightField = [
-        '#markup' => 'Global Configurations is not created <br> You can create it <a href="/admin/structure/config_pages/types/add">here</a>',
+      $cache_tags = $definition->getListCacheTags();
+      $copyright_array = [
+        '#markup' => $this->t('Global Configurations is not created <br> You can create it <a href="/admin/structure/config_pages/types/add">here</a>'),
         '#cache' => [
-          'tags' => $cacheTag,
+          'tags' => $cache_tags,
         ],
       ];
     }
-    return $copyrightField;
+    return $copyright_array;
   }
 
   /**
@@ -78,7 +80,7 @@ class Copyright extends BlockBase implements ContainerFactoryPluginInterface {
    */
   public function blockForm($form, FormStateInterface $form_state) {
     $form['url'] = [
-      '#markup' => 'Copyrights text can be edited <a href="/admin/copyright">here</a>',
+      '#markup' => $this->t('Copyrights text can be edited <a href="/admin/copyright">here</a>'),
     ];
     return $form;
   }
