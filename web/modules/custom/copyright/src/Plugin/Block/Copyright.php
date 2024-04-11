@@ -55,8 +55,21 @@ class Copyright extends BlockBase implements ContainerFactoryPluginInterface {
    * {@inheritdoc}
    */
   public function build() {
-    $storage = $this->configPagesLoaderService->load('global_configurations');
-    $copyrightField = $storage->get('field_copyright')->view('default');
+    $loader = $this->configPagesLoaderService;
+    if ($storage = $loader->load('global_configurations')) {
+      $copyrightField = $storage->get('field_copyright')->view('default');
+    }
+    else {
+      $entityTypeManager = \Drupal::service('entity_type.manager');
+      $definition = $entityTypeManager->getDefinition('config_pages');
+      $cacheTag = $definition->getListCacheTags();
+      $copyrightField = [
+        '#markup' => 'Global Configurations is not created <br> You can create it <a href="/admin/structure/config_pages/types/add">here</a>',
+        '#cache' => [
+          'tags' => $cacheTag,
+        ],
+      ];
+    }
     return $copyrightField;
   }
 
