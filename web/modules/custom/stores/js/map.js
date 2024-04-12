@@ -10,7 +10,7 @@
         const zoom = options.zoom;
         const locations = options.locations;
         element.style.height = '400px';
-        const map = L.map(element).setView([51.505, -0.09], zoom);
+        const map = L.map(element).setView([53.5, 0], zoom);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           maxZoom: 20,
           attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

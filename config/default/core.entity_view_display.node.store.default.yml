@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.store.field_geo
+    - field.field.node.store.field_location
     - node.type.store
   module:
     - geofield
@@ -21,6 +22,15 @@ content:
       output_escape: true
     third_party_settings: {  }
     weight: 103
+    region: content
+  field_location:
+    type: geofield_default
+    label: above
+    settings:
+      output_format: wkt
+      output_escape: true
+    third_party_settings: {  }
+    weight: 104
     region: content
   links:
     settings: {  }
