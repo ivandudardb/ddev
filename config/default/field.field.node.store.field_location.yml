@@ -1,4 +1,4 @@
-uuid: b821b676-35ee-4c50-a1b7-d5901398d4cb
+uuid: 3291983d-4b8e-40cd-889b-65bcaf8c3f05
 langcode: en
 status: true
 dependencies:
@@ -13,7 +13,7 @@ entity_type: node
 bundle: store
 label: Location
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

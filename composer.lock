@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "056faecc1f1395319cd8cfac188149ce",
+    "content-hash": "9087697d60109433e3f0d574bdd8b413",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -64,16 +64,16 @@
         },
         {
             "name": "chi-teck/drupal-code-generator",
-            "version": "3.4.0",
+            "version": "3.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Chi-teck/drupal-code-generator.git",
-                "reference": "b8136b945dc3446894e6cd2b2f055e147140faed"
+                "reference": "74c2dc687e124bfc4001e73e9346b33067e2ec2b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Chi-teck/drupal-code-generator/zipball/b8136b945dc3446894e6cd2b2f055e147140faed",
-                "reference": "b8136b945dc3446894e6cd2b2f055e147140faed",
+                "url": "https://api.github.com/repos/Chi-teck/drupal-code-generator/zipball/74c2dc687e124bfc4001e73e9346b33067e2ec2b",
+                "reference": "74c2dc687e124bfc4001e73e9346b33067e2ec2b",
                 "shasum": ""
             },
             "require": {
@@ -91,7 +91,7 @@
                 "squizlabs/php_codesniffer": "<3.6"
             },
             "require-dev": {
-                "chi-teck/drupal-coder-extension": "^2.0.0-beta2",
+                "chi-teck/drupal-coder-extension": "^2.0.0-beta3",
                 "drupal/coder": "8.3.23",
                 "drupal/core": "10.3.x-dev",
                 "ext-simplexml": "*",
@@ -118,9 +118,9 @@
             "description": "Drupal code generator",
             "support": {
                 "issues": "https://github.com/Chi-teck/drupal-code-generator/issues",
-                "source": "https://github.com/Chi-teck/drupal-code-generator/tree/3.4.0"
+                "source": "https://github.com/Chi-teck/drupal-code-generator/tree/3.5.0"
             },
-            "time": "2024-03-10T13:35:00+00:00"
+            "time": "2024-04-11T11:23:44+00:00"
         },
         {
             "name": "composer/installers",
@@ -2347,6 +2347,124 @@
             }
         },
         {
+            "name": "drupal/examples",
+            "version": "4.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/examples.git",
+                "reference": "4.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/examples-4.0.2.zip",
+                "reference": "4.0.2",
+                "shasum": "d50bdcc2c9f0fb09a77feff47663cdd9a302110c"
+            },
+            "require": {
+                "drupal/core": "^9.4 || ^10"
+            },
+            "require-dev": {
+                "drupal/hal": "*",
+                "drupal/stream_wrapper_example": "*",
+                "phpspec/prophecy-phpunit": "*"
+            },
+            "suggest": {
+                "drupal/devel": "Some modules will be able to pretty-print PHP with this module."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "4.0.2",
+                    "datestamp": "1677694701",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "add1sun",
+                    "homepage": "https://www.drupal.org/user/65088"
+                },
+                {
+                    "name": "cyberswat",
+                    "homepage": "https://www.drupal.org/user/27802"
+                },
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "ilo",
+                    "homepage": "https://www.drupal.org/user/118449"
+                },
+                {
+                    "name": "Itangalo",
+                    "homepage": "https://www.drupal.org/user/153998"
+                },
+                {
+                    "name": "jn2",
+                    "homepage": "https://www.drupal.org/user/1001014"
+                },
+                {
+                    "name": "jungle",
+                    "homepage": "https://www.drupal.org/user/2919723"
+                },
+                {
+                    "name": "katbailey",
+                    "homepage": "https://www.drupal.org/user/172987"
+                },
+                {
+                    "name": "linclark",
+                    "homepage": "https://www.drupal.org/user/396253"
+                },
+                {
+                    "name": "marvil07",
+                    "homepage": "https://www.drupal.org/user/132175"
+                },
+                {
+                    "name": "mikl",
+                    "homepage": "https://www.drupal.org/user/58679"
+                },
+                {
+                    "name": "Mile23",
+                    "homepage": "https://www.drupal.org/user/116231"
+                },
+                {
+                    "name": "rfay",
+                    "homepage": "https://www.drupal.org/user/30906"
+                },
+                {
+                    "name": "socketwench",
+                    "homepage": "https://www.drupal.org/user/65793"
+                },
+                {
+                    "name": "Torenware",
+                    "homepage": "https://www.drupal.org/user/18784"
+                },
+                {
+                    "name": "valthebald",
+                    "homepage": "https://www.drupal.org/user/239562"
+                },
+                {
+                    "name": "yched",
+                    "homepage": "https://www.drupal.org/user/39567"
+                }
+            ],
+            "description": "The Examples for Developers project aims to provide high-quality, well-documented API examples for a broad range of Drupal core functionality.",
+            "homepage": "https://www.drupal.org/project/examples",
+            "support": {
+                "source": "https://git.drupalcode.org/project/examples",
+                "issues": "https://www.drupal.org/project/issues/examples",
+                "documentation": "https://api.drupal.org/api/examples"
+            }
+        },
+        {
             "name": "drupal/facets",
             "version": "2.0.7",
             "source": {
@@ -4422,6 +4540,75 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v5.0.2"
             },
             "time": "2024-03-05T20:51:40+00:00"
+        },
+        {
+            "name": "npm-asset/leaflet",
+            "version": "1.9.4",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/leaflet/-/leaflet-1.9.4.tgz"
+            },
+            "type": "npm-asset",
+            "license": [
+                "BSD-2-Clause"
+            ]
+        },
+        {
+            "name": "oomphinc/composer-installers-extender",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oomphinc/composer-installers-extender.git",
+                "reference": "cbf4b6f9a24153b785d09eee755b995ba87bd5f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oomphinc/composer-installers-extender/zipball/cbf4b6f9a24153b785d09eee755b995ba87bd5f9",
+                "reference": "cbf4b6f9a24153b785d09eee755b995ba87bd5f9",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.1 || ^2.0",
+                "composer/installers": "^1.0 || ^2.0",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "composer/composer": "^2.0",
+                "phpunit/phpunit": "^7.2",
+                "squizlabs/php_codesniffer": "^3.3"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "OomphInc\\ComposerInstallersExtender\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "OomphInc\\ComposerInstallersExtender\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stephen Beemsterboer",
+                    "email": "stephen@oomphinc.com",
+                    "homepage": "https://github.com/balbuf"
+                },
+                {
+                    "name": "Nathan Dentzau",
+                    "email": "nate@oomphinc.com",
+                    "homepage": "http://oomph.is/ndentzau"
+                }
+            ],
+            "description": "Extend the composer/installers plugin to accept any arbitrary package type.",
+            "homepage": "http://www.oomphinc.com/",
+            "support": {
+                "issues": "https://github.com/oomphinc/composer-installers-extender/issues",
+                "source": "https://github.com/oomphinc/composer-installers-extender/tree/2.0.1"
+            },
+            "time": "2021-12-15T12:32:42+00:00"
         },
         {
             "name": "pear/archive_tar",

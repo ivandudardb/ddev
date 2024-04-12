@@ -20,11 +20,11 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_location:
-    type: geofield_default
-    weight: 122
+    type: geofield_latlon
+    weight: 124
     region: content
     settings:
-      geometry_validation: false
+      html5_geolocation: false
     third_party_settings: {  }
   langcode:
     type: language_select

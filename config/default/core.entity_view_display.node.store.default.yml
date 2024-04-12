@@ -14,12 +14,13 @@ bundle: store
 mode: default
 content:
   field_location:
-    type: geofield_latlon
-    label: hidden
+    type: geofield_default
+    label: above
     settings:
       output_format: wkt
+      output_escape: true
     third_party_settings: {  }
-    weight: 102
+    weight: 104
     region: content
   links:
     settings: {  }

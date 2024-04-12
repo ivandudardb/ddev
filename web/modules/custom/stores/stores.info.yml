@@ -1,0 +1,7 @@
+name: Stores Module
+type: module
+description: Display our stores
+core_version_requirement: ^9 || ^10
+package: custom
+dependencies:
+  - core:views
