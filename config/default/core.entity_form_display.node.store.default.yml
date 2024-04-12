@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.store.field_geo
     - field.field.node.store.field_location
     - node.type.store
   module:
@@ -19,13 +18,6 @@ content:
     weight: 10
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_geo:
-    type: geofield_latlon
-    weight: 123
-    region: content
-    settings:
-      html5_geolocation: false
     third_party_settings: {  }
   field_location:
     type: geofield_latlon

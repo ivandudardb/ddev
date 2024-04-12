@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.store.field_geo
     - field.field.node.store.field_location
     - node.type.store
   module:
@@ -21,7 +20,6 @@ content:
     region: content
 hidden:
   addtoany: true
-  field_geo: true
   field_location: true
   langcode: true
   search_api_excerpt: true
