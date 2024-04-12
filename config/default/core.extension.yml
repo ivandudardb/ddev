@@ -13,8 +13,11 @@ module:
   comment: 0
   components: 0
   config: 0
+  config_pages: 0
+  config_translation: 0
   contact: 0
   contextual: 0
+  copyright: 0
   custom_registration: 0
   custom_weather: 0
   datetime: 0
@@ -42,6 +45,7 @@ module:
   layout_builder: 0
   layout_discovery: 0
   link: 0
+  locale: 0
   menu_item_extras: 0
   menu_link_content: 0
   menu_ui: 0
@@ -72,6 +76,7 @@ module:
   user: 0
   views_ui: 0
   webform: 0
+  content_translation: 10
   views: 10
   paragraphs: 11
   standard: 1000

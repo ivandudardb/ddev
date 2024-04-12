@@ -1,0 +1,18 @@
+uuid: 7541683c-5de5-44de-a465-d7f341d30266
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.social-links
+id: menu_link_content.social-links.title
+field_name: title
+entity_type: menu_link_content
+bundle: social-links
+label: 'Menu link title'
+description: 'The text to be used for this link in the menu.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -21,8 +21,9 @@
 }
 
 .footer-links {
-  display: flex;
-  justify-content: center;
+  .social-title {
+    color: $white;
+  }
 
   .social_list {
     display: block;

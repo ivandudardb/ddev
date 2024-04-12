@@ -1,0 +1,18 @@
+uuid: d38fbd0d-60de-459f-b132-ab1182d204f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.advertisement_wide
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: block_content.advertisement_wide
+target_entity_type_id: block_content
+target_bundle: advertisement_wide
+default_langcode: site_default
+language_alterable: false

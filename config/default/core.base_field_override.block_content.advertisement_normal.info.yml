@@ -1,0 +1,18 @@
+uuid: fdbecb0b-7aee-4827-b6d8-74284e1e50fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.advertisement_normal
+id: block_content.advertisement_normal.info
+field_name: info
+entity_type: block_content
+bundle: advertisement_normal
+label: 'Block description'
+description: 'A brief description of your block.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

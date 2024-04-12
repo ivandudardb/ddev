@@ -1,0 +1,17 @@
+uuid: bcbc276a-eca0-4b2c-84d1-01263a5f54d2
+langcode: en
+status: true
+dependencies: {  }
+id: global_configurations
+label: 'Global configurations'
+token: false
+context:
+  show_warning: true
+  group:
+    language: true
+  fallback:
+    language: ''
+menu:
+  path: /admin/copyright
+  weight: 0
+  description: ''

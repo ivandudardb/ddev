@@ -1,0 +1,18 @@
+uuid: 2836703a-ca76-41e2-a5b0-7c1ff5d2aff9
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.news-menu
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: menu_link_content.news-menu
+target_entity_type_id: menu_link_content
+target_bundle: news-menu
+default_langcode: site_default
+language_alterable: false

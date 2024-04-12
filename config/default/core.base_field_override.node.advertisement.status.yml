@@ -1,0 +1,22 @@
+uuid: d7c38df1-9040-40f2-8c8d-a1171a55208c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.advertisement
+id: node.advertisement.status
+field_name: status
+entity_type: node
+bundle: advertisement
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

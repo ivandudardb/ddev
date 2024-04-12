@@ -1,0 +1,18 @@
+uuid: 94e2f171-8169-4b87-8de7-e55ebaf0f04d
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.news-menu
+id: menu_link_content.news-menu.description
+field_name: description
+entity_type: menu_link_content
+bundle: news-menu
+label: Description
+description: 'Shown when hovering over the menu link.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

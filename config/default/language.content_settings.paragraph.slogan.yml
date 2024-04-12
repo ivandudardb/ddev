@@ -1,0 +1,18 @@
+uuid: 1d10e5c5-942a-4352-8576-5a4fa64ffe2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.slogan
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.slogan
+target_entity_type_id: paragraph
+target_bundle: slogan
+default_langcode: site_default
+language_alterable: false

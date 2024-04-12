@@ -1,0 +1,18 @@
+uuid: 670f6b3e-cdc2-4a56-b067-6e2a505ff187
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.conclusion
+id: paragraph.conclusion.created
+field_name: created
+entity_type: paragraph
+bundle: conclusion
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

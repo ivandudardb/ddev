@@ -11,7 +11,7 @@ dependencies:
 id: customtheme_fontawesomecontainer
 theme: customtheme
 region: footer
-weight: 0
+weight: -15
 provider: null
 plugin: 'block_content:8eb66366-e95e-40d7-b98d-23635a8b7d13'
 settings:
