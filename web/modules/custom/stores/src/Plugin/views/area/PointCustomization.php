@@ -38,30 +38,14 @@ class PointCustomization extends AreaPluginBase {
     ];
     $form['size'] = [
       '#title' => $this->t('Point size'),
-      '#type' => 'textfield',
+      '#type' => 'number',
       '#default_value' => $this->options['size'],
-      '#element_validate' => [
-        [$this, 'validateNumberField'],
-      ],
     ];
     $form['zoom'] = [
       '#title' => $this->t('Map zoom'),
-      '#type' => 'textfield',
+      '#type' => 'number',
       '#default_value' => $this->options['zoom'],
-      '#element_validate' => [
-        [$this, 'validateNumberField'],
-      ],
     ];
-  }
-
-  /**
-   * Validation for number fields.
-   */
-  public function validateNumberField($element, FormStateInterface $form_state) {
-    $value = $element['#value'];
-    if (!is_numeric($value) || $value <= 0) {
-      $form_state->setError($element, $this->t('Please enter a valid positive number.'));
-    }
   }
 
   /**
