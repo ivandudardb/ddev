@@ -1,4 +1,4 @@
-uuid: b23bbcee-b130-4197-a477-2117d56a0785
+uuid: af4189fb-6f00-48c0-a234-cd141a9b5410
 langcode: en
 status: true
 dependencies:
@@ -15,16 +15,15 @@ mode: default
 content:
   field_copyright:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 0
     region: content
   field_social_title:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
+    type: text_default
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
     weight: 1
     region: content

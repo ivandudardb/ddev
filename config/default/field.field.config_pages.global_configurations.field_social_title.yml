@@ -1,10 +1,13 @@
-uuid: b011facb-19ec-4a0a-b75b-c27cc194f8d1
+uuid: 20f6c562-9cb3-47f0-9c65-018725dc09e1
 langcode: en
 status: true
 dependencies:
   config:
     - config_pages.type.global_configurations
     - field.storage.config_pages.field_social_title
+    - filter.format.plain_text
+  module:
+    - text
 id: config_pages.global_configurations.field_social_title
 field_name: field_social_title
 entity_type: config_pages
@@ -15,5 +18,7 @@ required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: string
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text

@@ -8,6 +8,7 @@ use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Entity\EntityTypeManager;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -19,6 +20,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
   admin_label: new TranslatableMarkup("Custom Copyright block"),
 )]
 class Copyright extends BlockBase implements ContainerFactoryPluginInterface {
+  use StringTranslationTrait;
 
   /**
    * Constructs a new Copyright.
@@ -55,11 +57,22 @@ class Copyright extends BlockBase implements ContainerFactoryPluginInterface {
    * {@inheritdoc}
    */
   public function build() {
-    $storage = $this->configPagesLoaderService->load('global_configurations');
-    $copyrightField = $storage->get('field_copyright')->view('default');
-    $copyrightField['#title'] = '';
-    $copyrightField['#cache']['tags'][] = 'config_pages:1';
-    return $copyrightField;
+    $loader = $this->configPagesLoaderService;
+    if ($entity = $loader->load('global_configurations')) {
+      $copyright_array = $entity->get('field_copyright')->view('default');
+    }
+    else {
+      $entityTypeManager = $this->entityTypeManager;
+      $definition = $entityTypeManager->getDefinition('config_pages');
+      $cache_tags = $definition->getListCacheTags();
+      $copyright_array = [
+        '#markup' => $this->t('Global Configurations is not created <br> You can create it <a href=":api">here</a>', [':api' => '/admin/structure/config_pages/types/add']),
+        '#cache' => [
+          'tags' => $cache_tags,
+        ],
+      ];
+    }
+    return $copyright_array;
   }
 
   /**
@@ -67,7 +80,7 @@ class Copyright extends BlockBase implements ContainerFactoryPluginInterface {
    */
   public function blockForm($form, FormStateInterface $form_state) {
     $form['url'] = [
-      '#markup' => 'Copyrights text can be edited <a href="/admin/copyright">here</a>',
+      '#markup' => $this->t('Copyrights text can be edited <a href=":api">here</a>', [':api' => '/admin/copyright']),
     ];
     return $form;
   }
