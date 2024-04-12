@@ -1,18 +1,17 @@
-uuid: bd0d9f6b-dc46-4316-b9f6-652d8806700a
+uuid: 6c17a0f8-56e3-4c30-96a6-1040488f4ae6
 langcode: en
 status: true
 dependencies:
   module:
     - config_pages
+    - text
 id: config_pages.field_social_title
 field_name: field_social_title
 entity_type: config_pages
-type: string
+type: text
 settings:
   max_length: 255
-  case_sensitive: false
-  is_ascii: false
-module: core
+module: text
 locked: false
 cardinality: 1
 translatable: true

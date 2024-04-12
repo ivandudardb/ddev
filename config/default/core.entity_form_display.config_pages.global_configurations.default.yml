@@ -1,4 +1,4 @@
-uuid: 40eb9e8e-47d5-4e49-a861-a3732d51c342
+uuid: aab66215-ac8f-4db4-a4de-4e88c696e840
 langcode: en
 status: true
 dependencies:
@@ -15,14 +15,14 @@ mode: default
 content:
   field_copyright:
     type: text_textfield
-    weight: 2
+    weight: 0
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   field_social_title:
-    type: string_textfield
+    type: text_textfield
     weight: 1
     region: content
     settings:

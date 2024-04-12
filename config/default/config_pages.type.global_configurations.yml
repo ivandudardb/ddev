@@ -1,4 +1,4 @@
-uuid: bcbc276a-eca0-4b2c-84d1-01263a5f54d2
+uuid: bc4c4466-e090-48b6-a464-835285f9e92f
 langcode: en
 status: true
 dependencies: {  }
@@ -14,4 +14,4 @@ context:
 menu:
   path: /admin/copyright
   weight: 0
-  description: ''
+  description: 'Global configurations desc'

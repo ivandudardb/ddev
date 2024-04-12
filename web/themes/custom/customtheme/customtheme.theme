@@ -1,6 +1,5 @@
 <?php
 
-use Drupal\Core\Cache\CacheableMetadata;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\node\Entity\Node;
 
