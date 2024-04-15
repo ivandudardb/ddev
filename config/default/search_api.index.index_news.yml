@@ -76,6 +76,8 @@ field_settings:
 
 
 
+
+
       fields:
         - 'entity:node/field_location'
         - 'entity:node/field_teaser_text'

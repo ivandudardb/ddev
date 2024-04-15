@@ -49,12 +49,19 @@ module:
   menu_item_extras: 0
   menu_link_content: 0
   menu_ui: 0
+  migrate: 0
+  migrate_drupal: 0
+  migrate_plus: 0
+  migrate_source_csv: 0
+  migrate_tools: 0
+  migrations_csv: 0
   mysql: 0
   node: 0
   options: 0
   page_cache: 0
   path: 0
   path_alias: 0
+  phpass: 0
   responsive_image: 0
   search: 0
   search_api: 0

@@ -10,22 +10,14 @@ display:
           action_title: Дія
         subject:
           label: Тема
-          separator: ', '
-        uid:
-          separator: ', '
         name:
           label: Автор
-          separator: ', '
         entity_id:
           label: Опубліковане
-          separator: ', '
         changed:
           label: Оновлено
-          separator: ', '
         operations:
           label: Операції
-        name_1:
-          separator: ', '
       pager:
         options:
           tags:
@@ -70,22 +62,14 @@ display:
           action_title: Дія
         subject:
           label: Тема
-          separator: ', '
-        uid:
-          separator: ', '
         name:
           label: Автор
-          separator: ', '
         entity_id:
           label: Опубліковане
-          separator: ', '
         changed:
           label: Оновлено
-          separator: ', '
         operations:
           label: Операції
-        name_1:
-          separator: ', '
       filters:
         subject:
           expose:
