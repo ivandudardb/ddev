@@ -1,0 +1,30 @@
+id: migration_csv
+migration_group: users_field_data
+migration_tags:
+  - users
+label: migration from csv file
+source:
+  plugin: csv
+  path: modules/custom/migrations_csv/assets/user_info.csv
+  delimiter: ","
+  header_offset: 0
+  ids:
+    - uid
+  column_names:
+    uid: 'User ID'
+    name: 'Username'
+    pass: 'User password'
+    mail: 'User email'
+  constants:
+    status: 1
+process:
+  uid: uid
+  name: name
+  pass:
+    plugin: callback
+    callable: md5
+    source: pass
+  mail: mail
+destination:
+  plugin: entity:user
+  md5_passwords: true

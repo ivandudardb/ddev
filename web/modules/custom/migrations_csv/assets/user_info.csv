@@ -1,7 +1,7 @@
-uid,name,pass,mail,city,country
-1070,migrant1,1234,migrant1@gmail.com,London,UK
-1071,migrant2,1235,migrant2@gmail.com,London,UK
-1072,migrant3,1236,migrant3@gmail.com,London,UK
-1073,migrant4,1237,migrant4@gmail.com,London,UK
-1074,migrant5,1238,migrant5@gmai.com,London,UK
-1075,migrant6,1239,migrant6@gmail.com,London,UK
+uid,name,pass,mail,city,country,interested_in
+500,migrant1000_updated,9876,migrant1000_updated@gmail.com,Lutsk,AL,14
+501,migrant2000_updated,9877,migrant2000_updated@gmail.com,Lutsk,AL,14
+502,migrant3000_updated,9878,migrant3000_updated@gmail.com,Lutsk,AL,14
+503,migrant4000_updated,9879,migrant4000_updated@gmail.com,Lutsk,AL,14
+504,migrant5000_updated,9880,migrant5000_updated@gmai.com,Lutsk,AL,14
+505,migrant6000_updated,9881,migrant6000_updated@gmail.com,Lutsk,AL,14
