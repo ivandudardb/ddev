@@ -22,14 +22,26 @@ class CustomMigratePlugin extends DestinationBase implements ContainerFactoryPlu
   /**
    * Constructs a new CustomMigratePlugin object.
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, MigrationInterface $migration, protected Connection $connection) {
+  public function __construct(
+    array $configuration,
+    $plugin_id,
+    $plugin_definition,
+    MigrationInterface $migration,
+    protected Connection $connection
+  ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $migration);
   }
 
   /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition, MigrationInterface $migration = NULL): CustomMigratePlugin|ContainerFactoryPluginInterface|static {
+  public static function create(
+    ContainerInterface $container,
+    array $configuration,
+    $plugin_id,
+    $plugin_definition,
+    MigrationInterface $migration = NULL
+  ): CustomMigratePlugin|ContainerFactoryPluginInterface|static {
     return new static(
       $configuration,
       $plugin_id,
@@ -66,13 +78,14 @@ class CustomMigratePlugin extends DestinationBase implements ContainerFactoryPlu
     $city = $row->getDestinationProperty('city');
     $country = $row->getDestinationProperty('country');
     $interested_in = $row->getDestinationProperty('interested_in');
-    $this->connection->insert('custom_registration_data')
+    $this->connection->upsert('custom_registration_data')
       ->fields([
         'uid' => $uid,
         'city' => $city,
         'country' => $country,
         'interested_in' => $interested_in,
       ])
+      ->key('uid')
       ->execute();
   }
 
