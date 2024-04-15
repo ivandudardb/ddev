@@ -51,6 +51,10 @@ module:
   menu_ui: 0
   migrate: 0
   migrate_drupal: 0
+  migrate_plus: 0
+  migrate_source_csv: 0
+  migrate_tools: 0
+  migrations_csv: 0
   mysql: 0
   node: 0
   options: 0

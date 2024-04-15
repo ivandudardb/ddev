@@ -8,3 +8,5 @@ settings:
           label: Різниця
         10:
           label: Пітон
+        13:
+          label: XML

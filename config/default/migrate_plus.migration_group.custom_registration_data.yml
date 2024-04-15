@@ -1,0 +1,10 @@
+uuid: 24fed11d-5b39-47b6-bf83-3cab64c20fb9
+langcode: en
+status: true
+dependencies: {  }
+id: custom_registration_data
+label: custom_registration_data
+description: ''
+source_type: null
+module: null
+shared_configuration: null
