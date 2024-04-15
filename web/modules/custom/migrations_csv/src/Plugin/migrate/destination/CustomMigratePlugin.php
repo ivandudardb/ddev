@@ -41,7 +41,7 @@ class CustomMigratePlugin extends DestinationBase implements ContainerFactoryPlu
     $plugin_id,
     $plugin_definition,
     MigrationInterface $migration = NULL
-  ): CustomMigratePlugin|ContainerFactoryPluginInterface|static {
+  ) {
     return new static(
       $configuration,
       $plugin_id,
