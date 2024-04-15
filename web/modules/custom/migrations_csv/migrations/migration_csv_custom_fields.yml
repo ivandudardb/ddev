@@ -1,0 +1,27 @@
+id: migration_csv_custom_fields
+migration_group: custom_registration_data
+migration_tags:
+  - users
+label: migration from csv file to custom table
+source:
+  plugin: csv
+  path: modules/custom/migrations_csv/assets/user_info.csv
+  delimiter: ","
+  header_offset: 0
+  ids:
+    - uid
+  column_names:
+    uid: 'User ID'
+    city: 'User city'
+    country: 'User country'
+    interested_in: 'User interest'
+  constants:
+    status: 1
+process:
+  uid: uid
+  city: city
+  country: country
+  interested_in: interested_in
+destination:
+  plugin: custom_migrate_plugin
+  database_connection: default
